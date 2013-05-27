@@ -7,80 +7,30 @@
 //
 
 #import "MapViewController.h"
-#import "WellLocation.h"
-#define METERS_PER_MILE 1609.344
+#import <GoogleMaps/GoogleMaps.h>
 
-@interface MapViewController ()
-
-@end
-
-@implementation MapViewController
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+@implementation MapViewController {
+  GMSMapView *mapView_;
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+// You don't need to modify the default initWithNibName:bundle: method.
 
-- (void)viewWillAppear:(BOOL)animated {
-
-    CLLocationCoordinate2D zoomLocation;
-    zoomLocation.latitude = -26.549223;
-    zoomLocation.longitude= 31.486816;
-    
-    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 80*METERS_PER_MILE, 80*METERS_PER_MILE);
-    
-    [_mapView setRegion:viewRegion animated:YES];
-    
-}
-
-- (void)plotWellLocations:(NSData *)responseData {
-    
-    for (id<MKAnnotation> annotation in _mapView.annotations) {
-        [_mapView removeAnnotation:annotation];
-    }
-    
-    NSDictionary *root = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:nil];
-    NSArray *data = [root objectForKey:@"data"];
-    
-    for (NSArray *row in data) {
-        NSNumber * latitude = [[row objectAtIndex:22]objectAtIndex:1];
-        NSNumber * longitude = [[row objectAtIndex:22]objectAtIndex:2];
-        NSString * crimeDescription = [row objectAtIndex:18];
-        NSString * address = [row objectAtIndex:14];
-        
-        CLLocationCoordinate2D coordinate;
-        coordinate.latitude = latitude.doubleValue;
-        coordinate.longitude = longitude.doubleValue;
-        WellLocation *annotation = [[WellLocation alloc] initWithName:crimeDescription address:address coordinate:coordinate] ;
-        [_mapView addAnnotation:annotation];
-	}
-}
-
-- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation {
-    static NSString *identifier = @"WellLocation";
-    if ([annotation isKindOfClass:[WellLocation class]]) {
-        
-        MKAnnotationView *annotationView = (MKAnnotationView *) [_mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
-        if (annotationView == nil) {
-            annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
-            annotationView.enabled = YES;
-            annotationView.canShowCallout = YES;
-            //annotationView.image = [UIImage imageNamed:@"arrest.png"];
-        } else {
-            annotationView.annotation = annotation;
-        }
-        
-        return annotationView;
-    }
-    
-    return nil;
+- (void)loadView {
+  // Create a GMSCameraPosition that tells the map to display the
+  // coordinate -33.86,151.20 at zoom level 6.
+  GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:-33.86
+                                                          longitude:151.20
+                                                               zoom:6];
+  mapView_ = [GMSMapView mapWithFrame:CGRectZero camera:camera];
+  mapView_.myLocationEnabled = YES;
+  self.view = mapView_;
+  
+  // Creates a marker in the center of the map.
+  GMSMarker *marker = [[GMSMarker alloc] init];
+  marker.position = CLLocationCoordinate2DMake(-33.86, 151.20);
+  marker.title = @"Sydney";
+  marker.snippet = @"Australia";
+  marker.map = mapView_;
 }
 
 @end
