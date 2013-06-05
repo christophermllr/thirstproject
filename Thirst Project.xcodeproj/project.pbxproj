@@ -33,14 +33,12 @@
 		837D4B1C171CE22700E8677E /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837D4B12171CE22700E8677E /* CoreMedia.framework */; };
 		837D4B1D171CE22700E8677E /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837D4B13171CE22700E8677E /* CoreVideo.framework */; };
 		837D4B1E171CE22700E8677E /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 837D4B14171CE22700E8677E /* libxml2.dylib */; };
-		837D4B1F171CE22700E8677E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837D4B15171CE22700E8677E /* MapKit.framework */; };
 		837D4B20171CE22700E8677E /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837D4B16171CE22700E8677E /* MessageUI.framework */; };
 		837D4B21171CE22700E8677E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837D4B17171CE22700E8677E /* MobileCoreServices.framework */; };
 		837D4B22171CE22700E8677E /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837D4B18171CE22700E8677E /* OpenGLES.framework */; };
 		837D4B23171CE22700E8677E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837D4B19171CE22700E8677E /* QuartzCore.framework */; };
 		837D4B24171CE22700E8677E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837D4B1A171CE22700E8677E /* Security.framework */; };
 		83C36D3B171CF37E0090F037 /* DonateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C36D3A171CF37E0090F037 /* DonateViewController.m */; };
-		83C36D3E171CF7AE0090F037 /* WellLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C36D3D171CF7AD0090F037 /* WellLocation.m */; };
 		83C36D40171CF88B0090F037 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83C36D3F171CF88B0090F037 /* AddressBook.framework */; };
 		D530F39417530C49008103FE /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D530F39317530C49008103FE /* GoogleMaps.framework */; };
 		D540479317530E4E0056196E /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D540479217530E4E0056196E /* GoogleMaps.bundle */; };
@@ -100,7 +98,6 @@
 		837D4B12171CE22700E8677E /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		837D4B13171CE22700E8677E /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		837D4B14171CE22700E8677E /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
-		837D4B15171CE22700E8677E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		837D4B16171CE22700E8677E /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		837D4B17171CE22700E8677E /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		837D4B18171CE22700E8677E /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -108,8 +105,6 @@
 		837D4B1A171CE22700E8677E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		83C36D39171CF37E0090F037 /* DonateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DonateViewController.h; sourceTree = "<group>"; };
 		83C36D3A171CF37E0090F037 /* DonateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DonateViewController.m; sourceTree = "<group>"; };
-		83C36D3C171CF7AD0090F037 /* WellLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WellLocation.h; sourceTree = "<group>"; };
-		83C36D3D171CF7AD0090F037 /* WellLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WellLocation.m; sourceTree = "<group>"; };
 		83C36D3F171CF88B0090F037 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		D530F39317530C49008103FE /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
 		D540479217530E4E0056196E /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
@@ -145,7 +140,6 @@
 				837D4B1C171CE22700E8677E /* CoreMedia.framework in Frameworks */,
 				837D4B1D171CE22700E8677E /* CoreVideo.framework in Frameworks */,
 				837D4B1E171CE22700E8677E /* libxml2.dylib in Frameworks */,
-				837D4B1F171CE22700E8677E /* MapKit.framework in Frameworks */,
 				837D4B21171CE22700E8677E /* MobileCoreServices.framework in Frameworks */,
 				837D4B1B171CE22700E8677E /* AudioToolbox.framework in Frameworks */,
 				837D4B20171CE22700E8677E /* MessageUI.framework in Frameworks */,
@@ -212,7 +206,6 @@
 				837D4B13171CE22700E8677E /* CoreVideo.framework */,
 				837D2CD1171CDA4500E8677E /* Foundation.framework */,
 				837D4B14171CE22700E8677E /* libxml2.dylib */,
-				837D4B15171CE22700E8677E /* MapKit.framework */,
 				837D4B16171CE22700E8677E /* MessageUI.framework */,
 				837D4B17171CE22700E8677E /* MobileCoreServices.framework */,
 				837D4B18171CE22700E8677E /* OpenGLES.framework */,
@@ -242,8 +235,6 @@
 				837D2CF7171CDA4500E8677E /* second.png */,
 				837D2CF9171CDA4500E8677E /* second@2x.png */,
 				837D2CD6171CDA4500E8677E /* Supporting Files */,
-				83C36D3C171CF7AD0090F037 /* WellLocation.h */,
-				83C36D3D171CF7AD0090F037 /* WellLocation.m */,
 			);
 			path = "Thirst Project";
 			sourceTree = "<group>";
@@ -393,7 +384,6 @@
 				837D2CEF171CDA4500E8677E /* AboutViewController.m in Sources */,
 				837D2CF6171CDA4500E8677E /* MapViewController.m in Sources */,
 				83C36D3B171CF37E0090F037 /* DonateViewController.m in Sources */,
-				83C36D3E171CF7AE0090F037 /* WellLocation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
