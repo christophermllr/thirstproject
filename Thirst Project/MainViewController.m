@@ -35,6 +35,7 @@
 
 @interface MainViewController ()
 
+@property(nonatomic, strong, readwrite) IBOutlet UITextField *amountField;
 @property(nonatomic, strong, readwrite) IBOutlet UIButton *payButton;
 @property(nonatomic, strong, readwrite) IBOutlet UIView *successView;
 
@@ -83,7 +84,8 @@
   self.completedPayment = nil;
   
   PayPalPayment *payment = [[PayPalPayment alloc] init];
-  payment.amount = [[NSDecimalNumber alloc] initWithString:@"9.95"];
+  payment.amount = [[NSDecimalNumber alloc] initWithString:self.amountField.text];
+    NSLog([NSString stringWithFormat: @"Photo: Amount=%@ ", payment.amount ] );
   payment.currencyCode = @"USD";
   payment.shortDescription = @"Thirst Project Donation";
 

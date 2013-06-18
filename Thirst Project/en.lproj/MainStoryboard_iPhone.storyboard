@@ -148,6 +148,9 @@ Almost 1 billion people on our planet don't have access to safe, clean drinking 
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Donate" id="6Df-dM-PIO"/>
+                    <connections>
+                        <outlet property="amountField" destination="mhN-Z0-AWO" id="Ih0-dP-vBj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lHT-uW-FZd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -215,6 +218,7 @@ Almost 1 billion people on our planet don't have access to safe, clean drinking 
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MainViewController.h"/>
             <relationships>
                 <relationship kind="action" name="togglePopover:"/>
+                <relationship kind="outlet" name="amountField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="payButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="successView" candidateClass="UIView"/>
             </relationships>
