@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		83079642176FFEFE00CC7478 /* FlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8307963F176FFEFE00CC7478 /* FlipsideViewController.m */; };
+		83079643176FFEFE00CC7478 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83079641176FFEFE00CC7478 /* MainViewController.m */; };
+		8307964A1770017000CC7478 /* button_secondary_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 830796441770017000CC7478 /* button_secondary_selected.png */; };
+		8307964B1770017000CC7478 /* button_secondary_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 830796451770017000CC7478 /* button_secondary_selected@2x.png */; };
+		8307964C1770017000CC7478 /* button_secondary.png in Resources */ = {isa = PBXBuildFile; fileRef = 830796461770017000CC7478 /* button_secondary.png */; };
+		8307964D1770017000CC7478 /* button_secondary@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 830796471770017000CC7478 /* button_secondary@2x.png */; };
+		8307964E1770017000CC7478 /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = 830796481770017000CC7478 /* check.png */; };
+		8307964F1770017000CC7478 /* check@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 830796491770017000CC7478 /* check@2x.png */; };
 		837D2CD0171CDA4500E8677E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837D2CCF171CDA4500E8677E /* UIKit.framework */; };
 		837D2CD2171CDA4500E8677E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837D2CD1171CDA4500E8677E /* Foundation.framework */; };
 		837D2CD4171CDA4500E8677E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837D2CD3171CDA4500E8677E /* CoreGraphics.framework */; };
@@ -43,7 +51,6 @@
 		839F04BB175EE07E0007231F /* Thirst_Water_Photo_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 839F04B6175EE07E0007231F /* Thirst_Water_Photo_3.jpg */; };
 		839F04BC175EE07E0007231F /* Thirst_Water_Photo_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 839F04B7175EE07E0007231F /* Thirst_Water_Photo_4.jpg */; };
 		839F04BD175EE07E0007231F /* Thirst_Water_Photo_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 839F04B8175EE07E0007231F /* Thirst_Water_Photo_5.jpg */; };
-		83C36D3B171CF37E0090F037 /* DonateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C36D3A171CF37E0090F037 /* DonateViewController.m */; };
 		83C36D40171CF88B0090F037 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83C36D3F171CF88B0090F037 /* AddressBook.framework */; };
 		D530F39417530C49008103FE /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D530F39317530C49008103FE /* GoogleMaps.framework */; };
 		D540479317530E4E0056196E /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D540479217530E4E0056196E /* GoogleMaps.bundle */; };
@@ -69,6 +76,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8307963E176FFEFE00CC7478 /* FlipsideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlipsideViewController.h; sourceTree = "<group>"; };
+		8307963F176FFEFE00CC7478 /* FlipsideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlipsideViewController.m; sourceTree = "<group>"; };
+		83079640176FFEFE00CC7478 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		83079641176FFEFE00CC7478 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		830796441770017000CC7478 /* button_secondary_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_secondary_selected.png; sourceTree = "<group>"; };
+		830796451770017000CC7478 /* button_secondary_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_secondary_selected@2x.png"; sourceTree = "<group>"; };
+		830796461770017000CC7478 /* button_secondary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_secondary.png; sourceTree = "<group>"; };
+		830796471770017000CC7478 /* button_secondary@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_secondary@2x.png"; sourceTree = "<group>"; };
+		830796481770017000CC7478 /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
+		830796491770017000CC7478 /* check@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check@2x.png"; sourceTree = "<group>"; };
 		837D2CCC171CDA4500E8677E /* Thirst Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Thirst Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		837D2CCF171CDA4500E8677E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		837D2CD1171CDA4500E8677E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -113,8 +130,6 @@
 		839F04B6175EE07E0007231F /* Thirst_Water_Photo_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Thirst_Water_Photo_3.jpg; sourceTree = "<group>"; };
 		839F04B7175EE07E0007231F /* Thirst_Water_Photo_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Thirst_Water_Photo_4.jpg; sourceTree = "<group>"; };
 		839F04B8175EE07E0007231F /* Thirst_Water_Photo_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Thirst_Water_Photo_5.jpg; sourceTree = "<group>"; };
-		83C36D39171CF37E0090F037 /* DonateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DonateViewController.h; sourceTree = "<group>"; };
-		83C36D3A171CF37E0090F037 /* DonateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DonateViewController.m; sourceTree = "<group>"; };
 		83C36D3F171CF88B0090F037 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		D530F39317530C49008103FE /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
 		D540479217530E4E0056196E /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
@@ -230,12 +245,20 @@
 		837D2CD5171CDA4500E8677E /* Thirst Project */ = {
 			isa = PBXGroup;
 			children = (
+				830796441770017000CC7478 /* button_secondary_selected.png */,
+				830796451770017000CC7478 /* button_secondary_selected@2x.png */,
+				830796461770017000CC7478 /* button_secondary.png */,
+				830796471770017000CC7478 /* button_secondary@2x.png */,
+				830796481770017000CC7478 /* check.png */,
+				830796491770017000CC7478 /* check@2x.png */,
+				8307963E176FFEFE00CC7478 /* FlipsideViewController.h */,
+				8307963F176FFEFE00CC7478 /* FlipsideViewController.m */,
+				83079640176FFEFE00CC7478 /* MainViewController.h */,
+				83079641176FFEFE00CC7478 /* MainViewController.m */,
 				837D2CED171CDA4500E8677E /* AboutViewController.h */,
 				837D2CEE171CDA4500E8677E /* AboutViewController.m */,
 				837D2CDE171CDA4500E8677E /* AppDelegate.h */,
 				837D2CDF171CDA4500E8677E /* AppDelegate.m */,
-				83C36D39171CF37E0090F037 /* DonateViewController.h */,
-				83C36D3A171CF37E0090F037 /* DonateViewController.m */,
 				837D2CF0171CDA4500E8677E /* first.png */,
 				837D2CF2171CDA4500E8677E /* first@2x.png */,
 				837D2CEA171CDA4500E8677E /* MainStoryboard_iPad.storyboard */,
@@ -366,6 +389,12 @@
 				839F04BB175EE07E0007231F /* Thirst_Water_Photo_3.jpg in Resources */,
 				839F04BC175EE07E0007231F /* Thirst_Water_Photo_4.jpg in Resources */,
 				839F04BD175EE07E0007231F /* Thirst_Water_Photo_5.jpg in Resources */,
+				8307964A1770017000CC7478 /* button_secondary_selected.png in Resources */,
+				8307964B1770017000CC7478 /* button_secondary_selected@2x.png in Resources */,
+				8307964C1770017000CC7478 /* button_secondary.png in Resources */,
+				8307964D1770017000CC7478 /* button_secondary@2x.png in Resources */,
+				8307964E1770017000CC7478 /* check.png in Resources */,
+				8307964F1770017000CC7478 /* check@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,7 +432,8 @@
 				837D2CE0171CDA4500E8677E /* AppDelegate.m in Sources */,
 				837D2CEF171CDA4500E8677E /* AboutViewController.m in Sources */,
 				837D2CF6171CDA4500E8677E /* MapViewController.m in Sources */,
-				83C36D3B171CF37E0090F037 /* DonateViewController.m in Sources */,
+				83079642176FFEFE00CC7478 /* FlipsideViewController.m in Sources */,
+				83079643176FFEFE00CC7478 /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

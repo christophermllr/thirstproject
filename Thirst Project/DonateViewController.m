@@ -14,41 +14,40 @@
 
 @implementation DonateViewController
 
-- (void)loadView {
-    [super loadView];
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.title = @"PayPal iOS Library Demo";
+    self.acceptCreditCards = YES;
+    self.environment = PayPalEnvironmentNoNetwork;
+    // Do any additional setup after loading the view, typically from a nib.
     
-    UIWebView *aWebView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 00, 320,450)];
-    aWebView.scalesPageToFit = YES;
-    [aWebView setDelegate:self];
+    self.successView.hidden = YES;
     
-    NSString *item = @"Gum";
-    NSInteger amount = 1;
-    
-    NSString *itemParameter = @"itemName=";
-    itemParameter = [itemParameter stringByAppendingString:item];
-    
-    NSString *amountParameter = @"amount=";
-    amountParameter = [amountParameter stringByAppendingFormat:@"%d",amount];
-    
-    NSString *urlString = @"http://haifa.baluyos.net/dev/PayPal/SetExpressCheckout.php?";
-    urlString = [urlString stringByAppendingString:amountParameter];
-    urlString = [urlString stringByAppendingString:@"&"];
-    urlString = [urlString stringByAppendingString:itemParameter];
-    
-    
-    
-    //Create a URL object.
-    NSURL *url = [NSURL URLWithString:urlString];
-    
-    //URL Requst Object
-    NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
-    
-    //load the URL into the web view.
-    [aWebView loadRequest:requestObj];
-    
-    //[self.view addSubview:myLabel];
-    [self.view addSubview:aWebView];
+    NSLog(@"PayPal iOS SDK version: %@", [PayPalPaymentViewController libraryVersion]);
 }
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:YES];
+    
+    UIEdgeInsets insets = UIEdgeInsetsMake(0, 15.0f, 0, 14.0f);
+    UIImage *payBackgroundImage = [[UIImage imageNamed:@"button_secondary.png"] resizableImageWithCapInsets:insets];
+    UIImage *payBackgroundImageHighlighted = [[UIImage imageNamed:@"button_secondary_selected.png"] resizableImageWithCapInsets:insets];
+    [self.payButton setBackgroundImage:payBackgroundImage forState:UIControlStateNormal];
+    [self.payButton setBackgroundImage:payBackgroundImageHighlighted forState:UIControlStateHighlighted];
+    [self.payButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+    [self.payButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateHighlighted];
+    
+    // Optimization: Prepare for display of the payment UI by getting network work done early
+    [PayPalPaymentViewController setEnvironment:self.environment];
+    [PayPalPaymentViewController prepareForPaymentUsingClientId:kPayPalClientId];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Pay action
 
 - (IBAction)pay {
     
@@ -83,20 +82,32 @@
     
 }
 
+#pragma mark - Proof of payment validation
+
+- (void)sendCompletedPaymentToServer:(PayPalPayment *)completedPayment {
+    // TODO: Send completedPayment.confirmation to server
+    NSLog(@"Here is your proof of payment:\n\n%@\n\nSend this to your server for confirmation and fulfillment.", completedPayment.confirmation);
+}
+
 #pragma mark - PayPalPaymentDelegate methods
 
 - (void)payPalPaymentDidComplete:(PayPalPayment *)completedPayment {
-    // Payment was processed successfully; send to server for verification and fulfillment.
-    //[self verifyCompletedPayment:completedPayment];
+    NSLog(@"PayPal Payment Success!");
+    self.completedPayment = completedPayment;
+    self.successView.hidden = NO;
     
-    // Dismiss the PayPalPaymentViewController.
+    [self sendCompletedPaymentToServer:completedPayment]; // Payment was processed successfully; send to server for verification and fulfillment
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)payPalPaymentDidCancel {
-    // The payment was canceled; dismiss the PayPalPaymentViewController.
+    NSLog(@"PayPal Payment Canceled");
+    self.completedPayment = nil;
+    self.successView.hidden = YES;
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+
 
 
 @end
