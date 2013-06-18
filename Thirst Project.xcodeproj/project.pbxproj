@@ -178,15 +178,6 @@
 		837D2CC3171CDA4500E8677E = {
 			isa = PBXGroup;
 			children = (
-				D54047A417530F8C0056196E /* SystemConfiguration.framework */,
-				D54047A217530F190056196E /* libz.dylib */,
-				D54047A017530F050056196E /* libicucore.dylib */,
-				D540479E17530EF20056196E /* libc++.dylib */,
-				D540479C17530ED20056196E /* ImageIO.framework */,
-				D540479A17530EBF0056196E /* GLKit.framework */,
-				D540479817530EAF0056196E /* CoreText.framework */,
-				D540479617530EA50056196E /* CoreLocation.framework */,
-				D540479417530E9D0056196E /* CoreData.framework */,
 				837D4B09171CDC4600E8677E /* PayPalMobile */,
 				837D2CD5171CDA4500E8677E /* Thirst Project */,
 				837D2CCE171CDA4500E8677E /* Frameworks */,
@@ -206,6 +197,15 @@
 		837D2CCE171CDA4500E8677E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D54047A417530F8C0056196E /* SystemConfiguration.framework */,
+				D54047A217530F190056196E /* libz.dylib */,
+				D54047A017530F050056196E /* libicucore.dylib */,
+				D540479E17530EF20056196E /* libc++.dylib */,
+				D540479C17530ED20056196E /* ImageIO.framework */,
+				D540479A17530EBF0056196E /* GLKit.framework */,
+				D540479817530EAF0056196E /* CoreText.framework */,
+				D540479617530EA50056196E /* CoreLocation.framework */,
+				D540479417530E9D0056196E /* CoreData.framework */,
 				D540479217530E4E0056196E /* GoogleMaps.bundle */,
 				D530F39317530C49008103FE /* GoogleMaps.framework */,
 				83C36D3F171CF88B0090F037 /* AddressBook.framework */,

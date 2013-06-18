@@ -14,6 +14,42 @@
 
 @implementation DonateViewController
 
+- (void)loadView {
+    [super loadView];
+    
+    UIWebView *aWebView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 00, 320,450)];
+    aWebView.scalesPageToFit = YES;
+    [aWebView setDelegate:self];
+    
+    NSString *item = @"Gum";
+    NSInteger amount = 1;
+    
+    NSString *itemParameter = @"itemName=";
+    itemParameter = [itemParameter stringByAppendingString:item];
+    
+    NSString *amountParameter = @"amount=";
+    amountParameter = [amountParameter stringByAppendingFormat:@"%d",amount];
+    
+    NSString *urlString = @"http://haifa.baluyos.net/dev/PayPal/SetExpressCheckout.php?";
+    urlString = [urlString stringByAppendingString:amountParameter];
+    urlString = [urlString stringByAppendingString:@"&"];
+    urlString = [urlString stringByAppendingString:itemParameter];
+    
+    
+    
+    //Create a URL object.
+    NSURL *url = [NSURL URLWithString:urlString];
+    
+    //URL Requst Object
+    NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
+    
+    //load the URL into the web view.
+    [aWebView loadRequest:requestObj];
+    
+    //[self.view addSubview:myLabel];
+    [self.view addSubview:aWebView];
+}
+
 - (IBAction)pay {
     
     NSString *clientId = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"PayPalClientId"];
