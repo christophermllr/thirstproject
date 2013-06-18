@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -20,8 +20,8 @@
                             </label>
                             <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" bouncesZoom="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="21">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="371" id="YXw-1a-ntE"/>
-                                    <constraint firstAttribute="width" constant="155" id="c0v-Vo-29o"/>
+                                    <constraint firstAttribute="height" constant="415" id="8BD-WI-GIN"/>
+                                    <constraint firstAttribute="width" constant="165" id="pLG-Ie-hff"/>
                                 </constraints>
                                 <string key="text">The Problem
 
@@ -29,22 +29,22 @@ Almost 1 billion people on our planet don't have access to safe, clean drinking 
                                 <fontDescription key="fontDescription" type="system" size="system"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MBP-st-0CH">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Thirst_Water_Photo_1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="MBP-st-0CH">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="132" id="oBA-Yh-aMB"/>
-                                    <constraint firstAttribute="height" constant="260" id="oht-GA-o13"/>
+                                    <constraint firstAttribute="width" constant="147" id="5aq-zy-MhY"/>
+                                    <constraint firstAttribute="height" constant="231" id="xU8-3d-Nxx"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="MBP-st-0CH" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="10" id="HKz-hX-l1c"/>
-                            <constraint firstAttribute="trailing" secondItem="21" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="QBg-X6-fBV"/>
                             <constraint firstAttribute="trailing" secondItem="20" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Qxj-1L-2Yh"/>
+                            <constraint firstItem="MBP-st-0CH" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="10" id="SHU-6L-z7J"/>
                             <constraint firstItem="20" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Ty9-wx-CyI"/>
-                            <constraint firstItem="21" firstAttribute="top" secondItem="16" secondAttribute="top" constant="76" id="gLQ-AM-6nu"/>
                             <constraint firstItem="20" firstAttribute="top" secondItem="16" secondAttribute="top" constant="20" symbolic="YES" type="default" id="ubf-Ko-0QF"/>
+                            <constraint firstItem="21" firstAttribute="trailing" secondItem="16" secondAttribute="trailing" type="default" id="uoP-jn-Gw2"/>
                             <constraint firstItem="MBP-st-0CH" firstAttribute="top" secondItem="20" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="viP-lY-DEe"/>
+                            <constraint firstAttribute="bottom" secondItem="21" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="w4U-tS-mtr"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="About" image="first" id="7"/>
@@ -117,6 +117,7 @@ Almost 1 billion people on our planet don't have access to safe, clean drinking 
         </scene>
     </scenes>
     <resources>
+        <image name="Thirst_Water_Photo_1.jpg" width="600" height="900"/>
         <image name="first" width="16" height="16"/>
         <image name="second" width="16" height="16"/>
     </resources>

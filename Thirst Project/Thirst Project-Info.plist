@@ -2,10 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>PayPalClientId</key>
-	<string>AcTishC87XiWR1EpWkcYPIKZSpebfstnAPkggMl5KiIzKnyiHIDEGru3OCVS</string>
-	<key>PayPalEmailAddress</key>
-	<string>cmiller0189@gmail.com</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
@@ -28,6 +24,10 @@
 	<string>1.0</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>PayPalClientId</key>
+	<string>AcTishC87XiWR1EpWkcYPIKZSpebfstnAPkggMl5KiIzKnyiHIDEGru3OCVS</string>
+	<key>PayPalEmailAddress</key>
+	<string>cmiller0189@gmail.com</string>
 	<key>UIMainStoryboardFile</key>
 	<string>MainStoryboard_iPhone</string>
 	<key>UIMainStoryboardFile~ipad</key>
