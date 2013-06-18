@@ -60,7 +60,92 @@ Almost 1 billion people on our planet don't have access to safe, clean drinking 
                     <view key="view" contentMode="scaleToFill" id="VC8-Fj-Nag">
                         <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9y4-G6-HmV">
+                                <items>
+                                    <navigationItem title="Donate to Thirst Project" id="BZW-mD-f8R"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhb-Vc-a7S">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Donate">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pay" destination="Lck-JH-vOB" eventType="touchUpInside" id="sJT-D1-EUG"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Click the button above to donate to Thirst Project using PayPal!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="mEc-wl-q8H">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="q2V-1e-fGy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.50715438180000005" green="0.50715438180000005" blue="0.50715438180000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ov-Uf-Q3g">
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="check.png" translatesAutoresizingMaskIntoConstraints="NO" id="p1u-Ew-v65">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="72x-Bb-twg"/>
+                                            <constraint firstAttribute="width" constant="66" id="QZ5-iD-aFd"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Your transaction was successful!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TFR-Xb-A1d">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="29" id="JBc-Fs-abL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.49946925949999998" green="0.49946925949999998" blue="0.49946925949999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.84999999999999998" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="TFR-Xb-A1d" secondAttribute="bottom" constant="7" id="4GB-Xt-C4n"/>
+                                    <constraint firstItem="TFR-Xb-A1d" firstAttribute="leading" secondItem="5ov-Uf-Q3g" secondAttribute="leading" type="default" id="ajx-Px-88h"/>
+                                    <constraint firstItem="TFR-Xb-A1d" firstAttribute="trailing" secondItem="5ov-Uf-Q3g" secondAttribute="trailing" type="default" id="mhr-E8-Yxs"/>
+                                    <constraint firstItem="p1u-Ew-v65" firstAttribute="top" secondItem="5ov-Uf-Q3g" secondAttribute="top" type="default" id="obH-Bg-neN"/>
+                                    <constraint firstItem="TFR-Xb-A1d" firstAttribute="centerX" secondItem="p1u-Ew-v65" secondAttribute="centerX" type="default" id="vOt-rE-DY3"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mhN-Z0-AWO">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="a1a-ki-aWi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Amount:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWU-uC-ChQ">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zhb-Vc-a7S" firstAttribute="leading" secondItem="VC8-Fj-Nag" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="4pg-4i-Qnv"/>
+                            <constraint firstAttribute="trailing" secondItem="5ov-Uf-Q3g" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="5O5-Cn-4Ck"/>
+                            <constraint firstItem="aWU-uC-ChQ" firstAttribute="leading" secondItem="VC8-Fj-Nag" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Ap0-iW-Ucu"/>
+                            <constraint firstItem="zhb-Vc-a7S" firstAttribute="top" secondItem="VC8-Fj-Nag" secondAttribute="top" constant="149" id="Hrr-NH-APu"/>
+                            <constraint firstAttribute="trailing" secondItem="mEc-wl-q8H" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="K4E-5y-lVR"/>
+                            <constraint firstItem="mhN-Z0-AWO" firstAttribute="centerX" secondItem="9y4-G6-HmV" secondAttribute="centerX" type="default" id="UCe-gu-0k3"/>
+                            <constraint firstItem="5ov-Uf-Q3g" firstAttribute="leading" secondItem="VC8-Fj-Nag" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="b07-9a-Clt"/>
+                            <constraint firstItem="aWU-uC-ChQ" firstAttribute="top" secondItem="mhN-Z0-AWO" secondAttribute="top" type="default" id="etT-p2-Fbp"/>
+                            <constraint firstItem="aWU-uC-ChQ" firstAttribute="top" secondItem="VC8-Fj-Nag" secondAttribute="top" constant="77" id="f7B-Os-RIt"/>
+                            <constraint firstItem="9y4-G6-HmV" firstAttribute="top" secondItem="VC8-Fj-Nag" secondAttribute="top" type="default" id="gMw-Yu-lnu"/>
+                            <constraint firstItem="5ov-Uf-Q3g" firstAttribute="top" secondItem="VC8-Fj-Nag" secondAttribute="top" constant="261" id="haM-U7-DIY"/>
+                            <constraint firstItem="9y4-G6-HmV" firstAttribute="trailing" secondItem="VC8-Fj-Nag" secondAttribute="trailing" type="default" id="iHH-92-j5D"/>
+                            <constraint firstItem="9y4-G6-HmV" firstAttribute="leading" secondItem="VC8-Fj-Nag" secondAttribute="leading" type="default" id="jlb-T3-UXZ"/>
+                            <constraint firstItem="mEc-wl-q8H" firstAttribute="top" secondItem="zhb-Vc-a7S" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="lx5-5M-T37"/>
+                            <constraint firstItem="mEc-wl-q8H" firstAttribute="leading" secondItem="VC8-Fj-Nag" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="mjd-4p-0Am"/>
+                            <constraint firstAttribute="trailing" secondItem="zhb-Vc-a7S" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="oSQ-M0-QeN"/>
+                            <constraint firstAttribute="bottom" secondItem="5ov-Uf-Q3g" secondAttribute="bottom" constant="160" id="w6V-Jo-ZGV"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Donate" id="6Df-dM-PIO"/>
                 </viewController>
@@ -118,6 +203,7 @@ Almost 1 billion people on our planet don't have access to safe, clean drinking 
     </scenes>
     <resources>
         <image name="Thirst_Water_Photo_1.jpg" width="600" height="900"/>
+        <image name="check.png" width="84" height="75"/>
         <image name="first" width="16" height="16"/>
         <image name="second" width="16" height="16"/>
     </resources>

@@ -85,7 +85,7 @@
   PayPalPayment *payment = [[PayPalPayment alloc] init];
   payment.amount = [[NSDecimalNumber alloc] initWithString:@"9.95"];
   payment.currencyCode = @"USD";
-  payment.shortDescription = @"Hipster t-shirt";
+  payment.shortDescription = @"Thirst Project Donation";
 
   if (!payment.processable) {
     // This particular payment will always be processable. If, for
@@ -93,10 +93,6 @@
     // empty, this payment wouldn't be processable, and you'd want
     // to handle that here.
   }
-
-  // Any customer identifier that you have will work here. Do NOT use a device- or
-  // hardware-based identifier.
-  NSString *customerId = @"user-11723";
 
   // Set the environment:
   // - For live charges, use PayPalEnvironmentProduction (default).
@@ -108,7 +104,7 @@
     NSString *emailAddress = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"PayPalEmailAddress"];
   PayPalPaymentViewController *paymentViewController = [[PayPalPaymentViewController alloc] initWithClientId:clientId
                                                                                                receiverEmail:emailAddress
-                                                                                                     payerId:customerId
+                                                                                                     payerId:nil
                                                                                                      payment:payment
                                                                                                     delegate:self];
   paymentViewController.hideCreditCardButton = !self.acceptCreditCards;
