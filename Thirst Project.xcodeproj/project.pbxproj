@@ -38,6 +38,11 @@
 		837D4B22171CE22700E8677E /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837D4B18171CE22700E8677E /* OpenGLES.framework */; };
 		837D4B23171CE22700E8677E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837D4B19171CE22700E8677E /* QuartzCore.framework */; };
 		837D4B24171CE22700E8677E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837D4B1A171CE22700E8677E /* Security.framework */; };
+		839F04B9175EE07E0007231F /* Thirst_Water_Photo_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 839F04B4175EE07E0007231F /* Thirst_Water_Photo_1.jpg */; };
+		839F04BA175EE07E0007231F /* Thirst_Water_Photo_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 839F04B5175EE07E0007231F /* Thirst_Water_Photo_2.jpg */; };
+		839F04BB175EE07E0007231F /* Thirst_Water_Photo_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 839F04B6175EE07E0007231F /* Thirst_Water_Photo_3.jpg */; };
+		839F04BC175EE07E0007231F /* Thirst_Water_Photo_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 839F04B7175EE07E0007231F /* Thirst_Water_Photo_4.jpg */; };
+		839F04BD175EE07E0007231F /* Thirst_Water_Photo_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 839F04B8175EE07E0007231F /* Thirst_Water_Photo_5.jpg */; };
 		83C36D3B171CF37E0090F037 /* DonateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C36D3A171CF37E0090F037 /* DonateViewController.m */; };
 		83C36D40171CF88B0090F037 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83C36D3F171CF88B0090F037 /* AddressBook.framework */; };
 		D530F39417530C49008103FE /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D530F39317530C49008103FE /* GoogleMaps.framework */; };
@@ -103,6 +108,11 @@
 		837D4B18171CE22700E8677E /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		837D4B19171CE22700E8677E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		837D4B1A171CE22700E8677E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		839F04B4175EE07E0007231F /* Thirst_Water_Photo_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Thirst_Water_Photo_1.jpg; sourceTree = "<group>"; };
+		839F04B5175EE07E0007231F /* Thirst_Water_Photo_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Thirst_Water_Photo_2.jpg; sourceTree = "<group>"; };
+		839F04B6175EE07E0007231F /* Thirst_Water_Photo_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Thirst_Water_Photo_3.jpg; sourceTree = "<group>"; };
+		839F04B7175EE07E0007231F /* Thirst_Water_Photo_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Thirst_Water_Photo_4.jpg; sourceTree = "<group>"; };
+		839F04B8175EE07E0007231F /* Thirst_Water_Photo_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Thirst_Water_Photo_5.jpg; sourceTree = "<group>"; };
 		83C36D39171CF37E0090F037 /* DonateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DonateViewController.h; sourceTree = "<group>"; };
 		83C36D3A171CF37E0090F037 /* DonateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DonateViewController.m; sourceTree = "<group>"; };
 		83C36D3F171CF88B0090F037 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
@@ -242,6 +252,11 @@
 		837D2CD6171CDA4500E8677E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				839F04B4175EE07E0007231F /* Thirst_Water_Photo_1.jpg */,
+				839F04B5175EE07E0007231F /* Thirst_Water_Photo_2.jpg */,
+				839F04B6175EE07E0007231F /* Thirst_Water_Photo_3.jpg */,
+				839F04B7175EE07E0007231F /* Thirst_Water_Photo_4.jpg */,
+				839F04B8175EE07E0007231F /* Thirst_Water_Photo_5.jpg */,
 				837D2CD7171CDA4500E8677E /* Thirst Project-Info.plist */,
 				837D2CD8171CDA4500E8677E /* InfoPlist.strings */,
 				837D2CDB171CDA4500E8677E /* main.m */,
@@ -346,6 +361,11 @@
 				837D2CF8171CDA4500E8677E /* second.png in Resources */,
 				837D2CFA171CDA4500E8677E /* second@2x.png in Resources */,
 				D540479317530E4E0056196E /* GoogleMaps.bundle in Resources */,
+				839F04B9175EE07E0007231F /* Thirst_Water_Photo_1.jpg in Resources */,
+				839F04BA175EE07E0007231F /* Thirst_Water_Photo_2.jpg in Resources */,
+				839F04BB175EE07E0007231F /* Thirst_Water_Photo_3.jpg in Resources */,
+				839F04BC175EE07E0007231F /* Thirst_Water_Photo_4.jpg in Resources */,
+				839F04BD175EE07E0007231F /* Thirst_Water_Photo_5.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
