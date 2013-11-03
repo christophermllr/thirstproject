@@ -20,7 +20,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" bouncesZoom="NO" editable="NO" textAlignment="center" selectable="NO" id="21">
-                                <rect key="frame" x="20" y="231" width="271" height="217"/>
+                                <rect key="frame" x="20" y="231" width="280" height="264"/>
                                 <string key="text">Almost 1 billion people on our planet don't have access to safe, clean drinking water and proper sanitization. That's one in every eight of us. 4,500 children die every day from diseases caused by contaminated water. That's huge. That's approximately one child every 15 seconds. 80% of all global diseases are water-borne and result from drinking contaminated water. These diseases kill more than 2.2 million people every year.</string>
                                 <fontDescription key="fontDescription" type="system" size="system"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -41,6 +41,7 @@
         <!--Main View Controller - Donate to Thirst Project-->
         <scene sceneID="sou-tB-ZEY">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lHT-uW-FZd" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Lck-JH-vOB" customClass="MainViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VC8-Fj-Nag">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -90,7 +91,6 @@
                         <outlet property="pickerView" destination="WS0-Lz-icE" id="vBQ-6y-mw5"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lHT-uW-FZd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1193" y="1065"/>
         </scene>
@@ -152,7 +152,7 @@
         <scene sceneID="q4T-hm-XOP">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wOz-Md-ywg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Wells" image="second" id="6"/>
+                    <tabBarItem key="tabBarItem" title="Wells" image="Well" id="6"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="J1Z-6i-d9e">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -171,7 +171,7 @@
         <scene sceneID="x02-uH-1MY">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="n8g-w3-ib6" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Donate" id="6Df-dM-PIO"/>
+                    <tabBarItem key="tabBarItem" title="Donate" image="Donate" id="6Df-dM-PIO"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kQe-uL-byu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -188,9 +188,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Donate" width="25" height="23"/>
         <image name="Drop" width="25" height="25"/>
         <image name="Logo" width="280" height="123"/>
-        <image name="second" width="30" height="30"/>
+        <image name="Well" width="25" height="25"/>
     </resources>
     <color key="tintColor" red="0.011764707040000001" green="0.66666668650000005" blue="0.67058825489999996" alpha="1" colorSpace="deviceRGB"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
