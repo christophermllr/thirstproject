@@ -1,19 +1,19 @@
 //
-//  AboutViewController.m
+//  WellViewController.m
 //  Thirst Project
 //
-//  Created by Christopher Miller on 4/15/13.
+//  Created by Christopher Miller on 11/3/13.
 //  Copyright (c) 2013 Thirst Project. All rights reserved.
 //
 
-#import "AboutViewController.h"
+#import "WellViewController.h"
 #import "AppDelegate.h"
 
-@interface AboutViewController ()
+@interface WellViewController ()
 
 @end
 
-@implementation AboutViewController
+@implementation WellViewController
 
 - (void)viewDidLoad
 {
@@ -25,7 +25,6 @@
         self.navigationController.navigationBar.barTintColor = [(AppDelegate *)[UIApplication sharedApplication].delegate TPColor];
         self.navigationController.navigationBar.translucent = NO;
         self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
-
     } else {
         self.navigationController.navigationBar.tintColor = [(AppDelegate *)[UIApplication sharedApplication].delegate TPColor];
     }

@@ -10,9 +10,12 @@
 
 @implementation AppDelegate
 
+@synthesize TPColor;
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
+    TPColor = [UIColor colorWithRed:3.0f/255.0f green:170.0f/255.0f blue:171.0f/255.0f alpha:1.0f];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     return YES;
 }
 							

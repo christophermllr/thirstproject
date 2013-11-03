@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
     </dependencies>
     <scenes>
-        <!--About View Controller - About-->
+        <!--About View Controller - About Thirst Project-->
         <scene sceneID="11">
             <objects>
-                <viewController title="About" id="2" customClass="AboutViewController" sceneMemberID="viewController">
+                <viewController id="2" customClass="AboutViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="16">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,13 +20,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" bouncesZoom="NO" editable="NO" textAlignment="center" selectable="NO" id="21">
-                                <rect key="frame" x="20" y="231" width="280" height="264"/>
+                                <rect key="frame" x="20" y="231" width="280" height="245"/>
                                 <string key="text">Almost 1 billion people on our planet don't have access to safe, clean drinking water and proper sanitization. That's one in every eight of us. 4,500 children die every day from diseases caused by contaminated water. That's huge. That's approximately one child every 15 seconds. 80% of all global diseases are water-borne and result from drinking contaminated water. These diseases kill more than 2.2 million people every year.</string>
                                 <fontDescription key="fontDescription" type="system" size="system"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" id="qI0-j8-N6B">
-                                <rect key="frame" x="20" y="88" width="280" height="123"/>
+                                <rect key="frame" x="20" y="81" width="280" height="123"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -103,7 +103,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="QKL-Iw-eDq"/>
+                    <navigationItem key="navigationItem" title="Well Locations" id="QKL-Iw-eDq"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12" sceneMemberID="firstResponder"/>
             </objects>
@@ -170,6 +170,7 @@
         <!--Navigation Controller - Donate-->
         <scene sceneID="x02-uH-1MY">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WZp-8P-ZyX" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="n8g-w3-ib6" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Donate" image="Donate" id="6Df-dM-PIO"/>
                     <toolbarItems/>
@@ -182,7 +183,6 @@
                         <segue destination="Lck-JH-vOB" kind="relationship" relationship="rootViewController" id="Atf-eH-VkN"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WZp-8P-ZyX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="659" y="1065"/>
         </scene>

@@ -32,6 +32,7 @@
 
 #import "MainViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "AppDelegate.h"
 
 @interface MainViewController ()
 
@@ -76,6 +77,16 @@
     
     self.successView.hidden = YES;
     self.amountField.keyboardType = UIKeyboardTypeDecimalPad;
+    
+    // Set Navbar color for iOS6/7.
+    NSArray *ver = [[UIDevice currentDevice].systemVersion componentsSeparatedByString:@"."];
+    if ([[ver objectAtIndex:0] intValue] >= 7) {
+        self.navigationController.navigationBar.barTintColor = [(AppDelegate *)[UIApplication sharedApplication].delegate TPColor];
+        self.navigationController.navigationBar.translucent = NO;
+        self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
+    } else {
+        self.navigationController.navigationBar.tintColor = [(AppDelegate *)[UIApplication sharedApplication].delegate TPColor];
+    }
     
     NSLog(@"PayPal iOS SDK version: %@", [PayPalPaymentViewController libraryVersion]);
 }

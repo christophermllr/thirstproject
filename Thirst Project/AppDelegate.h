@@ -9,7 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
+{
+    UIColor *TPColor;
+}
 
 @property (strong, nonatomic) UIWindow *window;
+@property (retain, nonatomic) UIColor *TPColor;
 
 @end

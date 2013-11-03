@@ -38,6 +38,7 @@
 		839F04BB175EE07E0007231F /* Thirst_Water_Photo_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 839F04B6175EE07E0007231F /* Thirst_Water_Photo_3.jpg */; };
 		839F04BC175EE07E0007231F /* Thirst_Water_Photo_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 839F04B7175EE07E0007231F /* Thirst_Water_Photo_4.jpg */; };
 		839F04BD175EE07E0007231F /* Thirst_Water_Photo_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 839F04B8175EE07E0007231F /* Thirst_Water_Photo_5.jpg */; };
+		83AD8C6D182714B200689C84 /* WellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AD8C6C182714B200689C84 /* WellViewController.m */; };
 		83C36D40171CF88B0090F037 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83C36D3F171CF88B0090F037 /* AddressBook.framework */; };
 		D540479517530E9D0056196E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D540479417530E9D0056196E /* CoreData.framework */; };
 		D540479717530EA50056196E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D540479617530EA50056196E /* CoreLocation.framework */; };
@@ -101,6 +102,8 @@
 		839F04B6175EE07E0007231F /* Thirst_Water_Photo_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Thirst_Water_Photo_3.jpg; sourceTree = "<group>"; };
 		839F04B7175EE07E0007231F /* Thirst_Water_Photo_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Thirst_Water_Photo_4.jpg; sourceTree = "<group>"; };
 		839F04B8175EE07E0007231F /* Thirst_Water_Photo_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Thirst_Water_Photo_5.jpg; sourceTree = "<group>"; };
+		83AD8C69182713BF00689C84 /* WellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WellViewController.h; sourceTree = "<group>"; };
+		83AD8C6C182714B200689C84 /* WellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WellViewController.m; sourceTree = "<group>"; };
 		83C36D3F171CF88B0090F037 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		D540479417530E9D0056196E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		D540479617530EA50056196E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -212,17 +215,19 @@
 		837D2CD5171CDA4500E8677E /* Thirst Project */ = {
 			isa = PBXGroup;
 			children = (
-				8307963E176FFEFE00CC7478 /* FlipsideViewController.h */,
-				8307963F176FFEFE00CC7478 /* FlipsideViewController.m */,
-				83079640176FFEFE00CC7478 /* MainViewController.h */,
-				83079641176FFEFE00CC7478 /* MainViewController.m */,
 				837D2CED171CDA4500E8677E /* AboutViewController.h */,
 				837D2CEE171CDA4500E8677E /* AboutViewController.m */,
 				837D2CDE171CDA4500E8677E /* AppDelegate.h */,
 				837D2CDF171CDA4500E8677E /* AppDelegate.m */,
+				8307963E176FFEFE00CC7478 /* FlipsideViewController.h */,
+				8307963F176FFEFE00CC7478 /* FlipsideViewController.m */,
 				837D2CEA171CDA4500E8677E /* MainStoryboard_iPad.storyboard */,
 				837D2CE7171CDA4500E8677E /* MainStoryboard_iPhone.storyboard */,
+				83079640176FFEFE00CC7478 /* MainViewController.h */,
+				83079641176FFEFE00CC7478 /* MainViewController.m */,
 				837D2CD6171CDA4500E8677E /* Supporting Files */,
+				83AD8C69182713BF00689C84 /* WellViewController.h */,
+				83AD8C6C182714B200689C84 /* WellViewController.m */,
 			);
 			path = "Thirst Project";
 			sourceTree = "<group>";
@@ -368,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				837D2CDC171CDA4500E8677E /* main.m in Sources */,
+				83AD8C6D182714B200689C84 /* WellViewController.m in Sources */,
 				837D2CE0171CDA4500E8677E /* AppDelegate.m in Sources */,
 				837D2CEF171CDA4500E8677E /* AboutViewController.m in Sources */,
 				83079642176FFEFE00CC7478 /* FlipsideViewController.m in Sources */,
