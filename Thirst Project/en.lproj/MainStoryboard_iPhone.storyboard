@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
     </dependencies>
@@ -8,79 +8,47 @@
         <scene sceneID="11">
             <objects>
                 <viewController title="About" id="2" customClass="AboutViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Ouf-kc-BHN"/>
-                        <viewControllerLayoutGuide type="bottom" id="pGO-o7-xPB"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="16">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="About" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="20">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="About" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="20">
                                 <rect key="frame" x="20" y="20" width="280" height="42"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" bouncesZoom="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="21">
-                                <rect key="frame" x="20" y="231" width="271" height="250"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="415" id="8BD-WI-GIN"/>
-                                    <constraint firstAttribute="width" constant="165" id="pLG-Ie-hff"/>
-                                </constraints>
-                                <string key="text">The Problem
-
-Almost 1 billion people on our planet don't have access to safe, clean drinking water and proper sanitization. That's one in every eight of us. 4,500 children die every day from diseases caused by contaminated water. That's huge. That's approximately one child every 15 seconds. 80% of all global diseases are water-borne and result from drinking contaminated water. These diseases kill more than 2.2 million people every year.</string>
+                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" bouncesZoom="NO" editable="NO" textAlignment="center" selectable="NO" id="21">
+                                <rect key="frame" x="20" y="231" width="271" height="217"/>
+                                <string key="text">Almost 1 billion people on our planet don't have access to safe, clean drinking water and proper sanitization. That's one in every eight of us. 4,500 children die every day from diseases caused by contaminated water. That's huge. That's approximately one child every 15 seconds. 80% of all global diseases are water-borne and result from drinking contaminated water. These diseases kill more than 2.2 million people every year.</string>
                                 <fontDescription key="fontDescription" type="system" size="system"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="qI0-j8-N6B">
-                                <rect key="frame" x="20" y="77" width="280" height="123"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" id="qI0-j8-N6B">
+                                <rect key="frame" x="20" y="88" width="280" height="123"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="20" secondAttribute="trailing" constant="20" symbolic="YES" id="Qxj-1L-2Yh"/>
-                            <constraint firstItem="20" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" id="Ty9-wx-CyI"/>
-                            <constraint firstItem="20" firstAttribute="top" secondItem="16" secondAttribute="top" constant="20" symbolic="YES" id="ubf-Ko-0QF"/>
-                            <constraint firstItem="21" firstAttribute="trailing" secondItem="16" secondAttribute="trailing" id="uoP-jn-Gw2"/>
-                            <constraint firstAttribute="bottom" secondItem="21" secondAttribute="bottom" constant="20" symbolic="YES" id="w4U-tS-mtr"/>
-                        </constraints>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="About" image="first" id="7"/>
+                    <navigationItem key="navigationItem" title="About Thirst Project" id="DzG-RL-PnI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="653" y="-138"/>
+            <point key="canvasLocation" x="1193" y="-610"/>
         </scene>
-        <!--Main View Controller - Donate-->
+        <!--Main View Controller - Donate to Thirst Project-->
         <scene sceneID="sou-tB-ZEY">
             <objects>
                 <viewController id="Lck-JH-vOB" customClass="MainViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="wKz-ZZ-roA"/>
-                        <viewControllerLayoutGuide type="bottom" id="7u8-MS-O6D"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="VC8-Fj-Nag">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9y4-G6-HmV">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <color key="barTintColor" red="0.011764707043766975" green="0.66666668653488159" blue="0.67058825492858887" alpha="1" colorSpace="deviceRGB"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
-                                    <color key="textShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Donate to Thirst Project" id="BZW-mD-f8R"/>
-                                </items>
-                            </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhb-Vc-a7S">
-                                <rect key="frame" x="20" y="404" width="280" height="30"/>
-                                <state key="normal" title="Donate">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zhb-Vc-a7S">
+                                <rect key="frame" x="20" y="463" width="280" height="30"/>
+                                <state key="normal" title="Donate to Thirst Project via PayPal">
                                     <color key="titleColor" red="0.011764707040000001" green="0.66666668650000005" blue="0.67058825489999996" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -88,37 +56,25 @@ Almost 1 billion people on our planet don't have access to safe, clean drinking 
                                     <action selector="pay" destination="Lck-JH-vOB" eventType="touchUpInside" id="sJT-D1-EUG"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="Click the button above to donate to Thirst Project using PayPal!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="mEc-wl-q8H">
-                                <rect key="frame" x="20" y="437" width="280" height="47"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="47" id="q2V-1e-fGy"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.50715438180000005" green="0.50715438180000005" blue="0.50715438180000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mhN-Z0-AWO">
-                                <rect key="frame" x="172" y="73" width="97" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="97" id="a1a-ki-aWi"/>
-                                </constraints>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="mhN-Z0-AWO">
+                                <rect key="frame" x="159" y="83" width="85" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Amount in USD:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWU-uC-ChQ">
-                                <rect key="frame" x="20" y="77" width="124" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Amount in USD:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aWU-uC-ChQ">
+                                <rect key="frame" x="20" y="87" width="124" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Associated School (optional):" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uXH-Nm-LtU">
-                                <rect key="frame" x="20" y="118" width="224" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Associated School (optional):" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uXH-Nm-LtU">
+                                <rect key="frame" x="20" y="129" width="224" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WS0-Lz-icE">
-                                <rect key="frame" x="0.0" y="147" width="320" height="162"/>
+                            <pickerView contentMode="scaleToFill" id="WS0-Lz-icE">
+                                <rect key="frame" x="0.0" y="158" width="320" height="162"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Lck-JH-vOB" id="sFn-FQ-RPE"/>
@@ -127,23 +83,8 @@ Almost 1 billion people on our planet don't have access to safe, clean drinking 
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="zhb-Vc-a7S" firstAttribute="leading" secondItem="VC8-Fj-Nag" secondAttribute="leading" constant="20" symbolic="YES" id="4pg-4i-Qnv"/>
-                            <constraint firstItem="aWU-uC-ChQ" firstAttribute="leading" secondItem="VC8-Fj-Nag" secondAttribute="leading" constant="20" symbolic="YES" id="Ap0-iW-Ucu"/>
-                            <constraint firstItem="zhb-Vc-a7S" firstAttribute="top" secondItem="VC8-Fj-Nag" secondAttribute="top" constant="149" id="Hrr-NH-APu"/>
-                            <constraint firstAttribute="trailing" secondItem="mEc-wl-q8H" secondAttribute="trailing" constant="20" symbolic="YES" id="K4E-5y-lVR"/>
-                            <constraint firstItem="mhN-Z0-AWO" firstAttribute="centerX" secondItem="9y4-G6-HmV" secondAttribute="centerX" id="UCe-gu-0k3"/>
-                            <constraint firstItem="aWU-uC-ChQ" firstAttribute="top" secondItem="mhN-Z0-AWO" secondAttribute="top" id="etT-p2-Fbp"/>
-                            <constraint firstItem="aWU-uC-ChQ" firstAttribute="top" secondItem="VC8-Fj-Nag" secondAttribute="top" constant="77" id="f7B-Os-RIt"/>
-                            <constraint firstItem="9y4-G6-HmV" firstAttribute="top" secondItem="VC8-Fj-Nag" secondAttribute="top" id="gMw-Yu-lnu"/>
-                            <constraint firstItem="9y4-G6-HmV" firstAttribute="trailing" secondItem="VC8-Fj-Nag" secondAttribute="trailing" id="iHH-92-j5D"/>
-                            <constraint firstItem="9y4-G6-HmV" firstAttribute="leading" secondItem="VC8-Fj-Nag" secondAttribute="leading" id="jlb-T3-UXZ"/>
-                            <constraint firstItem="mEc-wl-q8H" firstAttribute="top" secondItem="zhb-Vc-a7S" secondAttribute="bottom" constant="8" symbolic="YES" id="lx5-5M-T37"/>
-                            <constraint firstItem="mEc-wl-q8H" firstAttribute="leading" secondItem="VC8-Fj-Nag" secondAttribute="leading" constant="20" symbolic="YES" id="mjd-4p-0Am"/>
-                            <constraint firstAttribute="trailing" secondItem="zhb-Vc-a7S" secondAttribute="trailing" constant="20" symbolic="YES" id="oSQ-M0-QeN"/>
-                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Donate" id="6Df-dM-PIO"/>
+                    <navigationItem key="navigationItem" title="Donate to Thirst Project" id="I4B-UB-f2v"/>
                     <connections>
                         <outlet property="amountField" destination="mhN-Z0-AWO" id="Ih0-dP-vBj"/>
                         <outlet property="pickerView" destination="WS0-Lz-icE" id="vBQ-6y-mw5"/>
@@ -151,26 +92,22 @@ Almost 1 billion people on our planet don't have access to safe, clean drinking 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lHT-uW-FZd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="653" y="1161"/>
+            <point key="canvasLocation" x="1193" y="1065"/>
         </scene>
-        <!--Map View Controller - Map-->
+        <!--Well View Controller - Wells-->
         <scene sceneID="13">
             <objects>
-                <viewController title="Map" id="3" customClass="MapViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="3dX-vM-3lM"/>
-                        <viewControllerLayoutGuide type="bottom" id="gOR-wT-Yo3"/>
-                    </layoutGuides>
+                <viewController title="Wells" id="3" customClass="WellViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="17">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Wells" image="second" id="6"/>
+                    <navigationItem key="navigationItem" id="QKL-Iw-eDq"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="653" y="498"/>
+            <point key="canvasLocation" x="1193" y="202"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="15">
@@ -183,19 +120,76 @@ Almost 1 billion people on our planet don't have access to safe, clean drinking 
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="2" kind="relationship" relationship="viewControllers" id="26"/>
-                        <segue destination="3" kind="relationship" relationship="viewControllers" id="27"/>
-                        <segue destination="Lck-JH-vOB" kind="relationship" relationship="viewControllers" id="qa2-Y8-twA"/>
+                        <segue destination="3C0-61-x2n" kind="relationship" relationship="viewControllers" id="26"/>
+                        <segue destination="wOz-Md-ywg" kind="relationship" relationship="viewControllers" id="27"/>
+                        <segue destination="n8g-w3-ib6" kind="relationship" relationship="viewControllers" id="qa2-Y8-twA"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="132" y="180"/>
         </scene>
+        <!--Navigation Controller - About-->
+        <scene sceneID="64S-2V-wbf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3C0-61-x2n" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="About" image="Drop" id="7"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Lz7-q1-GbG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="EB3-vv-7M1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="da7-Me-TeV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="653" y="-610"/>
+        </scene>
+        <!--Navigation Controller - Wells-->
+        <scene sceneID="q4T-hm-XOP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wOz-Md-ywg" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Wells" image="second" id="6"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="J1Z-6i-d9e">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3" kind="relationship" relationship="rootViewController" id="srP-Wj-v7T"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UIq-aa-ic2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="659" y="202"/>
+        </scene>
+        <!--Navigation Controller - Donate-->
+        <scene sceneID="x02-uH-1MY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="n8g-w3-ib6" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Donate" id="6Df-dM-PIO"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kQe-uL-byu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Lck-JH-vOB" kind="relationship" relationship="rootViewController" id="Atf-eH-VkN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WZp-8P-ZyX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="659" y="1065"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="Drop" width="25" height="25"/>
         <image name="Logo" width="280" height="123"/>
-        <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>
     <color key="tintColor" red="0.011764707040000001" green="0.66666668650000005" blue="0.67058825489999996" alpha="1" colorSpace="deviceRGB"/>

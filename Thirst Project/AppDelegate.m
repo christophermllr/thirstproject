@@ -12,9 +12,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    
-    //get well data
-    
+    [[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
     return YES;
 }
 							
