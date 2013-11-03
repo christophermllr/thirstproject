@@ -22,9 +22,6 @@
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="HelveticaNeue-Light"/>
-                                </userDefinedRuntimeAttributes>
                             </label>
                             <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" bouncesZoom="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="21">
                                 <rect key="frame" x="20" y="231" width="271" height="250"/>
@@ -37,9 +34,6 @@
 Almost 1 billion people on our planet don't have access to safe, clean drinking water and proper sanitization. That's one in every eight of us. 4,500 children die every day from diseases caused by contaminated water. That's huge. That's approximately one child every 15 seconds. 80% of all global diseases are water-borne and result from drinking contaminated water. These diseases kill more than 2.2 million people every year.</string>
                                 <fontDescription key="fontDescription" type="system" size="system"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
-                                </userDefinedRuntimeAttributes>
                             </textView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="qI0-j8-N6B">
                                 <rect key="frame" x="20" y="77" width="280" height="123"/>
@@ -73,8 +67,13 @@ Almost 1 billion people on our planet don't have access to safe, clean drinking 
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9y4-G6-HmV">
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9y4-G6-HmV">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <color key="barTintColor" red="0.011764707043766975" green="0.66666668653488159" blue="0.67058825492858887" alpha="1" colorSpace="deviceRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="textShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="Donate to Thirst Project" id="BZW-mD-f8R"/>
                                 </items>
@@ -82,6 +81,7 @@ Almost 1 billion people on our planet don't have access to safe, clean drinking 
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhb-Vc-a7S">
                                 <rect key="frame" x="20" y="404" width="280" height="30"/>
                                 <state key="normal" title="Donate">
+                                    <color key="titleColor" red="0.011764707040000001" green="0.66666668650000005" blue="0.67058825489999996" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -198,6 +198,7 @@ Almost 1 billion people on our planet don't have access to safe, clean drinking 
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>
+    <color key="tintColor" red="0.011764707040000001" green="0.66666668650000005" blue="0.67058825489999996" alpha="1" colorSpace="deviceRGB"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
