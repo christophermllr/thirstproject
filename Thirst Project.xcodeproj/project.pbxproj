@@ -9,29 +9,16 @@
 /* Begin PBXBuildFile section */
 		83079642176FFEFE00CC7478 /* FlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8307963F176FFEFE00CC7478 /* FlipsideViewController.m */; };
 		83079643176FFEFE00CC7478 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83079641176FFEFE00CC7478 /* MainViewController.m */; };
-		8307964A1770017000CC7478 /* button_secondary_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 830796441770017000CC7478 /* button_secondary_selected.png */; };
-		8307964B1770017000CC7478 /* button_secondary_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 830796451770017000CC7478 /* button_secondary_selected@2x.png */; };
-		8307964C1770017000CC7478 /* button_secondary.png in Resources */ = {isa = PBXBuildFile; fileRef = 830796461770017000CC7478 /* button_secondary.png */; };
-		8307964D1770017000CC7478 /* button_secondary@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 830796471770017000CC7478 /* button_secondary@2x.png */; };
-		8307964E1770017000CC7478 /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = 830796481770017000CC7478 /* check.png */; };
-		8307964F1770017000CC7478 /* check@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 830796491770017000CC7478 /* check@2x.png */; };
+		836FC2D11826ECF400577614 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 836FC2CC1826C88400577614 /* Media.xcassets */; };
 		837D2CD0171CDA4500E8677E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837D2CCF171CDA4500E8677E /* UIKit.framework */; };
 		837D2CD2171CDA4500E8677E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837D2CD1171CDA4500E8677E /* Foundation.framework */; };
 		837D2CD4171CDA4500E8677E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837D2CD3171CDA4500E8677E /* CoreGraphics.framework */; };
 		837D2CDA171CDA4500E8677E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 837D2CD8171CDA4500E8677E /* InfoPlist.strings */; };
 		837D2CDC171CDA4500E8677E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 837D2CDB171CDA4500E8677E /* main.m */; };
 		837D2CE0171CDA4500E8677E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 837D2CDF171CDA4500E8677E /* AppDelegate.m */; };
-		837D2CE2171CDA4500E8677E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 837D2CE1171CDA4500E8677E /* Default.png */; };
-		837D2CE4171CDA4500E8677E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 837D2CE3171CDA4500E8677E /* Default@2x.png */; };
-		837D2CE6171CDA4500E8677E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 837D2CE5171CDA4500E8677E /* Default-568h@2x.png */; };
 		837D2CE9171CDA4500E8677E /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 837D2CE7171CDA4500E8677E /* MainStoryboard_iPhone.storyboard */; };
 		837D2CEC171CDA4500E8677E /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 837D2CEA171CDA4500E8677E /* MainStoryboard_iPad.storyboard */; };
 		837D2CEF171CDA4500E8677E /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 837D2CEE171CDA4500E8677E /* AboutViewController.m */; };
-		837D2CF1171CDA4500E8677E /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 837D2CF0171CDA4500E8677E /* first.png */; };
-		837D2CF3171CDA4500E8677E /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 837D2CF2171CDA4500E8677E /* first@2x.png */; };
-		837D2CF6171CDA4500E8677E /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 837D2CF5171CDA4500E8677E /* MapViewController.m */; };
-		837D2CF8171CDA4500E8677E /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 837D2CF7171CDA4500E8677E /* second.png */; };
-		837D2CFA171CDA4500E8677E /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 837D2CF9171CDA4500E8677E /* second@2x.png */; };
 		837D2D02171CDA4500E8677E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837D2D01171CDA4500E8677E /* SenTestingKit.framework */; };
 		837D2D03171CDA4500E8677E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837D2CCF171CDA4500E8677E /* UIKit.framework */; };
 		837D2D04171CDA4500E8677E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837D2CD1171CDA4500E8677E /* Foundation.framework */; };
@@ -52,8 +39,6 @@
 		839F04BC175EE07E0007231F /* Thirst_Water_Photo_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 839F04B7175EE07E0007231F /* Thirst_Water_Photo_4.jpg */; };
 		839F04BD175EE07E0007231F /* Thirst_Water_Photo_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 839F04B8175EE07E0007231F /* Thirst_Water_Photo_5.jpg */; };
 		83C36D40171CF88B0090F037 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83C36D3F171CF88B0090F037 /* AddressBook.framework */; };
-		D530F39417530C49008103FE /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D530F39317530C49008103FE /* GoogleMaps.framework */; };
-		D540479317530E4E0056196E /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D540479217530E4E0056196E /* GoogleMaps.bundle */; };
 		D540479517530E9D0056196E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D540479417530E9D0056196E /* CoreData.framework */; };
 		D540479717530EA50056196E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D540479617530EA50056196E /* CoreLocation.framework */; };
 		D540479917530EAF0056196E /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D540479817530EAF0056196E /* CoreText.framework */; };
@@ -80,12 +65,7 @@
 		8307963F176FFEFE00CC7478 /* FlipsideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlipsideViewController.m; sourceTree = "<group>"; };
 		83079640176FFEFE00CC7478 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		83079641176FFEFE00CC7478 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		830796441770017000CC7478 /* button_secondary_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_secondary_selected.png; sourceTree = "<group>"; };
-		830796451770017000CC7478 /* button_secondary_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_secondary_selected@2x.png"; sourceTree = "<group>"; };
-		830796461770017000CC7478 /* button_secondary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_secondary.png; sourceTree = "<group>"; };
-		830796471770017000CC7478 /* button_secondary@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_secondary@2x.png"; sourceTree = "<group>"; };
-		830796481770017000CC7478 /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
-		830796491770017000CC7478 /* check@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check@2x.png"; sourceTree = "<group>"; };
+		836FC2CC1826C88400577614 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		837D2CCC171CDA4500E8677E /* Thirst Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Thirst Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		837D2CCF171CDA4500E8677E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		837D2CD1171CDA4500E8677E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -96,19 +76,10 @@
 		837D2CDD171CDA4500E8677E /* Thirst Project-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Thirst Project-Prefix.pch"; sourceTree = "<group>"; };
 		837D2CDE171CDA4500E8677E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		837D2CDF171CDA4500E8677E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		837D2CE1171CDA4500E8677E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		837D2CE3171CDA4500E8677E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		837D2CE5171CDA4500E8677E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		837D2CE8171CDA4500E8677E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		837D2CEB171CDA4500E8677E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		837D2CED171CDA4500E8677E /* AboutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		837D2CEE171CDA4500E8677E /* AboutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
-		837D2CF0171CDA4500E8677E /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
-		837D2CF2171CDA4500E8677E /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		837D2CF4171CDA4500E8677E /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
-		837D2CF5171CDA4500E8677E /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
-		837D2CF7171CDA4500E8677E /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
-		837D2CF9171CDA4500E8677E /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		837D2D00171CDA4500E8677E /* Thirst ProjectTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Thirst ProjectTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		837D2D01171CDA4500E8677E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		837D4B0A171CDC4600E8677E /* libPayPalMobile.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPayPalMobile.a; sourceTree = "<group>"; };
@@ -131,8 +102,6 @@
 		839F04B7175EE07E0007231F /* Thirst_Water_Photo_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Thirst_Water_Photo_4.jpg; sourceTree = "<group>"; };
 		839F04B8175EE07E0007231F /* Thirst_Water_Photo_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Thirst_Water_Photo_5.jpg; sourceTree = "<group>"; };
 		83C36D3F171CF88B0090F037 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
-		D530F39317530C49008103FE /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
-		D540479217530E4E0056196E /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 		D540479417530E9D0056196E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		D540479617530EA50056196E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		D540479817530EAF0056196E /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
@@ -173,7 +142,6 @@
 				837D2CD2171CDA4500E8677E /* Foundation.framework in Frameworks */,
 				837D2CD4171CDA4500E8677E /* CoreGraphics.framework in Frameworks */,
 				837D4B0E171CDC4600E8677E /* libPayPalMobile.a in Frameworks */,
-				D530F39417530C49008103FE /* GoogleMaps.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,6 +161,7 @@
 		837D2CC3171CDA4500E8677E = {
 			isa = PBXGroup;
 			children = (
+				836FC2CC1826C88400577614 /* Media.xcassets */,
 				837D4B09171CDC4600E8677E /* PayPalMobile */,
 				837D2CD5171CDA4500E8677E /* Thirst Project */,
 				837D2CCE171CDA4500E8677E /* Frameworks */,
@@ -221,8 +190,6 @@
 				D540479817530EAF0056196E /* CoreText.framework */,
 				D540479617530EA50056196E /* CoreLocation.framework */,
 				D540479417530E9D0056196E /* CoreData.framework */,
-				D540479217530E4E0056196E /* GoogleMaps.bundle */,
-				D530F39317530C49008103FE /* GoogleMaps.framework */,
 				83C36D3F171CF88B0090F037 /* AddressBook.framework */,
 				837D4B11171CE22700E8677E /* AudioToolbox.framework */,
 				837D4B0F171CDD1900E8677E /* AVFoundation.framework */,
@@ -245,12 +212,6 @@
 		837D2CD5171CDA4500E8677E /* Thirst Project */ = {
 			isa = PBXGroup;
 			children = (
-				830796441770017000CC7478 /* button_secondary_selected.png */,
-				830796451770017000CC7478 /* button_secondary_selected@2x.png */,
-				830796461770017000CC7478 /* button_secondary.png */,
-				830796471770017000CC7478 /* button_secondary@2x.png */,
-				830796481770017000CC7478 /* check.png */,
-				830796491770017000CC7478 /* check@2x.png */,
 				8307963E176FFEFE00CC7478 /* FlipsideViewController.h */,
 				8307963F176FFEFE00CC7478 /* FlipsideViewController.m */,
 				83079640176FFEFE00CC7478 /* MainViewController.h */,
@@ -259,14 +220,8 @@
 				837D2CEE171CDA4500E8677E /* AboutViewController.m */,
 				837D2CDE171CDA4500E8677E /* AppDelegate.h */,
 				837D2CDF171CDA4500E8677E /* AppDelegate.m */,
-				837D2CF0171CDA4500E8677E /* first.png */,
-				837D2CF2171CDA4500E8677E /* first@2x.png */,
 				837D2CEA171CDA4500E8677E /* MainStoryboard_iPad.storyboard */,
 				837D2CE7171CDA4500E8677E /* MainStoryboard_iPhone.storyboard */,
-				837D2CF4171CDA4500E8677E /* MapViewController.h */,
-				837D2CF5171CDA4500E8677E /* MapViewController.m */,
-				837D2CF7171CDA4500E8677E /* second.png */,
-				837D2CF9171CDA4500E8677E /* second@2x.png */,
 				837D2CD6171CDA4500E8677E /* Supporting Files */,
 			);
 			path = "Thirst Project";
@@ -284,9 +239,6 @@
 				837D2CD8171CDA4500E8677E /* InfoPlist.strings */,
 				837D2CDB171CDA4500E8677E /* main.m */,
 				837D2CDD171CDA4500E8677E /* Thirst Project-Prefix.pch */,
-				837D2CE1171CDA4500E8677E /* Default.png */,
-				837D2CE3171CDA4500E8677E /* Default@2x.png */,
-				837D2CE5171CDA4500E8677E /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -347,7 +299,7 @@
 		837D2CC4171CDA4500E8677E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Thirst Project";
 			};
 			buildConfigurationList = 837D2CC7171CDA4500E8677E /* Build configuration list for PBXProject "Thirst Project" */;
@@ -373,28 +325,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				836FC2D11826ECF400577614 /* Media.xcassets in Resources */,
 				837D2CDA171CDA4500E8677E /* InfoPlist.strings in Resources */,
-				837D2CE2171CDA4500E8677E /* Default.png in Resources */,
-				837D2CE4171CDA4500E8677E /* Default@2x.png in Resources */,
-				837D2CE6171CDA4500E8677E /* Default-568h@2x.png in Resources */,
 				837D2CE9171CDA4500E8677E /* MainStoryboard_iPhone.storyboard in Resources */,
 				837D2CEC171CDA4500E8677E /* MainStoryboard_iPad.storyboard in Resources */,
-				837D2CF1171CDA4500E8677E /* first.png in Resources */,
-				837D2CF3171CDA4500E8677E /* first@2x.png in Resources */,
-				837D2CF8171CDA4500E8677E /* second.png in Resources */,
-				837D2CFA171CDA4500E8677E /* second@2x.png in Resources */,
-				D540479317530E4E0056196E /* GoogleMaps.bundle in Resources */,
 				839F04B9175EE07E0007231F /* Thirst_Water_Photo_1.jpg in Resources */,
 				839F04BA175EE07E0007231F /* Thirst_Water_Photo_2.jpg in Resources */,
 				839F04BB175EE07E0007231F /* Thirst_Water_Photo_3.jpg in Resources */,
 				839F04BC175EE07E0007231F /* Thirst_Water_Photo_4.jpg in Resources */,
 				839F04BD175EE07E0007231F /* Thirst_Water_Photo_5.jpg in Resources */,
-				8307964A1770017000CC7478 /* button_secondary_selected.png in Resources */,
-				8307964B1770017000CC7478 /* button_secondary_selected@2x.png in Resources */,
-				8307964C1770017000CC7478 /* button_secondary.png in Resources */,
-				8307964D1770017000CC7478 /* button_secondary@2x.png in Resources */,
-				8307964E1770017000CC7478 /* check.png in Resources */,
-				8307964F1770017000CC7478 /* check@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,7 +370,6 @@
 				837D2CDC171CDA4500E8677E /* main.m in Sources */,
 				837D2CE0171CDA4500E8677E /* AppDelegate.m in Sources */,
 				837D2CEF171CDA4500E8677E /* AboutViewController.m in Sources */,
-				837D2CF6171CDA4500E8677E /* MapViewController.m in Sources */,
 				83079642176FFEFE00CC7478 /* FlipsideViewController.m in Sources */,
 				83079643176FFEFE00CC7478 /* MainViewController.m in Sources */,
 			);
@@ -486,7 +424,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = armv7;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -508,7 +445,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-lstdc++",
@@ -523,7 +460,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = armv7;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -538,7 +474,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = (
 					"-lstdc++",
@@ -553,6 +489,8 @@
 		837D2D13171CDA4500E8677E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -572,6 +510,8 @@
 		837D2D14171CDA4500E8677E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",

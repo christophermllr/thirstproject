@@ -44,7 +44,7 @@
 @implementation FlipsideViewController
 
 - (void)awakeFromNib {
-  self.contentSizeForViewInPopover = CGSizeMake(320.0, 480.0);
+  self.preferredContentSize = CGSizeMake(320.0, 480.0);
   [super awakeFromNib];
 }
 

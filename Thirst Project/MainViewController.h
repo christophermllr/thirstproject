@@ -33,12 +33,13 @@
 #import "FlipsideViewController.h"
 #import "PayPalMobile.h"
 
-@interface MainViewController : UIViewController <PayPalPaymentDelegate, FlipsideViewControllerDelegate, UIPopoverControllerDelegate>
+@interface MainViewController : UIViewController <PayPalPaymentDelegate, FlipsideViewControllerDelegate, UIPopoverControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
 
 @property(nonatomic, strong, readwrite) UIPopoverController *flipsidePopoverController;
 
 @property(nonatomic, strong, readwrite) NSString *environment;
 @property(nonatomic, assign, readwrite) BOOL acceptCreditCards;
 @property(nonatomic, strong, readwrite) PayPalPayment *completedPayment;
+
 
 @end

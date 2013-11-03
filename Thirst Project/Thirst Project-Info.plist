@@ -8,6 +8,10 @@
 	<string>${PRODUCT_NAME}</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
+	<key>CFBundleIcons</key>
+	<dict/>
+	<key>CFBundleIcons~ipad</key>
+	<dict/>
 	<key>CFBundleIdentifier</key>
 	<string>WMP.${PRODUCT_NAME:rfc1034identifier}</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -25,9 +29,11 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>PayPalClientId</key>
-	<string>AcTishC87XiWR1EpWkcYPIKZSpebfstnAPkggMl5KiIzKnyiHIDEGru3OCVS</string>
-	<key>PayPalEmailAddress</key>
-	<string>cmiller0189@gmail.com</string>
+	<string>AURwPhAvt-7dtlSH5C1X9S8kbddcjIWDcEcoIm7SOxS-1tXA4KdMBT83U2Oe</string>
+	<key>PayPalReceiverEmail</key>
+	<string>seth-facilitator@thirstproject.org</string>
+	<key>TPSchoolsURL</key>
+	<string>https://dl.dropboxusercontent.com/u/2384307/schools.json</string>
 	<key>UIMainStoryboardFile</key>
 	<string>MainStoryboard_iPhone</string>
 	<key>UIMainStoryboardFile~ipad</key>
@@ -41,9 +47,9 @@
 		<key>UINavigationBar</key>
 		<dict>
 			<key>Style</key>
-			<string>UIBarStyleDefault</string>
+			<string>UIBarStyleBlack</string>
 			<key>Translucent</key>
-			<false/>
+			<true/>
 		</dict>
 	</dict>
 	<key>UISupportedInterfaceOrientations</key>
