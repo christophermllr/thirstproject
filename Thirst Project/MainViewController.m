@@ -184,6 +184,17 @@
                                                                                                       delegate:self];
     paymentViewController.hideCreditCardButton = !self.acceptCreditCards;
     
+    // Set Navbar color for iOS6/7.
+    NSArray *ver = [[UIDevice currentDevice].systemVersion componentsSeparatedByString:@"."];
+    if ([[ver objectAtIndex:0] intValue] >= 7) {
+        paymentViewController.navigationBar.barTintColor = [(AppDelegate *)[UIApplication sharedApplication].delegate TPColor];
+        paymentViewController.navigationBar.tintColor = [UIColor whiteColor];
+        paymentViewController.navigationBar.translucent = NO;
+        paymentViewController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
+    } else {
+        paymentViewController.navigationBar.tintColor = [(AppDelegate *)[UIApplication sharedApplication].delegate TPColor];
+    }
+    
     [self presentViewController:paymentViewController animated:YES completion:nil];
 }
 

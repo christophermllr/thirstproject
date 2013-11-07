@@ -41,7 +41,6 @@
         <!--Main View Controller - Donate to Thirst Project-->
         <scene sceneID="sou-tB-ZEY">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lHT-uW-FZd" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Lck-JH-vOB" customClass="MainViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VC8-Fj-Nag">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -91,6 +90,7 @@
                         <outlet property="pickerView" destination="WS0-Lz-icE" id="vBQ-6y-mw5"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lHT-uW-FZd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1193" y="1065"/>
         </scene>
@@ -170,7 +170,6 @@
         <!--Navigation Controller - Donate-->
         <scene sceneID="x02-uH-1MY">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WZp-8P-ZyX" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="n8g-w3-ib6" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Donate" image="Donate" id="6Df-dM-PIO"/>
                     <toolbarItems/>
@@ -183,6 +182,7 @@
                         <segue destination="Lck-JH-vOB" kind="relationship" relationship="rootViewController" id="Atf-eH-VkN"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WZp-8P-ZyX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="659" y="1065"/>
         </scene>
