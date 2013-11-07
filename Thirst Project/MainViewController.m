@@ -108,6 +108,10 @@
     [PayPalPaymentViewController prepareForPaymentUsingClientId:clientId];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [self.amountField becomeFirstResponder];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -148,13 +152,23 @@
     
     if (self.amountField.text == nil || [self.amountField.text length] == 0) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Enter an amount"
-                                                        message:@"Please enter an amount in USD."
+                                                        message:@"Please enter an amount."
                                                        delegate:nil
                                               cancelButtonTitle:@"OK"
                                               otherButtonTitles:nil];
         [alert show];
         return;
     }
+    
+//    if () {
+//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Enter an amount"
+//                                                        message:@"Amount is not valid"
+//                                                       delegate:nil
+//                                              cancelButtonTitle:@"OK"
+//                                              otherButtonTitles:nil];
+//        [alert show];
+//        return;
+//    }
     
     payment.amount = [[NSDecimalNumber alloc] initWithString:self.amountField.text];
     NSLog(@"Amount=%@ ", payment.amount);
