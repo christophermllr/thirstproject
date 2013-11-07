@@ -29,6 +29,7 @@
     } else {
         self.navigationController.navigationBar.tintColor = [(AppDelegate *)[UIApplication sharedApplication].delegate TPColor];
     }
+    
 }
 
 - (void)didReceiveMemoryWarning
