@@ -150,6 +150,7 @@
     
     PayPalPayment *payment = [[PayPalPayment alloc] init];
     
+    // Did the user enter an amount?
     if (self.amountField.text == nil || [self.amountField.text length] == 0) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Enter an amount"
                                                         message:@"Please enter an amount."
@@ -160,24 +161,18 @@
         return;
     }
     
-//    if () {
-//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Enter an amount"
-//                                                        message:@"Amount is not valid"
-//                                                       delegate:nil
-//                                              cancelButtonTitle:@"OK"
-//                                              otherButtonTitles:nil];
-//        [alert show];
-//        return;
-//    }
-    
-    payment.amount = [[NSDecimalNumber alloc] initWithString:self.amountField.text];
-    NSLog(@"Amount=%@ ", payment.amount);
+    NSNumber *number = [NSNumber numberWithDouble:[self.amountField.text doubleValue]];
+    NSNumberFormatter *fmt = [[NSNumberFormatter alloc] init];
+    [fmt setNumberStyle:NSNumberFormatterDecimalStyle];
+    [fmt setMaximumFractionDigits:2];
+    [fmt setRoundingMode: NSNumberFormatterRoundUp];
+    NSString *numstring = [fmt stringFromNumber:number];
+    payment.amount = [NSDecimalNumber decimalNumberWithString:numstring];
     payment.currencyCode = @"USD";
     
     NSInteger row = [self.pickerView selectedRowInComponent:0];
     NSString *selectedText = [self.schools objectAtIndex:row];
     payment.shortDescription = selectedText;
-    NSLog(@"Desc=%@ ", payment.shortDescription);
     
     if (!payment.processable) {
         // This particular payment will always be processable. If, for
