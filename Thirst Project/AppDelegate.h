@@ -11,9 +11,11 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 {
     UIColor *TPColor;
+    NSData *schoolData;
 }
 
-@property (strong, nonatomic) UIWindow *window;
-@property (retain, nonatomic) UIColor *TPColor;
+@property (strong, nonatomic)    UIWindow *window;
+@property (retain, nonatomic)    UIColor *TPColor;
+@property (retain, nonatomic)    NSData *schoolData;
 
 @end

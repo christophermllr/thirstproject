@@ -36,11 +36,11 @@
 
 @interface MainViewController ()
 
-@property(nonatomic, strong, readwrite) IBOutlet UITextField *amountField;
-@property(nonatomic, strong, readwrite) IBOutlet UIButton *payButton;
-@property(nonatomic, strong, readwrite) IBOutlet UIView *successView;
-@property(nonatomic, strong, readwrite) IBOutlet UIPickerView *pickerView;
-@property(nonatomic, strong, readwrite)          NSMutableArray *schools;
+@property (nonatomic, strong, readwrite) IBOutlet UITextField *amountField;
+@property (nonatomic, strong, readwrite) IBOutlet UIButton *payButton;
+@property (nonatomic, strong, readwrite) IBOutlet UIView *successView;
+@property (nonatomic, strong, readwrite) IBOutlet UIPickerView *pickerView;
+@property (nonatomic, strong, readwrite)          NSMutableArray *schools;
 
 @end
 
@@ -55,26 +55,28 @@
     // - For testing, use PayPalEnvironmentNoNetwork.
     self.environment = PayPalEnvironmentNoNetwork;
     
-    // Get schools
-    NSString *urlAsString = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"TPSchoolsURL"];
-    NSURL *url = [[NSURL alloc] initWithString:urlAsString];
-    NSLog(@"URL : %@", url);
-    
-    NSData *data = [NSData dataWithContentsOfURL:url];
-    NSLog(@"Data : %@", data);
-    
+    // Parse the school data.
     NSError *e = nil;
-    self.schools = [NSJSONSerialization JSONObjectWithData:data
+    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    if (appDelegate.schoolData == nil)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                        message:@"An Internet connection is required for the list of schools."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+        return; //TODO send user back to initial view controller?
+    }
+    
+    self.schools = [NSJSONSerialization JSONObjectWithData:appDelegate.schoolData
                                                    options:kNilOptions
                                                      error:&e];
-    
     if (e) {
         NSLog(@"Error : %@", e);
     }
-    else {
-        NSLog(@"JSON : %@", self.schools);
-    }
     
+    // Setup view things.
     self.successView.hidden = YES;
     self.amountField.keyboardType = UIKeyboardTypeDecimalPad;
     
@@ -152,8 +154,18 @@
     
     // Did the user enter an amount?
     if (self.amountField.text == nil || [self.amountField.text length] == 0) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Enter an amount"
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
                                                         message:@"Please enter an amount."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+        return;
+    }
+    
+    if (([[self.amountField.text componentsSeparatedByString:@"."] count] - 1) > 1) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                        message:@"The amount you entered is not valid."
                                                        delegate:nil
                                               cancelButtonTitle:@"OK"
                                               otherButtonTitles:nil];

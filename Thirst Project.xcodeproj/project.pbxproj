@@ -22,7 +22,6 @@
 		837D2D02171CDA4500E8677E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837D2D01171CDA4500E8677E /* SenTestingKit.framework */; };
 		837D2D03171CDA4500E8677E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837D2CCF171CDA4500E8677E /* UIKit.framework */; };
 		837D2D04171CDA4500E8677E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837D2CD1171CDA4500E8677E /* Foundation.framework */; };
-		837D4B0E171CDC4600E8677E /* libPayPalMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 837D4B0A171CDC4600E8677E /* libPayPalMobile.a */; };
 		837D4B10171CDD1900E8677E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837D4B0F171CDD1900E8677E /* AVFoundation.framework */; };
 		837D4B1B171CE22700E8677E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837D4B11171CE22700E8677E /* AudioToolbox.framework */; };
 		837D4B1C171CE22700E8677E /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837D4B12171CE22700E8677E /* CoreMedia.framework */; };
@@ -33,6 +32,8 @@
 		837D4B22171CE22700E8677E /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837D4B18171CE22700E8677E /* OpenGLES.framework */; };
 		837D4B23171CE22700E8677E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837D4B19171CE22700E8677E /* QuartzCore.framework */; };
 		837D4B24171CE22700E8677E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837D4B1A171CE22700E8677E /* Security.framework */; };
+		837FC03218503ECF00B7D327 /* libPayPalMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 837FC02E18503ECF00B7D327 /* libPayPalMobile.a */; };
+		837FC03818503EFC00B7D327 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 837FC03718503EFC00B7D327 /* Reachability.m */; };
 		83AD8C6D182714B200689C84 /* WellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AD8C6C182714B200689C84 /* WellViewController.m */; };
 		83C36D40171CF88B0090F037 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83C36D3F171CF88B0090F037 /* AddressBook.framework */; };
 		D540479517530E9D0056196E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D540479417530E9D0056196E /* CoreData.framework */; };
@@ -78,10 +79,6 @@
 		837D2CEE171CDA4500E8677E /* AboutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		837D2D00171CDA4500E8677E /* Thirst ProjectTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Thirst ProjectTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		837D2D01171CDA4500E8677E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		837D4B0A171CDC4600E8677E /* libPayPalMobile.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPayPalMobile.a; sourceTree = "<group>"; };
-		837D4B0B171CDC4600E8677E /* PayPalMobile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalMobile.h; sourceTree = "<group>"; };
-		837D4B0C171CDC4600E8677E /* PayPalPayment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalPayment.h; sourceTree = "<group>"; };
-		837D4B0D171CDC4600E8677E /* PayPalPaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalPaymentViewController.h; sourceTree = "<group>"; };
 		837D4B0F171CDD1900E8677E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		837D4B11171CE22700E8677E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		837D4B12171CE22700E8677E /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
@@ -92,6 +89,12 @@
 		837D4B18171CE22700E8677E /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		837D4B19171CE22700E8677E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		837D4B1A171CE22700E8677E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		837FC02E18503ECF00B7D327 /* libPayPalMobile.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPayPalMobile.a; path = Libs/PayPalMobile/libPayPalMobile.a; sourceTree = "<group>"; };
+		837FC02F18503ECF00B7D327 /* PayPalMobile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PayPalMobile.h; path = Libs/PayPalMobile/PayPalMobile.h; sourceTree = "<group>"; };
+		837FC03018503ECF00B7D327 /* PayPalPayment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PayPalPayment.h; path = Libs/PayPalMobile/PayPalPayment.h; sourceTree = "<group>"; };
+		837FC03118503ECF00B7D327 /* PayPalPaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PayPalPaymentViewController.h; path = Libs/PayPalMobile/PayPalPaymentViewController.h; sourceTree = "<group>"; };
+		837FC03618503EFC00B7D327 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = Libs/Reachability/Reachability.h; sourceTree = "<group>"; };
+		837FC03718503EFC00B7D327 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = Libs/Reachability/Reachability.m; sourceTree = "<group>"; };
 		83AD8C69182713BF00689C84 /* WellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WellViewController.h; sourceTree = "<group>"; };
 		83AD8C6C182714B200689C84 /* WellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WellViewController.m; sourceTree = "<group>"; };
 		83C36D3F171CF88B0090F037 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
@@ -134,7 +137,7 @@
 				837D2CD0171CDA4500E8677E /* UIKit.framework in Frameworks */,
 				837D2CD2171CDA4500E8677E /* Foundation.framework in Frameworks */,
 				837D2CD4171CDA4500E8677E /* CoreGraphics.framework in Frameworks */,
-				837D4B0E171CDC4600E8677E /* libPayPalMobile.a in Frameworks */,
+				837FC03218503ECF00B7D327 /* libPayPalMobile.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,8 +157,8 @@
 		837D2CC3171CDA4500E8677E = {
 			isa = PBXGroup;
 			children = (
+				837FC03318503EE000B7D327 /* Libs */,
 				836FC2CC1826C88400577614 /* Media.xcassets */,
-				837D4B09171CDC4600E8677E /* PayPalMobile */,
 				837D2CD5171CDA4500E8677E /* Thirst Project */,
 				837D2CCE171CDA4500E8677E /* Frameworks */,
 				837D2CCD171CDA4500E8677E /* Products */,
@@ -233,15 +236,33 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		837D4B09171CDC4600E8677E /* PayPalMobile */ = {
+		837FC03318503EE000B7D327 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
-				837D4B0A171CDC4600E8677E /* libPayPalMobile.a */,
-				837D4B0B171CDC4600E8677E /* PayPalMobile.h */,
-				837D4B0C171CDC4600E8677E /* PayPalPayment.h */,
-				837D4B0D171CDC4600E8677E /* PayPalPaymentViewController.h */,
+				837FC03518503EEF00B7D327 /* Reachability */,
+				837FC03418503EE500B7D327 /* PayPalMobile */,
 			);
-			path = PayPalMobile;
+			name = Libs;
+			sourceTree = "<group>";
+		};
+		837FC03418503EE500B7D327 /* PayPalMobile */ = {
+			isa = PBXGroup;
+			children = (
+				837FC02E18503ECF00B7D327 /* libPayPalMobile.a */,
+				837FC02F18503ECF00B7D327 /* PayPalMobile.h */,
+				837FC03018503ECF00B7D327 /* PayPalPayment.h */,
+				837FC03118503ECF00B7D327 /* PayPalPaymentViewController.h */,
+			);
+			name = PayPalMobile;
+			sourceTree = "<group>";
+		};
+		837FC03518503EEF00B7D327 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				837FC03618503EFC00B7D327 /* Reachability.h */,
+				837FC03718503EFC00B7D327 /* Reachability.m */,
+			);
+			name = Reachability;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,6 +375,7 @@
 			files = (
 				837D2CDC171CDA4500E8677E /* main.m in Sources */,
 				83AD8C6D182714B200689C84 /* WellViewController.m in Sources */,
+				837FC03818503EFC00B7D327 /* Reachability.m in Sources */,
 				837D2CE0171CDA4500E8677E /* AppDelegate.m in Sources */,
 				837D2CEF171CDA4500E8677E /* AboutViewController.m in Sources */,
 				83079642176FFEFE00CC7478 /* FlipsideViewController.m in Sources */,
@@ -486,7 +508,8 @@
 				INFOPLIST_FILE = "Thirst Project/Thirst Project-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/PayPalMobile\"",
+					"\\\"$(SRCROOT)/PayPalMobile\\\"",
+					/Users/chris/Github/thirstproject/Libs/PayPalMobile,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -507,7 +530,8 @@
 				INFOPLIST_FILE = "Thirst Project/Thirst Project-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/PayPalMobile\"",
+					"\\\"$(SRCROOT)/PayPalMobile\\\"",
+					/Users/chris/Github/thirstproject/Libs/PayPalMobile,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

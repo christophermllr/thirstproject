@@ -7,15 +7,54 @@
 //
 
 #import "AppDelegate.h"
+#import "Reachability.h"
 
 @implementation AppDelegate
 
 @synthesize TPColor;
+@synthesize schoolData;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     TPColor = [UIColor colorWithRed:3.0f/255.0f green:170.0f/255.0f blue:171.0f/255.0f alpha:1.0f];
+    [self getSchoolData];
     return YES;
+}
+
+- (void)getSchoolData
+{
+    Reachability *reachability = [Reachability reachabilityForInternetConnection];
+    NetworkStatus internetStatus = [reachability currentReachabilityStatus];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSString *cachePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *filePath = [cachePath stringByAppendingPathComponent:@"schools.json"];
+    
+    if(internetStatus == ReachableViaWiFi || internetStatus == ReachableViaWWAN) {
+        
+        NSString *urlAsString = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"TPSchoolsURL"];
+        NSURL *url = [[NSURL alloc] initWithString:urlAsString];
+        
+        schoolData = [NSData dataWithContentsOfURL:url];
+        
+        [schoolData writeToFile:filePath atomically:YES];
+        
+    }
+    else {
+        
+        if([fileManager fileExistsAtPath:filePath]) {
+            schoolData = [NSData dataWithContentsOfFile: filePath];
+        }
+        else {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                            message:@"An Internet connection is required for the list of schools."
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+            [alert show];
+            return; //TODO disable access to the payment view controller.
+        }
+    }
+    
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application
