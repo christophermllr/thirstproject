@@ -31,6 +31,7 @@
 //
 
 #import "MainViewController.h"
+#import "InfoViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "AppDelegate.h"
 
@@ -60,8 +61,8 @@
     AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     if (appDelegate.schoolData == nil)
     {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
-                                                        message:@"An Internet connection is required for the list of schools."
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"An Internet Connection is Required"
+                                                        message:nil
                                                        delegate:nil
                                               cancelButtonTitle:@"OK"
                                               otherButtonTitles:nil];
@@ -154,8 +155,8 @@
     
     // Did the user enter an amount?
     if (self.amountField.text == nil || [self.amountField.text length] == 0) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
-                                                        message:@"Please enter an amount."
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Enter a Donation Amount"
+                                                        message:nil
                                                        delegate:nil
                                               cancelButtonTitle:@"OK"
                                               otherButtonTitles:nil];
@@ -164,8 +165,8 @@
     }
     
     if (([[self.amountField.text componentsSeparatedByString:@"."] count] - 1) > 1) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
-                                                        message:@"The amount you entered is not valid."
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Invalid Donation Amount"
+                                                        message:nil
                                                        delegate:nil
                                               cancelButtonTitle:@"OK"
                                               otherButtonTitles:nil];
@@ -272,6 +273,12 @@
             popoverController.delegate = self;
         }
     }
+    if ([segue.identifier isEqualToString:@"ViewInfo"]) {
+        
+        UINavigationController *navigationController = segue.destinationViewController;
+        InfoViewController *infoViewController = [navigationController viewControllers][0];
+        infoViewController.delegate = self;
+    }
 }
 
 - (IBAction)togglePopover:(id)sender {
@@ -281,6 +288,13 @@
     } else {
         [self performSegueWithIdentifier:@"showAlternate" sender:sender];
     }
+}
+
+#pragma mark - InfoViewControllerDelegate
+
+- (void)infoViewControllerDidClose:(InfoViewController *)controller
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

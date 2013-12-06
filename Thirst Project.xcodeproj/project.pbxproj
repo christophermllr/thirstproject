@@ -36,6 +36,8 @@
 		837FC03818503EFC00B7D327 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 837FC03718503EFC00B7D327 /* Reachability.m */; };
 		83AD8C6D182714B200689C84 /* WellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AD8C6C182714B200689C84 /* WellViewController.m */; };
 		83C36D40171CF88B0090F037 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83C36D3F171CF88B0090F037 /* AddressBook.framework */; };
+		83D840EB185180650035E05D /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D840EA185180650035E05D /* InfoViewController.m */; };
+		83D840EF18518EAC0035E05D /* AMBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D840EE18518EAC0035E05D /* AMBlurView.m */; };
 		D540479517530E9D0056196E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D540479417530E9D0056196E /* CoreData.framework */; };
 		D540479717530EA50056196E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D540479617530EA50056196E /* CoreLocation.framework */; };
 		D540479917530EAF0056196E /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D540479817530EAF0056196E /* CoreText.framework */; };
@@ -98,6 +100,10 @@
 		83AD8C69182713BF00689C84 /* WellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WellViewController.h; sourceTree = "<group>"; };
 		83AD8C6C182714B200689C84 /* WellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WellViewController.m; sourceTree = "<group>"; };
 		83C36D3F171CF88B0090F037 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		83D840E9185180650035E05D /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
+		83D840EA185180650035E05D /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
+		83D840ED18518EAC0035E05D /* AMBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMBlurView.h; path = Libs/AMBlurView/AMBlurView.h; sourceTree = "<group>"; };
+		83D840EE18518EAC0035E05D /* AMBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMBlurView.m; path = Libs/AMBlurView/AMBlurView.m; sourceTree = "<group>"; };
 		D540479417530E9D0056196E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		D540479617530EA50056196E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		D540479817530EAF0056196E /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
@@ -221,6 +227,8 @@
 				837D2CD6171CDA4500E8677E /* Supporting Files */,
 				83AD8C69182713BF00689C84 /* WellViewController.h */,
 				83AD8C6C182714B200689C84 /* WellViewController.m */,
+				83D840E9185180650035E05D /* InfoViewController.h */,
+				83D840EA185180650035E05D /* InfoViewController.m */,
 			);
 			path = "Thirst Project";
 			sourceTree = "<group>";
@@ -239,6 +247,7 @@
 		837FC03318503EE000B7D327 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				83D840EC18518E8C0035E05D /* AMBlurView */,
 				837FC03518503EEF00B7D327 /* Reachability */,
 				837FC03418503EE500B7D327 /* PayPalMobile */,
 			);
@@ -263,6 +272,15 @@
 				837FC03718503EFC00B7D327 /* Reachability.m */,
 			);
 			name = Reachability;
+			sourceTree = "<group>";
+		};
+		83D840EC18518E8C0035E05D /* AMBlurView */ = {
+			isa = PBXGroup;
+			children = (
+				83D840ED18518EAC0035E05D /* AMBlurView.h */,
+				83D840EE18518EAC0035E05D /* AMBlurView.m */,
+			);
+			name = AMBlurView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -374,7 +392,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				837D2CDC171CDA4500E8677E /* main.m in Sources */,
+				83D840EF18518EAC0035E05D /* AMBlurView.m in Sources */,
 				83AD8C6D182714B200689C84 /* WellViewController.m in Sources */,
+				83D840EB185180650035E05D /* InfoViewController.m in Sources */,
 				837FC03818503EFC00B7D327 /* Reachability.m in Sources */,
 				837D2CE0171CDA4500E8677E /* AppDelegate.m in Sources */,
 				837D2CEF171CDA4500E8677E /* AboutViewController.m in Sources */,
@@ -508,8 +528,7 @@
 				INFOPLIST_FILE = "Thirst Project/Thirst Project-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\\\"$(SRCROOT)/PayPalMobile\\\"",
-					/Users/chris/Github/thirstproject/Libs/PayPalMobile,
+					"$(SRCROOT)/Libs/PayPalMobile",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -530,8 +549,7 @@
 				INFOPLIST_FILE = "Thirst Project/Thirst Project-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\\\"$(SRCROOT)/PayPalMobile\\\"",
-					/Users/chris/Github/thirstproject/Libs/PayPalMobile,
+					"$(SRCROOT)/Libs/PayPalMobile",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

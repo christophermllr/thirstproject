@@ -6,8 +6,9 @@
 //  Copyright (c) 2013 Thirst Project. All rights reserved.
 //
 
+#import "InfoViewController.h"
 #import <UIKit/UIKit.h>
 
-@interface WellViewController : UIViewController
+@interface WellViewController : UIViewController <InfoViewControllerDelegate>
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "WellViewController.h"
+#import "InfoViewController.h"
 #import "AppDelegate.h"
 
 @interface WellViewController ()
@@ -34,6 +35,23 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - InfoViewControllerDelegate
+
+- (void)infoViewControllerDidClose:(InfoViewController *)controller
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"ViewInfo"]) {
+        
+        UINavigationController *navigationController = segue.destinationViewController;
+        InfoViewController *infoViewController = [navigationController viewControllers][0];
+        infoViewController.delegate = self;
+    }
 }
 
 @end

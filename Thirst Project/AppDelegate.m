@@ -45,8 +45,8 @@
             schoolData = [NSData dataWithContentsOfFile: filePath];
         }
         else {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
-                                                            message:@"An Internet connection is required for the list of schools."
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"An Internet Connection is Required"
+                                                            message:nil
                                                            delegate:nil
                                                   cancelButtonTitle:@"OK"
                                                   otherButtonTitles:nil];
