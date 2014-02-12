@@ -34,6 +34,8 @@
 #import "InfoViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "AppDelegate.h"
+#import "DeviceUtils.h"
+#import "ThirstProjectConfig.h"
 
 @interface MainViewController ()
 
@@ -83,12 +85,12 @@
     
     // Set Navbar color for iOS6/7.
     NSArray *ver = [[UIDevice currentDevice].systemVersion componentsSeparatedByString:@"."];
-    if ([[ver objectAtIndex:0] intValue] >= 7) {
-        self.navigationController.navigationBar.barTintColor = [(AppDelegate *)[UIApplication sharedApplication].delegate TPColor];
+    if ([DeviceUtils isiOS7OrGreater]) {
+        self.navigationController.navigationBar.barTintColor = [ThirstProjectConfig defaultColor];
         self.navigationController.navigationBar.translucent = NO;
         self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
     } else {
-        self.navigationController.navigationBar.tintColor = [(AppDelegate *)[UIApplication sharedApplication].delegate TPColor];
+        self.navigationController.navigationBar.tintColor = [ThirstProjectConfig defaultColor];
     }
     
     NSLog(@"PayPal iOS SDK version: %@", [PayPalPaymentViewController libraryVersion]);
@@ -115,11 +117,6 @@
     [self.amountField becomeFirstResponder];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     [self.view endEditing:YES];
@@ -139,7 +136,7 @@
     return self.schools.count;
 }
 
--(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row   forComponent:(NSInteger)component
+-(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
     return [self.schools objectAtIndex:row];
 }
@@ -207,17 +204,15 @@
     paymentViewController.hideCreditCardButton = !self.acceptCreditCards;
     
     // Set Navbar color for iOS6/7.
-    NSArray *ver = [[UIDevice currentDevice].systemVersion componentsSeparatedByString:@"."];
-    
-    if ([[ver objectAtIndex:0] intValue] >= 7) {
+    if ([DeviceUtils isiOS7OrGreater]) {
         
-        paymentViewController.navigationBar.barTintColor = [(AppDelegate *)[UIApplication sharedApplication].delegate TPColor];
+        paymentViewController.navigationBar.barTintColor = [ThirstProjectConfig defaultColor];
         paymentViewController.navigationBar.tintColor = [UIColor whiteColor];
         paymentViewController.navigationBar.translucent = NO;
         paymentViewController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
         
     } else {
-        paymentViewController.navigationBar.tintColor = [(AppDelegate *)[UIApplication sharedApplication].delegate TPColor];
+        paymentViewController.navigationBar.tintColor = [ThirstProjectConfig defaultColor];
     }
     
     [self presentViewController:paymentViewController animated:YES completion:nil];

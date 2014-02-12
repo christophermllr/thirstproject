@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3BEFDF8F18ABEBB900118104 /* DeviceUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEFDF8E18ABEBB900118104 /* DeviceUtils.m */; };
+		3BEFDF9218ABEC9C00118104 /* ThirstProjectConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEFDF9118ABEC9C00118104 /* ThirstProjectConfig.m */; };
 		83079642176FFEFE00CC7478 /* FlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8307963F176FFEFE00CC7478 /* FlipsideViewController.m */; };
 		83079643176FFEFE00CC7478 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83079641176FFEFE00CC7478 /* MainViewController.m */; };
 		836FC2D11826ECF400577614 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 836FC2CC1826C88400577614 /* Media.xcassets */; };
@@ -60,6 +62,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3BEFDF8D18ABEBB900118104 /* DeviceUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceUtils.h; sourceTree = "<group>"; };
+		3BEFDF8E18ABEBB900118104 /* DeviceUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceUtils.m; sourceTree = "<group>"; };
+		3BEFDF9018ABEC9C00118104 /* ThirstProjectConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirstProjectConfig.h; sourceTree = "<group>"; };
+		3BEFDF9118ABEC9C00118104 /* ThirstProjectConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirstProjectConfig.m; sourceTree = "<group>"; };
 		8307963E176FFEFE00CC7478 /* FlipsideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlipsideViewController.h; sourceTree = "<group>"; };
 		8307963F176FFEFE00CC7478 /* FlipsideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlipsideViewController.m; sourceTree = "<group>"; };
 		83079640176FFEFE00CC7478 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -229,6 +235,10 @@
 				83AD8C6C182714B200689C84 /* WellViewController.m */,
 				83D840E9185180650035E05D /* InfoViewController.h */,
 				83D840EA185180650035E05D /* InfoViewController.m */,
+				3BEFDF8D18ABEBB900118104 /* DeviceUtils.h */,
+				3BEFDF8E18ABEBB900118104 /* DeviceUtils.m */,
+				3BEFDF9018ABEC9C00118104 /* ThirstProjectConfig.h */,
+				3BEFDF9118ABEC9C00118104 /* ThirstProjectConfig.m */,
 			);
 			path = "Thirst Project";
 			sourceTree = "<group>";
@@ -392,9 +402,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				837D2CDC171CDA4500E8677E /* main.m in Sources */,
+				3BEFDF8F18ABEBB900118104 /* DeviceUtils.m in Sources */,
 				83D840EF18518EAC0035E05D /* AMBlurView.m in Sources */,
 				83AD8C6D182714B200689C84 /* WellViewController.m in Sources */,
 				83D840EB185180650035E05D /* InfoViewController.m in Sources */,
+				3BEFDF9218ABEC9C00118104 /* ThirstProjectConfig.m in Sources */,
 				837FC03818503EFC00B7D327 /* Reachability.m in Sources */,
 				837D2CE0171CDA4500E8677E /* AppDelegate.m in Sources */,
 				837D2CEF171CDA4500E8677E /* AboutViewController.m in Sources */,

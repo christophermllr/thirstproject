@@ -29,7 +29,7 @@
     NSString *cachePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     NSString *filePath = [cachePath stringByAppendingPathComponent:@"schools.json"];
     
-    if(internetStatus == ReachableViaWiFi || internetStatus == ReachableViaWWAN) {
+    if (internetStatus == ReachableViaWiFi || internetStatus == ReachableViaWWAN) {
         
         NSString *urlAsString = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"TPSchoolsURL"];
         NSURL *url = [[NSURL alloc] initWithString:urlAsString];
@@ -38,13 +38,11 @@
         
         [schoolData writeToFile:filePath atomically:YES];
         
-    }
-    else {
+    } else {
         
-        if([fileManager fileExistsAtPath:filePath]) {
+        if ([fileManager fileExistsAtPath:filePath]) {
             schoolData = [NSData dataWithContentsOfFile: filePath];
-        }
-        else {
+        } else {
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"An Internet Connection is Required"
                                                             message:nil
                                                            delegate:nil

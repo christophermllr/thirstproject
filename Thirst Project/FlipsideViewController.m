@@ -49,10 +49,6 @@
   [super awakeFromNib];
 }
 
-- (void)viewDidLoad {
-  [super viewDidLoad];
-}
-
 - (void)logEnvironment {
   NSLog(@"Environment: %@. Accept credit cards? %d", self.delegate.environment, self.delegate.acceptCreditCards);
 }
@@ -78,11 +74,6 @@
     self.proofOfPaymentLabel.hidden = YES;
   }
   self.proofOfPaymentTextView.layer.cornerRadius = 8.0f;
-}
-
-- (void)didReceiveMemoryWarning {
-  [super didReceiveMemoryWarning];
-  // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Actions
