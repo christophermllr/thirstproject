@@ -18,7 +18,7 @@
 
 @interface CountryViewController ()
 
-@property (nonatomic, strong, readwrite) NSArray *countries;
+@property (nonatomic, strong) NSArray *countries;
 
 @end
 
@@ -26,7 +26,17 @@
 
 - (void)viewDidLoad
 {
+    // Add a UICollectionView
+    UICollectionViewFlowLayout *layout=[[UICollectionViewFlowLayout alloc] init];
+    _collectionView=[[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:layout];
+    [_collectionView setDataSource:self];
+    [_collectionView setDelegate:self];
+    [_collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cellId"];
+    [_collectionView setBackgroundColor:[UIColor clearColor]];
+    [self.view addSubview:_collectionView];
+    
     [super viewDidLoad];
+    
     [self parseCountries];
     [self getCountryImages];
     
@@ -99,32 +109,32 @@
     }
 }
 
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
-{
-    return 1;
-}
-
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
-{
-    return [self.countries count];
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return self.countries.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *identifier = @"Cell";
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSString *cachePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
-    
-    Country *country = [self.countries objectAtIndex:indexPath.section + indexPath.row];
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cellId" forIndexPath:indexPath];
+
+    Country *country = [self.countries objectAtIndex:indexPath.row];
     NSString *filePath = [cachePath stringByAppendingPathComponent:country.imageFilename];
     
-    if ([fileManager fileExistsAtPath:filePath]) {
-        UIImageView *countryImageView = (UIImageView *)[cell viewWithTag:100];
-        countryImageView.image = [NSData dataWithContentsOfFile: filePath];
-    }
+    cell.backgroundColor = [ThirstProjectConfig defaultColor];
+    //TODO fill with images
+//    if ([fileManager fileExistsAtPath:filePath]) {
+//        UIImageView *countryImageView = (UIImageView *)[cell viewWithTag:100];
+//        countryImageView.image = [[UIImage alloc] initWithContentsOfFile:filePath];
+//    }
     
     return cell;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    return CGSizeMake(150, 150);
 }
 
 #pragma mark - InfoViewControllerDelegate
