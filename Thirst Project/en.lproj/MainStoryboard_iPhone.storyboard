@@ -186,7 +186,7 @@
         <scene sceneID="13">
             <objects>
                 <viewController title="Wells" id="3" customClass="CountryViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="17">
+                    <view key="view" contentMode="scaleToFill" id="17" customClass="UICollectionView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.94117653369999998" green="0.94117653369999998" blue="0.94117653369999998" alpha="1" colorSpace="deviceRGB"/>
@@ -300,6 +300,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="MKa-sP-ISy"/>
+        <segue reference="08y-0v-PDs"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -10,4 +10,10 @@
 
 @interface Country : NSObject
 
+@property (strong, nonatomic) NSString *countryName;
+@property (strong, nonatomic) NSString *imageFilename;
+@property (strong, nonatomic) NSNumber *wellCount;
+@property (strong, nonatomic) NSNumber *peopleServed;
+@property (strong, nonatomic) NSNumber *dollarsDonated;
+
 @end

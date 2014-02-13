@@ -43,7 +43,7 @@
 @property (nonatomic, strong, readwrite) IBOutlet UIButton *payButton;
 @property (nonatomic, strong, readwrite) IBOutlet UIView *successView;
 @property (nonatomic, strong, readwrite) IBOutlet UIPickerView *pickerView;
-@property (nonatomic, strong, readwrite)          NSMutableArray *schools;
+@property (nonatomic, strong, readwrite)          NSArray *schools;
 
 @end
 
