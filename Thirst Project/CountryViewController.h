@@ -9,6 +9,6 @@
 #import "InfoViewController.h"
 #import <UIKit/UIKit.h>
 
-@interface WellViewController : UIViewController <InfoViewControllerDelegate>
+@interface CountryViewController : UIViewController <InfoViewControllerDelegate>
 
 @end

@@ -37,7 +37,11 @@
 	<key>PayPalReceiverEmail</key>
 	<string>seth-facilitator@thirstproject.org</string>
 	<key>TPSchoolsURL</key>
-	<string>https://dl.dropboxusercontent.com/u/2384307/schools.json</string>
+	<string>https://dl.dropboxusercontent.com/u/2384307/TPApp/schools.json</string>
+	<key>TPCountriesURL</key>
+	<string>https://dl.dropboxusercontent.com/u/2384307/TPApp/countries.json</string>
+	<key>TPImagesURL</key>
+	<string>https://dl.dropboxusercontent.com/u/2384307/TPApp/images/</string>
 	<key>UIMainStoryboardFile</key>
 	<string>MainStoryboard_iPhone</string>
 	<key>UIMainStoryboardFile~ipad</key>

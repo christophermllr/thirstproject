@@ -124,10 +124,10 @@
             </objects>
             <point key="canvasLocation" x="2285" y="202"/>
         </scene>
-        <!--Main View Controller - Donate to Thirst Project-->
+        <!--Donate View Controller - Donate to Thirst Project-->
         <scene sceneID="sou-tB-ZEY">
             <objects>
-                <viewController id="Lck-JH-vOB" customClass="MainViewController" sceneMemberID="viewController">
+                <viewController id="Lck-JH-vOB" customClass="DonateViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VC8-Fj-Nag">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -182,10 +182,10 @@
             </objects>
             <point key="canvasLocation" x="1079" y="1065"/>
         </scene>
-        <!--Well View Controller - Wells-->
+        <!--Country View Controller - Wells-->
         <scene sceneID="13">
             <objects>
-                <viewController title="Wells" id="3" customClass="WellViewController" sceneMemberID="viewController">
+                <viewController title="Wells" id="3" customClass="CountryViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="17">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

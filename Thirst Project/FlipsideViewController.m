@@ -32,7 +32,6 @@
 
 #import "FlipsideViewController.h"
 #import <QuartzCore/QuartzCore.h>
-#import "AppDelegate.h"
 
 @interface FlipsideViewController ()
 

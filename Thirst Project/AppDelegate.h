@@ -12,10 +12,12 @@
 {
     UIColor *TPColor;
     NSData *schoolData;
+    NSData *countryData;
 }
 
 @property (strong, nonatomic)    UIWindow *window;
 @property (retain, nonatomic)    UIColor *TPColor;
 @property (retain, nonatomic)    NSData *schoolData;
+@property (retain, nonatomic)    NSData *countryData;
 
 @end

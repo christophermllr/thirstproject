@@ -8,7 +8,6 @@
 
 #import "AboutViewController.h"
 #import "InfoViewController.h"
-#import "AppDelegate.h"
 #import "DeviceUtils.h"
 #import "ThirstProjectConfig.h"
 

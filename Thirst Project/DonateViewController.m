@@ -30,14 +30,14 @@
 //  either expressed or implied, of the FreeBSD Project.
 //
 
-#import "MainViewController.h"
+#import "DonateViewController.h"
 #import "InfoViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "AppDelegate.h"
 #import "DeviceUtils.h"
 #import "ThirstProjectConfig.h"
 
-@interface MainViewController ()
+@interface DonateViewController ()
 
 @property (nonatomic, strong, readwrite) IBOutlet UITextField *amountField;
 @property (nonatomic, strong, readwrite) IBOutlet UIButton *payButton;
@@ -47,7 +47,7 @@
 
 @end
 
-@implementation MainViewController
+@implementation DonateViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -84,7 +84,6 @@
     self.amountField.keyboardType = UIKeyboardTypeDecimalPad;
     
     // Set Navbar color for iOS6/7.
-    NSArray *ver = [[UIDevice currentDevice].systemVersion componentsSeparatedByString:@"."];
     if ([DeviceUtils isiOS7OrGreater]) {
         self.navigationController.navigationBar.barTintColor = [ThirstProjectConfig defaultColor];
         self.navigationController.navigationBar.translucent = NO;

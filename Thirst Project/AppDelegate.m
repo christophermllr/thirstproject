@@ -13,11 +13,13 @@
 
 @synthesize TPColor;
 @synthesize schoolData;
+@synthesize countryData;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     TPColor = [UIColor colorWithRed:3.0f/255.0f green:170.0f/255.0f blue:171.0f/255.0f alpha:1.0f];
     [self getSchoolData];
+    [self getCountryData];
     return YES;
 }
 
@@ -53,6 +55,39 @@
         }
     }
     
+}
+
+- (void)getCountryData
+{
+    Reachability *reachability = [Reachability reachabilityForInternetConnection];
+    NetworkStatus internetStatus = [reachability currentReachabilityStatus];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSString *cachePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *filePath = [cachePath stringByAppendingPathComponent:@"countries.json"];
+    
+    if (internetStatus == ReachableViaWiFi || internetStatus == ReachableViaWWAN) {
+        
+        NSString *urlAsString = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"TPCountriesURL"];
+        NSURL *url = [[NSURL alloc] initWithString:urlAsString];
+        
+        countryData = [NSData dataWithContentsOfURL:url];
+        
+        [countryData writeToFile:filePath atomically:YES];
+        
+    } else {
+        
+        if ([fileManager fileExistsAtPath:filePath]) {
+            countryData = [NSData dataWithContentsOfFile: filePath];
+        } else {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"An Internet Connection is Required"
+                                                            message:nil
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+            [alert show];
+            return; //TODO disable access to the payment view controller.
+        }
+    }
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application
