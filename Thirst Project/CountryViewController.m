@@ -15,6 +15,7 @@
 #import "CountryBuilder.h"
 #import "Reachability.h"
 #import "Country.h"
+#import "CellImageButton.h"
 
 @interface CountryViewController ()
 
@@ -109,8 +110,21 @@
     }
 }
 
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+#pragma mark - Collection Rendering
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
     return self.countries.count;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    return CGSizeMake(150, 150);
+}
+
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
+{
+    return UIEdgeInsetsMake(5, 5, 5, 5);
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -122,19 +136,32 @@
     Country *country = [self.countries objectAtIndex:indexPath.row];
     NSString *filePath = [cachePath stringByAppendingPathComponent:country.imageFilename];
     
-    cell.backgroundColor = [ThirstProjectConfig defaultColor];
-    //TODO fill with images
-//    if ([fileManager fileExistsAtPath:filePath]) {
-//        UIImageView *countryImageView = (UIImageView *)[cell viewWithTag:100];
-//        countryImageView.image = [[UIImage alloc] initWithContentsOfFile:filePath];
-//    }
+    if ([fileManager fileExistsAtPath:filePath]) {
+        
+        CellImageButton *button = [[CellImageButton alloc] initWithFrame:CGRectMake(0, 0, 150, 150)];
+        [button addTarget:self action:@selector(onCellTouch:) forControlEvents:UIControlEventTouchUpInside];
+        [button setCountryData:country];
+        
+        UIImageView *subview = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 150, 150)];
+        subview.image = [[UIImage alloc] initWithContentsOfFile:filePath];
+        
+        [button addSubview:subview];
+        [cell addSubview:button];
+        [cell bringSubviewToFront:button];
+    }
     
     return cell;
 }
 
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+-(void)onCellTouch:(CellImageButton *)sender
 {
-    return CGSizeMake(150, 150);
+    NSString *message = [NSString stringWithFormat:@"%@ wells built\n$%@ donated\n%@ lives affected", sender.countryData.wellCount, sender.countryData.dollarsDonated, sender.countryData.peopleServed];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:sender.countryData.countryName
+                                                    message:message
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
 }
 
 #pragma mark - InfoViewControllerDelegate

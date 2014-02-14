@@ -11,6 +11,7 @@
 		3BEFDF9218ABEC9C00118104 /* ThirstProjectConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEFDF9118ABEC9C00118104 /* ThirstProjectConfig.m */; };
 		83079642176FFEFE00CC7478 /* FlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8307963F176FFEFE00CC7478 /* FlipsideViewController.m */; };
 		83079643176FFEFE00CC7478 /* DonateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83079641176FFEFE00CC7478 /* DonateViewController.m */; };
+		833B160018ADCDA3002EA8C8 /* CellImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 833B15FF18ADCDA2002EA8C8 /* CellImageButton.m */; };
 		836025E518AC5FE100995E22 /* Country.m in Sources */ = {isa = PBXBuildFile; fileRef = 836025E418AC5FE100995E22 /* Country.m */; };
 		836025E818AC626E00995E22 /* CountryBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 836025E718AC626E00995E22 /* CountryBuilder.m */; };
 		836FC2D11826ECF400577614 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 836FC2CC1826C88400577614 /* Media.xcassets */; };
@@ -71,6 +72,8 @@
 		8307963F176FFEFE00CC7478 /* FlipsideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlipsideViewController.m; sourceTree = "<group>"; };
 		83079640176FFEFE00CC7478 /* DonateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DonateViewController.h; sourceTree = "<group>"; };
 		83079641176FFEFE00CC7478 /* DonateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DonateViewController.m; sourceTree = "<group>"; };
+		833B15FE18ADCDA2002EA8C8 /* CellImageButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellImageButton.h; sourceTree = "<group>"; };
+		833B15FF18ADCDA2002EA8C8 /* CellImageButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellImageButton.m; sourceTree = "<group>"; };
 		836025E318AC5FE100995E22 /* Country.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Country.h; sourceTree = "<group>"; };
 		836025E418AC5FE100995E22 /* Country.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Country.m; sourceTree = "<group>"; };
 		836025E618AC626E00995E22 /* CountryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountryBuilder.h; sourceTree = "<group>"; };
@@ -246,6 +249,8 @@
 				837D2CD6171CDA4500E8677E /* Supporting Files */,
 				3BEFDF9018ABEC9C00118104 /* ThirstProjectConfig.h */,
 				3BEFDF9118ABEC9C00118104 /* ThirstProjectConfig.m */,
+				833B15FE18ADCDA2002EA8C8 /* CellImageButton.h */,
+				833B15FF18ADCDA2002EA8C8 /* CellImageButton.m */,
 			);
 			path = "Thirst Project";
 			sourceTree = "<group>";
@@ -406,6 +411,7 @@
 				3BEFDF9218ABEC9C00118104 /* ThirstProjectConfig.m in Sources */,
 				837FC03818503EFC00B7D327 /* Reachability.m in Sources */,
 				837D2CE0171CDA4500E8677E /* AppDelegate.m in Sources */,
+				833B160018ADCDA3002EA8C8 /* CellImageButton.m in Sources */,
 				837D2CEF171CDA4500E8677E /* AboutViewController.m in Sources */,
 				836025E518AC5FE100995E22 /* Country.m in Sources */,
 				83079642176FFEFE00CC7478 /* FlipsideViewController.m in Sources */,

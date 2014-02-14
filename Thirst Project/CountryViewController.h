@@ -13,4 +13,5 @@
 {
     UICollectionView *_collectionView;
 }
+
 @end
