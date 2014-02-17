@@ -3,7 +3,7 @@
 //  Thirst Project
 //
 //  Created by Christopher Miller on 11/3/13.
-//  Copyright (c) 2013 Thirst Project. All rights reserved.
+//  Copyright (c) 2014 Thirst Project. All rights reserved.
 //
 
 #import "InfoViewController.h"

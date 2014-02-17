@@ -4,7 +4,7 @@
 //
 //  Created by Christopher Miller on 11/3/13.
 //  Edited by Kevin Kinnebrew 2/12/14
-//  Copyright (c) 2013 Thirst Project. All rights reserved.
+//  Copyright (c) 2014 Thirst Project. All rights reserved.
 //
 
 #import "CountryViewController.h"
