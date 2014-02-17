@@ -132,6 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				837D4B20171CE22700E8677E /* MessageUI.framework in Frameworks */,
 				D54047A517530F8C0056196E /* SystemConfiguration.framework in Frameworks */,
 				837D4B23171CE22700E8677E /* QuartzCore.framework in Frameworks */,
 				837D4B22171CE22700E8677E /* OpenGLES.framework in Frameworks */,
@@ -150,7 +151,6 @@
 				837D4B1E171CE22700E8677E /* libxml2.dylib in Frameworks */,
 				837D4B21171CE22700E8677E /* MobileCoreServices.framework in Frameworks */,
 				837D4B1B171CE22700E8677E /* AudioToolbox.framework in Frameworks */,
-				837D4B20171CE22700E8677E /* MessageUI.framework in Frameworks */,
 				837D4B24171CE22700E8677E /* Security.framework in Frameworks */,
 				837D2CD0171CDA4500E8677E /* UIKit.framework in Frameworks */,
 				837D2CD2171CDA4500E8677E /* Foundation.framework in Frameworks */,
@@ -342,6 +342,11 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Thirst Project";
+				TargetAttributes = {
+					837D2CCB171CDA4500E8677E = {
+						DevelopmentTeam = M9982KADQN;
+					};
+				};
 			};
 			buildConfigurationList = 837D2CC7171CDA4500E8677E /* Build configuration list for PBXProject "Thirst Project" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -535,6 +540,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -547,6 +554,7 @@
 					"$(SRCROOT)/Libs/PayPalMobile",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -556,6 +564,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -567,7 +577,9 @@
 					"$(inherited)",
 					"$(SRCROOT)/Libs/PayPalMobile",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

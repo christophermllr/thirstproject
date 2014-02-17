@@ -2,10 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>UIViewControllerBasedStatusBarAppearance</key>
-	<false/>
-	<key>UIStatusBarStyle</key>
-	<string>UIStatusBarStyleLightContent</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
@@ -17,7 +13,7 @@
 	<key>CFBundleIcons~ipad</key>
 	<dict/>
 	<key>CFBundleIdentifier</key>
-	<string>WMP.${PRODUCT_NAME:rfc1034identifier}</string>
+	<string>com.westmonroepartners.thirstproject</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -36,12 +32,20 @@
 	<string>AURwPhAvt-7dtlSH5C1X9S8kbddcjIWDcEcoIm7SOxS-1tXA4KdMBT83U2Oe</string>
 	<key>PayPalReceiverEmail</key>
 	<string>seth-facilitator@thirstproject.org</string>
-	<key>TPSchoolsURL</key>
-	<string>https://dl.dropboxusercontent.com/u/2384307/TPApp/schools.json</string>
 	<key>TPCountriesURL</key>
 	<string>https://dl.dropboxusercontent.com/u/2384307/TPApp/countries.json</string>
 	<key>TPImagesURL</key>
 	<string>https://dl.dropboxusercontent.com/u/2384307/TPApp/images/</string>
+	<key>TPSchoolsURL</key>
+	<string>https://dl.dropboxusercontent.com/u/2384307/TPApp/schools.json</string>
+	<key>TPFeedbackEmail</key>
+	<string>cmiller@westmonroepartners.com</string>
+	<key>TPFeedbackSubject</key>
+	<string>[ThirstProject] App Feedback</string>
+	<key>TPContactEmail</key>
+	<string>seth@thirstproject.org</string>
+	<key>TPContactSubject</key>
+	<string>Contact from iOS App</string>
 	<key>UIMainStoryboardFile</key>
 	<string>MainStoryboard_iPhone</string>
 	<key>UIMainStoryboardFile~ipad</key>
@@ -50,6 +54,8 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleLightContent</string>
 	<key>UIStatusBarTintParameters</key>
 	<dict>
 		<key>UINavigationBar</key>
@@ -68,5 +74,7 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 </dict>
 </plist>

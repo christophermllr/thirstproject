@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MFMailComposeViewController.h>
 
 @class InfoViewController;
 
@@ -14,10 +15,12 @@
 - (void)infoViewControllerDidClose:(InfoViewController *)controller;
 @end
 
-@interface InfoViewController : UIViewController
+@interface InfoViewController : UIViewController <MFMailComposeViewControllerDelegate>
 
 @property (nonatomic, weak) id <InfoViewControllerDelegate> delegate;
 
 - (IBAction)done:(id)sender;
+- (IBAction)sendFeedback:(id)sender;
+- (IBAction)contactThirstProject:(id)sender;
 
 @end
