@@ -39,8 +39,8 @@
 
 @property (unsafe_unretained) id<JBKenBurnsViewDelegate> delegate;
 
-- (void) animateWithImagePaths:(NSArray *)imagePaths headings:(NSArray *)headings transitionDuration:(float)time loop:(BOOL)isLoop isLandscape:(BOOL)isLandscape;
-- (void) animateWithImages:(NSArray *)images headings:(NSArray *)headings transitionDuration:(float)time loop:(BOOL)isLoop isLandscape:(BOOL)isLandscape;
+- (void) animateWithImagePaths:(NSArray *)imagePaths transitionDuration:(float)time loop:(BOOL)isLoop isLandscape:(BOOL)isLandscape;
+- (void) animateWithImages:(NSArray *)images transitionDuration:(float)time loop:(BOOL)isLoop isLandscape:(BOOL)isLandscape;
 - (void) stopAnimation;
 @end
 

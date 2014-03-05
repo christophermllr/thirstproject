@@ -37,7 +37,6 @@ enum JBSourceMode {
 // Private interface
 @interface JBKenBurnsView (){
     NSMutableArray *_imagesArray;
-    NSMutableArray *_headingsArray;
     CGFloat _showImageDuration;
     NSInteger _currentIndex;
     BOOL _shouldLoop;
@@ -74,15 +73,15 @@ enum JBSourceMode {
     self.layer.masksToBounds = YES;
 }
 
-- (void) animateWithImagePaths:(NSArray *)imagePaths headings:(NSArray *)headings transitionDuration:(float)duration loop:(BOOL)shouldLoop isLandscape:(BOOL)isLandscape
+- (void) animateWithImagePaths:(NSArray *)imagePaths transitionDuration:(float)duration loop:(BOOL)shouldLoop isLandscape:(BOOL)isLandscape
 {
     _sourceMode = JBSourceModePaths;
-    [self _startAnimationsWithData:imagePaths headings:headings transitionDuration:duration loop:shouldLoop isLandscape:isLandscape];
+    [self _startAnimationsWithData:imagePaths transitionDuration:duration loop:shouldLoop isLandscape:isLandscape];
 }
 
-- (void) animateWithImages:(NSArray *)images headings:(NSArray *)headings transitionDuration:(float)duration loop:(BOOL)shouldLoop isLandscape:(BOOL)isLandscape {
+- (void) animateWithImages:(NSArray *)images transitionDuration:(float)duration loop:(BOOL)shouldLoop isLandscape:(BOOL)isLandscape {
     _sourceMode = JBSourceModeImages;
-    [self _startAnimationsWithData:images headings:headings transitionDuration:duration loop:shouldLoop isLandscape:isLandscape];
+    [self _startAnimationsWithData:images transitionDuration:duration loop:shouldLoop isLandscape:isLandscape];
 }
 
 - (void)stopAnimation {
@@ -92,10 +91,9 @@ enum JBSourceMode {
     }
 }
 
-- (void)_startAnimationsWithData:(NSArray *)data headings:(NSArray *)headings transitionDuration:(float)duration loop:(BOOL)shouldLoop isLandscape:(BOOL)isLandscape
+- (void)_startAnimationsWithData:(NSArray *)data transitionDuration:(float)duration loop:(BOOL)shouldLoop isLandscape:(BOOL)isLandscape
 {
     _imagesArray        = [data mutableCopy];
-    _headingsArray      = [headings mutableCopy];
     _showImageDuration  = duration;
     _shouldLoop         = shouldLoop;
     _isLandscape        = isLandscape;
@@ -256,18 +254,6 @@ enum JBSourceMode {
     picLayer.zPosition   = 1;
     
     [imageView.layer addSublayer:picLayer];
-    
-    CATextLayer *textLayer = [[CATextLayer alloc] init];
-    [textLayer setFont:@"Helvetica-Bold"];
-    [textLayer setFontSize:30];
-    [textLayer setFrame:imageView.frame];
-    [textLayer setString:_headingsArray[_currentIndex]];
-    [textLayer setAlignmentMode:kCAAlignmentCenter];
-    [textLayer setForegroundColor:[[UIColor whiteColor] CGColor]];
-    textLayer.wrapped = YES;
-    textLayer.zPosition = 2;
-    
-    [imageView.layer addSublayer:textLayer];
     
     CATransition *animation = [CATransition animation];
     [animation setDuration:1];

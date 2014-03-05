@@ -27,8 +27,10 @@
 
 @interface SlideshowViewController : UIViewController <JBKenBurnsViewDelegate> {
     JBKenBurnsView *kenView;
+    UILabel *label;
 }
 
 @property (nonatomic, retain) IBOutlet JBKenBurnsView *kenView;
+@property (nonatomic, retain) IBOutlet UILabel *label;
 
 @end
