@@ -41,7 +41,7 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    NSArray *myImages = [NSArray arrayWithObjects:
+    NSArray *images = [NSArray arrayWithObjects:
                          [UIImage imageNamed:@"Photo1"],
                          [UIImage imageNamed:@"Photo2"],
                          [UIImage imageNamed:@"Photo3"],
@@ -49,7 +49,17 @@
                          [UIImage imageNamed:@"Photo5"],
                          [UIImage imageNamed:@"Logo"], nil];
     
-    [self.kenView animateWithImages:myImages
+    NSArray *headings = [NSArray arrayWithObjects:
+                         @"Almost 1 billion people on our planet don't have access to safe, clean drinking water and proper sanitization. That's one in every eight of us.",
+                         @"4,500 children die every day from diseases caused by contaminated water. That's huge.",
+                         @"That's approximately one child every 15 seconds.",
+                         @"80% of all global diseases are water-borne and result from drinking contaminated water.",
+                         @"These diseases kill more than 2.2 million people every year.",
+                         @"",
+                         nil];
+    
+    [self.kenView animateWithImages:images
+                           headings:headings
                  transitionDuration:6
                                loop:NO
                         isLandscape:NO];
