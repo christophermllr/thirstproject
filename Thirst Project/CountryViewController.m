@@ -14,6 +14,8 @@
 #import "ThirstProjectConfig.h"
 #import "Reachability.h"
 #import "Country.h"
+#import "CountryBuilder.h"
+#import "WellsViewController.h"
 
 @interface CountryViewController ()
 
@@ -29,13 +31,7 @@
     
     [super viewDidLoad];
     
-    /* NSMutableArray *countries = [NSMutableArray array];
-    for (NSDictionary //not sure what goes here)
-    {
-        [countries addObject:[dictionary valueForKey:@"countryName"]];
-    }
-    NSLog(@"%@",countries);
-    */
+    [self parseCountries];
     
     // Set Navbar color for iOS6/7.
     if ([DeviceUtils isiOS7OrGreater]) {
@@ -47,6 +43,33 @@
     }
 }
 
+-(void)parseCountries
+{
+    NSError *error = nil;
+    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    if (appDelegate.countryData == nil)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"An Internet Connection is Required"
+                                                        message:nil
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+        return; //TODO send user back to initial view controller?
+    }
+    
+    self.countries = [CountryBuilder countriesFromJSON:appDelegate.countryData error:&error];
+    if (error != nil) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                        message:@"An error occurred while parsing the list of countries."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+        return; //TODO send user back to initial view controller?
+    }
+}
+
 #pragma mark - TableView
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -55,7 +78,14 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     // TODO incomplete
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"countryCell"];
     
+        
+    Country *country = [self.countries objectAtIndex:indexPath.row];
+    // Name of country to cell
+    cell.textLabel.text = country.countryName;
+    
+    return cell;
 }
 
 #pragma mark - InfoViewControllerDelegate
@@ -71,6 +101,10 @@
         UINavigationController *navigationController = segue.destinationViewController;
         InfoViewController *infoViewController = [navigationController viewControllers][0];
         infoViewController.delegate = self;
+    }
+    else if([segue.identifier isEqualToString:@"toDetails"]) {
+        // TODO not sure what goes here
+        
     }
 }
 
