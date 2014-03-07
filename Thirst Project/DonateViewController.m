@@ -154,6 +154,17 @@
     payment.amount = [NSDecimalNumber decimalNumberWithString:numstring];
     payment.currencyCode = @"USD";
     
+    // Is donation amount greater than 0
+    if ([self.amountField.text doubleValue] == 0) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Donation amount must be greater than $0"
+                                                        message:nil
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+        return;
+    }
+    
     NSInteger row = [self.pickerView selectedRowInComponent:0];
     NSString *selectedText = [self.schools objectAtIndex:row];
     payment.shortDescription = selectedText;

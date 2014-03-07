@@ -9,15 +9,15 @@
 /* Begin PBXBuildFile section */
 		3BEFDF8F18ABEBB900118104 /* DeviceUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEFDF8E18ABEBB900118104 /* DeviceUtils.m */; };
 		3BEFDF9218ABEC9C00118104 /* ThirstProjectConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEFDF9118ABEC9C00118104 /* ThirstProjectConfig.m */; };
+		72A046D818C8D6E600013F72 /* thirst.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72A046D718C8D6E600013F72 /* thirst.jpg */; };
+		72ADA73318C921BF00B1E25D /* CountryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72ADA73218C921BE00B1E25D /* CountryViewController.m */; };
 		83079642176FFEFE00CC7478 /* FlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8307963F176FFEFE00CC7478 /* FlipsideViewController.m */; };
 		83079643176FFEFE00CC7478 /* DonateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83079641176FFEFE00CC7478 /* DonateViewController.m */; };
-		833B160018ADCDA3002EA8C8 /* CellImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 833B15FF18ADCDA2002EA8C8 /* CellImageButton.m */; };
 		833EEF3818C6C17900B627B8 /* JBKenBurnsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 833EEF3618C6C17900B627B8 /* JBKenBurnsView.m */; };
 		833EEF3918C6C17900B627B8 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 833EEF3718C6C17900B627B8 /* LICENSE */; };
 		833EEF4118C6CC8A00B627B8 /* KenBurnsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 833EEF3E18C6CC8A00B627B8 /* KenBurnsAppDelegate.m */; };
 		833EEF4218C6CC8A00B627B8 /* SlideshowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 833EEF4018C6CC8A00B627B8 /* SlideshowViewController.m */; };
 		836025E518AC5FE100995E22 /* Country.m in Sources */ = {isa = PBXBuildFile; fileRef = 836025E418AC5FE100995E22 /* Country.m */; };
-		836025E818AC626E00995E22 /* CountryBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 836025E718AC626E00995E22 /* CountryBuilder.m */; };
 		836FC2D11826ECF400577614 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 836FC2CC1826C88400577614 /* Media.xcassets */; };
 		837D2CD0171CDA4500E8677E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837D2CCF171CDA4500E8677E /* UIKit.framework */; };
 		837D2CD2171CDA4500E8677E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837D2CD1171CDA4500E8677E /* Foundation.framework */; };
@@ -43,7 +43,6 @@
 		837D4B24171CE22700E8677E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837D4B1A171CE22700E8677E /* Security.framework */; };
 		837FC03218503ECF00B7D327 /* libPayPalMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 837FC02E18503ECF00B7D327 /* libPayPalMobile.a */; };
 		837FC03818503EFC00B7D327 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 837FC03718503EFC00B7D327 /* Reachability.m */; };
-		83AD8C6D182714B200689C84 /* CountryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AD8C6C182714B200689C84 /* CountryViewController.m */; };
 		83C36D40171CF88B0090F037 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83C36D3F171CF88B0090F037 /* AddressBook.framework */; };
 		83D840EB185180650035E05D /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D840EA185180650035E05D /* InfoViewController.m */; };
 		D540479517530E9D0056196E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D540479417530E9D0056196E /* CoreData.framework */; };
@@ -72,12 +71,13 @@
 		3BEFDF8E18ABEBB900118104 /* DeviceUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceUtils.m; sourceTree = "<group>"; };
 		3BEFDF9018ABEC9C00118104 /* ThirstProjectConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirstProjectConfig.h; sourceTree = "<group>"; };
 		3BEFDF9118ABEC9C00118104 /* ThirstProjectConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirstProjectConfig.m; sourceTree = "<group>"; };
+		72A046D718C8D6E600013F72 /* thirst.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = thirst.jpg; sourceTree = "<group>"; };
+		72ADA73118C921BE00B1E25D /* CountryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountryViewController.h; sourceTree = "<group>"; };
+		72ADA73218C921BE00B1E25D /* CountryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountryViewController.m; sourceTree = "<group>"; };
 		8307963E176FFEFE00CC7478 /* FlipsideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlipsideViewController.h; sourceTree = "<group>"; };
 		8307963F176FFEFE00CC7478 /* FlipsideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlipsideViewController.m; sourceTree = "<group>"; };
 		83079640176FFEFE00CC7478 /* DonateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DonateViewController.h; sourceTree = "<group>"; };
 		83079641176FFEFE00CC7478 /* DonateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DonateViewController.m; sourceTree = "<group>"; };
-		833B15FE18ADCDA2002EA8C8 /* CellImageButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellImageButton.h; sourceTree = "<group>"; };
-		833B15FF18ADCDA2002EA8C8 /* CellImageButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellImageButton.m; sourceTree = "<group>"; };
 		833EEF3518C6C17900B627B8 /* JBKenBurnsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBKenBurnsView.h; sourceTree = "<group>"; };
 		833EEF3618C6C17900B627B8 /* JBKenBurnsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBKenBurnsView.m; sourceTree = "<group>"; };
 		833EEF3718C6C17900B627B8 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -87,8 +87,6 @@
 		833EEF4018C6CC8A00B627B8 /* SlideshowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideshowViewController.m; sourceTree = "<group>"; };
 		836025E318AC5FE100995E22 /* Country.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Country.h; sourceTree = "<group>"; };
 		836025E418AC5FE100995E22 /* Country.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Country.m; sourceTree = "<group>"; };
-		836025E618AC626E00995E22 /* CountryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountryBuilder.h; sourceTree = "<group>"; };
-		836025E718AC626E00995E22 /* CountryBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountryBuilder.m; sourceTree = "<group>"; };
 		836FC2CC1826C88400577614 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		837D2CCC171CDA4500E8677E /* Thirst Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Thirst Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		837D2CCF171CDA4500E8677E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -122,8 +120,6 @@
 		837FC03118503ECF00B7D327 /* PayPalPaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PayPalPaymentViewController.h; path = Libs/PayPalMobile/PayPalPaymentViewController.h; sourceTree = "<group>"; };
 		837FC03618503EFC00B7D327 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = Libs/Reachability/Reachability.h; sourceTree = "<group>"; };
 		837FC03718503EFC00B7D327 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = Libs/Reachability/Reachability.m; sourceTree = "<group>"; };
-		83AD8C69182713BF00689C84 /* CountryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountryViewController.h; sourceTree = "<group>"; };
-		83AD8C6C182714B200689C84 /* CountryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountryViewController.m; sourceTree = "<group>"; };
 		83C36D3F171CF88B0090F037 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		83D840E9185180650035E05D /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
 		83D840EA185180650035E05D /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
@@ -183,6 +179,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		72A046D618C8D6DB00013F72 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				72A046D718C8D6E600013F72 /* thirst.jpg */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		833EEF3418C6C17900B627B8 /* JBKenBurns */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,18 +252,14 @@
 		837D2CD5171CDA4500E8677E /* Thirst Project */ = {
 			isa = PBXGroup;
 			children = (
+				72ADA73118C921BE00B1E25D /* CountryViewController.h */,
+				72ADA73218C921BE00B1E25D /* CountryViewController.m */,
 				837D2CED171CDA4500E8677E /* AboutViewController.h */,
 				837D2CEE171CDA4500E8677E /* AboutViewController.m */,
 				837D2CDE171CDA4500E8677E /* AppDelegate.h */,
 				837D2CDF171CDA4500E8677E /* AppDelegate.m */,
-				833B15FE18ADCDA2002EA8C8 /* CellImageButton.h */,
-				833B15FF18ADCDA2002EA8C8 /* CellImageButton.m */,
 				836025E318AC5FE100995E22 /* Country.h */,
 				836025E418AC5FE100995E22 /* Country.m */,
-				836025E618AC626E00995E22 /* CountryBuilder.h */,
-				836025E718AC626E00995E22 /* CountryBuilder.m */,
-				83AD8C69182713BF00689C84 /* CountryViewController.h */,
-				83AD8C6C182714B200689C84 /* CountryViewController.m */,
 				3BEFDF8D18ABEBB900118104 /* DeviceUtils.h */,
 				3BEFDF8E18ABEBB900118104 /* DeviceUtils.m */,
 				83079640176FFEFE00CC7478 /* DonateViewController.h */,
@@ -284,6 +284,7 @@
 		837D2CD6171CDA4500E8677E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				72A046D618C8D6DB00013F72 /* Images */,
 				837D2CD7171CDA4500E8677E /* Thirst Project-Info.plist */,
 				837D2CD8171CDA4500E8677E /* InfoPlist.strings */,
 				837D2CDB171CDA4500E8677E /* main.m */,
@@ -401,6 +402,7 @@
 				836FC2D11826ECF400577614 /* Media.xcassets in Resources */,
 				837D2CDA171CDA4500E8677E /* InfoPlist.strings in Resources */,
 				837D2CE9171CDA4500E8677E /* MainStoryboard_iPhone.storyboard in Resources */,
+				72A046D818C8D6E600013F72 /* thirst.jpg in Resources */,
 				837D2CEC171CDA4500E8677E /* MainStoryboard_iPad.storyboard in Resources */,
 				833EEF3918C6C17900B627B8 /* LICENSE in Resources */,
 			);
@@ -438,14 +440,12 @@
 			files = (
 				837D2CDC171CDA4500E8677E /* main.m in Sources */,
 				3BEFDF8F18ABEBB900118104 /* DeviceUtils.m in Sources */,
-				836025E818AC626E00995E22 /* CountryBuilder.m in Sources */,
-				83AD8C6D182714B200689C84 /* CountryViewController.m in Sources */,
 				83D840EB185180650035E05D /* InfoViewController.m in Sources */,
 				833EEF4218C6CC8A00B627B8 /* SlideshowViewController.m in Sources */,
 				3BEFDF9218ABEC9C00118104 /* ThirstProjectConfig.m in Sources */,
 				837FC03818503EFC00B7D327 /* Reachability.m in Sources */,
 				837D2CE0171CDA4500E8677E /* AppDelegate.m in Sources */,
-				833B160018ADCDA3002EA8C8 /* CellImageButton.m in Sources */,
+				72ADA73318C921BF00B1E25D /* CountryViewController.m in Sources */,
 				833EEF4118C6CC8A00B627B8 /* KenBurnsAppDelegate.m in Sources */,
 				837D2CEF171CDA4500E8677E /* AboutViewController.m in Sources */,
 				833EEF3818C6C17900B627B8 /* JBKenBurnsView.m in Sources */,
