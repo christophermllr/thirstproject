@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Country.h"
 
 @interface WellsViewController : UIViewController
 
@@ -17,6 +18,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *moneyDonated;
 @property (weak, nonatomic) IBOutlet UILabel *peopleServed;
 
-@property (nonatomic) NSString *country;
+@property (nonatomic, strong) Country *country;
 
 @end

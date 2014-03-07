@@ -90,21 +90,13 @@
 
 #pragma mark - InfoViewControllerDelegate
 
-- (void)infoViewControllerDidClose:(InfoViewController *)controller
-{
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([segue.identifier isEqualToString:@"ViewInfo"]) {
-        UINavigationController *navigationController = segue.destinationViewController;
-        InfoViewController *infoViewController = [navigationController viewControllers][0];
-        infoViewController.delegate = self;
-    }
-    else if([segue.identifier isEqualToString:@"toDetails"]) {
-        // TODO not sure what goes here
-        
+    if([segue.identifier isEqualToString:@"showDetails"] &&
+       [segue.destinationViewController respondsToSelector:@selector(setCountry:)]) {
+        NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+        Country *country = [self.countries objectAtIndex:path.row];
+        [segue.destinationViewController performSelector:@selector(setCountry:)withObject:country];
     }
 }
 

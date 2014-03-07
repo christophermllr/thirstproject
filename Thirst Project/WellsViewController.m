@@ -11,9 +11,11 @@
 #import "Country.h"
 #import "DeviceUtils.h"
 #import "ThirstProjectConfig.h"
-
+#import "Reachability.h"
 
 @interface WellsViewController ()
+
+-(void)getCountryImage;
 
 @end
 
@@ -24,6 +26,7 @@
 @synthesize wellsBuilt;
 @synthesize moneyDonated;
 @synthesize peopleServed;
+@synthesize country;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,6 +34,7 @@
     if (self) {
         // Custom initialization
     }
+    
     return self;
 }
 
@@ -38,8 +42,11 @@
 {
     [super viewDidLoad];
     
-    // TODO Set navBar title
-    self.navigationItem.title = @"";
+    self.title = country.countryName;
+    self.wellsBuilt.text = [NSString stringWithFormat:@"%@ wells built",country.wellCount];
+    
+    [self getCountryImage];
+    [self setImage];
     
 	// Set Navbar color for iOS6/7.
     if ([DeviceUtils isiOS7OrGreater]) {
@@ -48,6 +55,46 @@
         self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
     } else {
         self.navigationController.navigationBar.tintColor = [ThirstProjectConfig defaultColor];
+    }
+}
+
+-(void)getCountryImage
+{
+    Reachability *reachability = [Reachability reachabilityForInternetConnection];
+    NetworkStatus internetStatus = [reachability currentReachabilityStatus];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSString *cachePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *imageFolderUrl = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"TPImagesURL"];
+    
+    NSString *filePath = [cachePath stringByAppendingPathComponent:self.country.imageFilename];
+        
+        if (![fileManager fileExistsAtPath:filePath] &&
+            (internetStatus == ReachableViaWiFi || internetStatus == ReachableViaWWAN)) {
+            NSString *urlAsString = [NSString stringWithFormat:@"%@%@", imageFolderUrl, self.country.imageFilename];
+            NSURL *url = [[NSURL alloc] initWithString:urlAsString];
+            NSData *image = [NSData dataWithContentsOfURL:url];
+            [image writeToFile:filePath atomically:YES];
+        }
+        
+        if (![fileManager fileExistsAtPath:filePath]) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"An Internet Connection is Required"
+                                                            message:nil
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+            [alert show];
+            return; //TODO disable access to the payment view controller.
+        }
+}
+
+-(void)setImage {
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSString *cachePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    
+    NSString *filePath = [cachePath stringByAppendingPathComponent:country.imageFilename];
+    
+    if ([fileManager fileExistsAtPath:filePath]) {
+        countryImage.image = [[UIImage alloc] initWithContentsOfFile:filePath];
     }
 }
 
