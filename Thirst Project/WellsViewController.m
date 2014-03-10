@@ -21,11 +21,6 @@
 
 @implementation WellsViewController
 
-@synthesize flagImage;
-@synthesize countryImage;
-@synthesize wellsBuilt;
-@synthesize moneyDonated;
-@synthesize peopleServed;
 @synthesize country;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -44,6 +39,8 @@
     
     self.title = country.countryName;
     self.wellsBuilt.text = [NSString stringWithFormat:@"%@ wells built",country.wellCount];
+    self.moneyDonated.text = [NSString stringWithFormat:@"$%@ donated", country.dollarsDonated];
+    self.peopleServed.text = [NSString stringWithFormat:@"%@ lives affected", country.peopleServed];
     
     [self getCountryImage];
     [self setImage];
@@ -94,7 +91,7 @@
     NSString *filePath = [cachePath stringByAppendingPathComponent:country.imageFilename];
     
     if ([fileManager fileExistsAtPath:filePath]) {
-        countryImage.image = [[UIImage alloc] initWithContentsOfFile:filePath];
+        _countryImage.image = [[UIImage alloc] initWithContentsOfFile:filePath];
     }
 }
 
