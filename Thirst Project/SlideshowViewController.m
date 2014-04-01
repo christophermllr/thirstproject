@@ -39,11 +39,8 @@
     self.kenView.layer.borderColor = [UIColor blackColor].CGColor;
     self.kenView.delegate = self;
     
-    //TODO this isn't working
-    self.label = [UILabel alloc];
-    self.label.font = [UIFont fontWithName:@"Helvetica-Bold" size:30];
-    self.label.textColor = [UIColor whiteColor];
-    [self.label setCenter:self.view.center];
+    // TODO this isn't working
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -60,6 +57,7 @@
                  transitionDuration:6
                                loop:NO
                         isLandscape:NO];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -88,8 +86,8 @@
                          @"These diseases kill more than 2.2 million people every year.",
                          @"",
                          nil];
-    
-    self.label.text = headings[index];
+
+    self.label.text = [headings objectAtIndex:index];
     
     NSLog(@"Finished image: %d", index);
 }

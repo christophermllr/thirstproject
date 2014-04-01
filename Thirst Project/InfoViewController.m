@@ -38,7 +38,7 @@
 
 - (IBAction)done:(id)sender
 {
-    [self.delegate infoViewControllerDidClose:self];
+    [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
 - (IBAction)sendFeedback:(id)sender
