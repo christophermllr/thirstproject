@@ -28,7 +28,6 @@
 
 - (void)viewDidLoad
 {
-    
     [super viewDidLoad];
     
     [self parseCountries];
@@ -79,7 +78,8 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     // TODO incomplete
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"countryCell"];
-    
+    cell.textLabel.highlightedTextColor = [UIColor grayColor];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
         
     Country *country = [self.countries objectAtIndex:indexPath.row];
     // Name of country to cell

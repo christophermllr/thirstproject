@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--About View Controller - About Thirst Project-->
@@ -17,15 +17,22 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="e8E-Q4-fgH">
-                                <rect key="frame" x="120" y="205" width="82" height="30"/>
+                                <rect key="frame" x="74" y="260" width="172" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Learn more!">
+                                <state key="normal" title="Click Here to Learn More">
+                                    <color key="titleColor" red="0.011764707040000001" green="0.66666668650000005" blue="0.67058825489999996" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="pkp-aO-R2Z" kind="modal" id="hkQ-2w-dkl"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The world's leading YOUTH water activism organization" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UAa-QS-ddr">
+                                <rect key="frame" x="47" y="187" width="226" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.94117653369999998" green="0.94117653369999998" blue="0.94117653369999998" alpha="1" colorSpace="deviceRGB"/>
                     </view>
@@ -56,12 +63,15 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.74999999999999978" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NrJ-P3-mgD">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NrJ-P3-mgD">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="shadowOffset" width="0.0" height="1"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -89,7 +99,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2SS-aj-vc9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1731" y="974"/>
+            <point key="canvasLocation" x="1761" y="424"/>
         </scene>
         <!--Info View Controller - Info-->
         <scene sceneID="Zjg-Px-8uG">
@@ -99,7 +109,7 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.39999999999999963" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thirst.jpg" id="nF0-XR-Fld">
+                            <imageView userInteractionEnabled="NO" alpha="0.39999999999999963" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="About" id="nF0-XR-Fld">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -125,6 +135,7 @@
                                 <rect key="frame" x="106" y="7" width="108" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Send Feedback">
+                                    <color key="titleColor" red="0.011764707040000001" green="0.66666668650000005" blue="0.67058825489999996" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -135,6 +146,7 @@
                                 <rect key="frame" x="72" y="42" width="176" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Contact the Thirst Project">
+                                    <color key="titleColor" red="0.011764707040000001" green="0.66666668650000005" blue="0.67058825489999996" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -159,7 +171,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AjQ-3Y-j7h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2285" y="202"/>
+            <point key="canvasLocation" x="2253" y="424"/>
         </scene>
         <!--Donate View Controller - Donate to Thirst Project-->
         <scene sceneID="sou-tB-ZEY">
@@ -226,7 +238,9 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="hof-Jm-dlD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.94117653369999998" green="0.94117653369999998" blue="0.94117653369999998" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.94117653369999998" green="0.94117653369999998" blue="0.94117653369999998" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="sectionIndexTrackingBackgroundColor" red="0.94117653369999998" green="0.94117653369999998" blue="0.94117653369999998" alpha="1" colorSpace="deviceRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="countryCell" id="7FG-EL-RlR">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
@@ -235,6 +249,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.94117653369999998" green="0.94117653369999998" blue="0.94117653369999998" alpha="1" colorSpace="deviceRGB"/>
                                 <connections>
                                     <segue destination="1CV-g2-PDY" kind="push" identifier="showDetails" id="rHp-Yn-hoj"/>
                                 </connections>
@@ -296,9 +311,18 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.94117653369999998" green="0.94117653369999998" blue="0.94117653369999998" alpha="1" colorSpace="deviceRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Cbd-7W-I8y"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Cbd-7W-I8y">
+                        <barButtonItem key="rightBarButtonItem" image="Info" id="eEw-iY-SBR">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                            <connections>
+                                <segue destination="0GU-1U-kmM" kind="modal" id="uGs-NW-3zI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="countryImage" destination="fLB-Le-00i" id="Kol-FY-ckR"/>
                         <outlet property="flagImage" destination="QQS-dc-oxo" id="Vp9-WA-ec3"/>
@@ -390,21 +414,21 @@
         </scene>
     </scenes>
     <resources>
+        <image name="About" width="640" height="960"/>
         <image name="Donate" width="25" height="23"/>
         <image name="Drop" width="25" height="25"/>
         <image name="Info" width="25" height="25"/>
         <image name="Logo" width="280" height="123"/>
         <image name="WMP" width="300" height="51"/>
         <image name="Well" width="25" height="25"/>
-        <image name="thirst.jpg" width="640" height="960"/>
     </resources>
-    <color key="tintColor" red="0.011764707040000001" green="0.66666668650000005" blue="0.67058825489999996" alpha="1" colorSpace="deviceRGB"/>
+    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="08y-0v-PDs"/>
+        <segue reference="uGs-NW-3zI"/>
     </inferredMetricsTieBreakers>
 </document>

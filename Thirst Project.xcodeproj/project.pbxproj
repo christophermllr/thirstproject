@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3BEFDF8F18ABEBB900118104 /* DeviceUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEFDF8E18ABEBB900118104 /* DeviceUtils.m */; };
 		3BEFDF9218ABEC9C00118104 /* ThirstProjectConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEFDF9118ABEC9C00118104 /* ThirstProjectConfig.m */; };
-		72A046D818C8D6E600013F72 /* thirst.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72A046D718C8D6E600013F72 /* thirst.jpg */; };
 		72ADA73318C921BF00B1E25D /* CountryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72ADA73218C921BE00B1E25D /* CountryViewController.m */; };
 		72ADA73618CA2BE700B1E25D /* CountryBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 72ADA73518CA2BE700B1E25D /* CountryBuilder.m */; };
 		72ADA73918CA315B00B1E25D /* WellsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72ADA73818CA315B00B1E25D /* WellsViewController.m */; };
@@ -30,7 +29,6 @@
 		837D2CE9171CDA4500E8677E /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 837D2CE7171CDA4500E8677E /* MainStoryboard_iPhone.storyboard */; };
 		837D2CEC171CDA4500E8677E /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 837D2CEA171CDA4500E8677E /* MainStoryboard_iPad.storyboard */; };
 		837D2CEF171CDA4500E8677E /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 837D2CEE171CDA4500E8677E /* AboutViewController.m */; };
-		837D2D02171CDA4500E8677E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837D2D01171CDA4500E8677E /* SenTestingKit.framework */; };
 		837D2D03171CDA4500E8677E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837D2CCF171CDA4500E8677E /* UIKit.framework */; };
 		837D2D04171CDA4500E8677E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837D2CD1171CDA4500E8677E /* Foundation.framework */; };
 		837D4B10171CDD1900E8677E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837D4B0F171CDD1900E8677E /* AVFoundation.framework */; };
@@ -73,7 +71,6 @@
 		3BEFDF8E18ABEBB900118104 /* DeviceUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceUtils.m; sourceTree = "<group>"; };
 		3BEFDF9018ABEC9C00118104 /* ThirstProjectConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirstProjectConfig.h; sourceTree = "<group>"; };
 		3BEFDF9118ABEC9C00118104 /* ThirstProjectConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirstProjectConfig.m; sourceTree = "<group>"; };
-		72A046D718C8D6E600013F72 /* thirst.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = thirst.jpg; sourceTree = "<group>"; };
 		72ADA73118C921BE00B1E25D /* CountryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountryViewController.h; sourceTree = "<group>"; };
 		72ADA73218C921BE00B1E25D /* CountryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountryViewController.m; sourceTree = "<group>"; };
 		72ADA73418CA2BE700B1E25D /* CountryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountryBuilder.h; sourceTree = "<group>"; };
@@ -108,8 +105,7 @@
 		837D2CEB171CDA4500E8677E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		837D2CED171CDA4500E8677E /* AboutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		837D2CEE171CDA4500E8677E /* AboutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
-		837D2D00171CDA4500E8677E /* Thirst ProjectTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Thirst ProjectTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		837D2D01171CDA4500E8677E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		837D2D00171CDA4500E8677E /* Thirst ProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Thirst ProjectTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		837D4B0F171CDD1900E8677E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		837D4B11171CE22700E8677E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		837D4B12171CE22700E8677E /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
@@ -176,7 +172,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				837D2D02171CDA4500E8677E /* SenTestingKit.framework in Frameworks */,
 				837D2D03171CDA4500E8677E /* UIKit.framework in Frameworks */,
 				837D2D04171CDA4500E8677E /* Foundation.framework in Frameworks */,
 			);
@@ -185,14 +180,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		72A046D618C8D6DB00013F72 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				72A046D718C8D6E600013F72 /* thirst.jpg */,
-			);
-			name = Images;
-			sourceTree = "<group>";
-		};
 		833EEF3418C6C17900B627B8 /* JBKenBurns */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,7 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				837D2CCC171CDA4500E8677E /* Thirst Project.app */,
-				837D2D00171CDA4500E8677E /* Thirst ProjectTests.octest */,
+				837D2D00171CDA4500E8677E /* Thirst ProjectTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -249,7 +236,6 @@
 				837D4B18171CE22700E8677E /* OpenGLES.framework */,
 				837D4B19171CE22700E8677E /* QuartzCore.framework */,
 				837D4B1A171CE22700E8677E /* Security.framework */,
-				837D2D01171CDA4500E8677E /* SenTestingKit.framework */,
 				837D2CCF171CDA4500E8677E /* UIKit.framework */,
 			);
 			name = Frameworks;
@@ -294,7 +280,6 @@
 		837D2CD6171CDA4500E8677E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				72A046D618C8D6DB00013F72 /* Images */,
 				837D2CD7171CDA4500E8677E /* Thirst Project-Info.plist */,
 				837D2CD8171CDA4500E8677E /* InfoPlist.strings */,
 				837D2CDB171CDA4500E8677E /* main.m */,
@@ -369,8 +354,8 @@
 			);
 			name = "Thirst ProjectTests";
 			productName = "Thirst ProjectTests";
-			productReference = 837D2D00171CDA4500E8677E /* Thirst ProjectTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productReference = 837D2D00171CDA4500E8677E /* Thirst ProjectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -378,6 +363,7 @@
 		837D2CC4171CDA4500E8677E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastTestingUpgradeCheck = 0510;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Thirst Project";
 				TargetAttributes = {
@@ -412,7 +398,6 @@
 				836FC2D11826ECF400577614 /* Media.xcassets in Resources */,
 				837D2CDA171CDA4500E8677E /* InfoPlist.strings in Resources */,
 				837D2CE9171CDA4500E8677E /* MainStoryboard_iPhone.storyboard in Resources */,
-				72A046D818C8D6E600013F72 /* thirst.jpg in Resources */,
 				837D2CEC171CDA4500E8677E /* MainStoryboard_iPad.storyboard in Resources */,
 				833EEF3918C6C17900B627B8 /* LICENSE in Resources */,
 			);
@@ -632,15 +617,15 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Thirst Project.app/Thirst Project";
 				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"\\\"$(SDKROOT)/Developer/Library/Frameworks\\\"",
+					"\\\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\\\"",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Thirst Project/Thirst Project-Prefix.pch";
 				INFOPLIST_FILE = "Thirst ProjectTests/Thirst ProjectTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -649,15 +634,15 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Thirst Project.app/Thirst Project";
 				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"\\\"$(SDKROOT)/Developer/Library/Frameworks\\\"",
+					"\\\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\\\"",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Thirst Project/Thirst Project-Prefix.pch";
 				INFOPLIST_FILE = "Thirst ProjectTests/Thirst ProjectTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
