@@ -32,6 +32,17 @@
 
 #pragma mark - View lifecycle
 
+-(void)loadView
+{
+    [super loadView];
+    self.closeBtn.layer.cornerRadius = 4;
+    self.closeBtn.layer.borderWidth = 1;
+    self.closeBtn.layer.borderColor = [UIColor colorWithRed:179.0/255.0 green:179.0/255.0 blue:179.0/255.0 alpha:1.0].CGColor;
+    [self.closeBtn setTitleColor:[UIColor colorWithRed:230.0/255.0 green:230.0/255.0 blue:230.0/255.0 alpha:1.0] forState:UIControlStateNormal];
+    self.closeBtn.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.75];
+    [self.closeBtn.titleLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Medium" size:12.0]];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
