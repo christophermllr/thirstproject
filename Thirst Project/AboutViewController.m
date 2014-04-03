@@ -26,7 +26,6 @@
         self.navigationController.navigationBar.barTintColor = [ThirstProjectConfig defaultColor];
         self.navigationController.navigationBar.translucent = NO;
         self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
-
     } else {
         self.navigationController.navigationBar.tintColor = [ThirstProjectConfig defaultColor];
     }

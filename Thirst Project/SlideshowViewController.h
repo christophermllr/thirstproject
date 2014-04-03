@@ -28,9 +28,12 @@
 @interface SlideshowViewController : UIViewController <JBKenBurnsViewDelegate> {
     JBKenBurnsView *kenView;
     UILabel *label;
+    UIButton *closeBtn;
 }
 
 @property (nonatomic, retain) IBOutlet JBKenBurnsView *kenView;
 @property (nonatomic, retain) IBOutlet UILabel *label;
+@property (nonatomic, retain) IBOutlet UIButton *closeBtn;
+- (IBAction)closeSlideshow:(id)sender;
 
 @end

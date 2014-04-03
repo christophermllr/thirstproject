@@ -28,6 +28,7 @@
 @implementation SlideshowViewController
 @synthesize kenView;
 @synthesize label;
+@synthesize closeBtn;
 
 #pragma mark - View lifecycle
 
@@ -35,12 +36,19 @@
 {
     [super viewDidLoad];
     
+    // Enable close button when user taps slideshow.
+    self.closeBtn.hidden = YES;
+    self.label.userInteractionEnabled = YES;
+    
+    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
+    [singleTap setNumberOfTapsRequired:1];
+    
+    [self.label addGestureRecognizer:singleTap];
+    
+    // Slideshow setup.
     self.kenView.layer.borderWidth = 1;
     self.kenView.layer.borderColor = [UIColor blackColor].CGColor;
     self.kenView.delegate = self;
-    
-    // TODO this isn't working
-    
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -60,18 +68,20 @@
     
 }
 
-- (void)didReceiveMemoryWarning
+-(void)handleSingleTap:(id)sender
 {
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
+    [UIView transitionWithView:self.closeBtn
+                      duration:0.4
+                       options:UIViewAnimationOptionTransitionCrossDissolve
+                    animations:NULL
+                    completion:NULL];
     
-    // Release any cached data, images, etc that aren't in use.
+    self.closeBtn.hidden = !self.closeBtn.hidden;
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+- (BOOL)prefersStatusBarHidden
 {
-    // Return YES for supported orientations
-	return YES;
+    return YES;
 }
 
 
@@ -103,5 +113,11 @@
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
+- (IBAction)closeSlideshow:(id)sender
+{
+    self.kenView.delegate = nil;
+    [self setKenView:nil];
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
 
 @end

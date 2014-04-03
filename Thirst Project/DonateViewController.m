@@ -188,18 +188,6 @@
                                                                                                       delegate:self];
     paymentViewController.hideCreditCardButton = !self.acceptCreditCards;
     
-    // Set Navbar color for iOS6/7.
-    if ([DeviceUtils isiOS7OrGreater]) {
-        
-        paymentViewController.navigationBar.barTintColor = [ThirstProjectConfig defaultColor];
-        paymentViewController.navigationBar.tintColor = [UIColor whiteColor];
-        paymentViewController.navigationBar.translucent = NO;
-        paymentViewController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
-        
-    } else {
-        paymentViewController.navigationBar.tintColor = [ThirstProjectConfig defaultColor];
-    }
-    
     [self presentViewController:paymentViewController animated:YES completion:nil];
 }
 

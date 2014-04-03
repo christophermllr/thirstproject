@@ -44,6 +44,8 @@
 		837FC03218503ECF00B7D327 /* libPayPalMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 837FC02E18503ECF00B7D327 /* libPayPalMobile.a */; };
 		837FC03818503EFC00B7D327 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 837FC03718503EFC00B7D327 /* Reachability.m */; };
 		83C36D40171CF88B0090F037 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83C36D3F171CF88B0090F037 /* AddressBook.framework */; };
+		83C6E12418ECEA030085F34F /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C6E12318ECEA030085F34F /* TabBarController.m */; };
+		83C6E12718ECECAD0085F34F /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C6E12618ECECAD0085F34F /* NavigationController.m */; };
 		83D840EB185180650035E05D /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D840EA185180650035E05D /* InfoViewController.m */; };
 		D540479517530E9D0056196E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D540479417530E9D0056196E /* CoreData.framework */; };
 		D540479717530EA50056196E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D540479617530EA50056196E /* CoreLocation.framework */; };
@@ -123,6 +125,10 @@
 		837FC03618503EFC00B7D327 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = Libs/Reachability/Reachability.h; sourceTree = "<group>"; };
 		837FC03718503EFC00B7D327 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = Libs/Reachability/Reachability.m; sourceTree = "<group>"; };
 		83C36D3F171CF88B0090F037 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		83C6E12218ECEA030085F34F /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
+		83C6E12318ECEA030085F34F /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
+		83C6E12518ECECAD0085F34F /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
+		83C6E12618ECECAD0085F34F /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
 		83D840E9185180650035E05D /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
 		83D840EA185180650035E05D /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
 		D540479417530E9D0056196E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -244,18 +250,16 @@
 		837D2CD5171CDA4500E8677E /* Thirst Project */ = {
 			isa = PBXGroup;
 			children = (
-				72ADA73418CA2BE700B1E25D /* CountryBuilder.h */,
-				72ADA73518CA2BE700B1E25D /* CountryBuilder.m */,
 				837D2CED171CDA4500E8677E /* AboutViewController.h */,
 				837D2CEE171CDA4500E8677E /* AboutViewController.m */,
 				837D2CDE171CDA4500E8677E /* AppDelegate.h */,
 				837D2CDF171CDA4500E8677E /* AppDelegate.m */,
 				836025E318AC5FE100995E22 /* Country.h */,
 				836025E418AC5FE100995E22 /* Country.m */,
+				72ADA73418CA2BE700B1E25D /* CountryBuilder.h */,
+				72ADA73518CA2BE700B1E25D /* CountryBuilder.m */,
 				72ADA73118C921BE00B1E25D /* CountryViewController.h */,
 				72ADA73218C921BE00B1E25D /* CountryViewController.m */,
-				72ADA73718CA315B00B1E25D /* WellsViewController.h */,
-				72ADA73818CA315B00B1E25D /* WellsViewController.m */,
 				3BEFDF8D18ABEBB900118104 /* DeviceUtils.h */,
 				3BEFDF8E18ABEBB900118104 /* DeviceUtils.m */,
 				83079640176FFEFE00CC7478 /* DonateViewController.h */,
@@ -271,8 +275,14 @@
 				833EEF3F18C6CC8A00B627B8 /* SlideshowViewController.h */,
 				833EEF4018C6CC8A00B627B8 /* SlideshowViewController.m */,
 				837D2CD6171CDA4500E8677E /* Supporting Files */,
+				83C6E12218ECEA030085F34F /* TabBarController.h */,
+				83C6E12318ECEA030085F34F /* TabBarController.m */,
 				3BEFDF9018ABEC9C00118104 /* ThirstProjectConfig.h */,
 				3BEFDF9118ABEC9C00118104 /* ThirstProjectConfig.m */,
+				72ADA73718CA315B00B1E25D /* WellsViewController.h */,
+				72ADA73818CA315B00B1E25D /* WellsViewController.m */,
+				83C6E12518ECECAD0085F34F /* NavigationController.h */,
+				83C6E12618ECECAD0085F34F /* NavigationController.m */,
 			);
 			path = "Thirst Project";
 			sourceTree = "<group>";
@@ -436,6 +446,7 @@
 				837D2CDC171CDA4500E8677E /* main.m in Sources */,
 				3BEFDF8F18ABEBB900118104 /* DeviceUtils.m in Sources */,
 				83D840EB185180650035E05D /* InfoViewController.m in Sources */,
+				83C6E12718ECECAD0085F34F /* NavigationController.m in Sources */,
 				833EEF4218C6CC8A00B627B8 /* SlideshowViewController.m in Sources */,
 				3BEFDF9218ABEC9C00118104 /* ThirstProjectConfig.m in Sources */,
 				837FC03818503EFC00B7D327 /* Reachability.m in Sources */,
@@ -447,6 +458,7 @@
 				833EEF3818C6C17900B627B8 /* JBKenBurnsView.m in Sources */,
 				72ADA73618CA2BE700B1E25D /* CountryBuilder.m in Sources */,
 				836025E518AC5FE100995E22 /* Country.m in Sources */,
+				83C6E12418ECEA030085F34F /* TabBarController.m in Sources */,
 				83079642176FFEFE00CC7478 /* FlipsideViewController.m in Sources */,
 				83079643176FFEFE00CC7478 /* DonateViewController.m in Sources */,
 			);

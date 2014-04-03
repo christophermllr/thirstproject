@@ -31,6 +31,7 @@
                                 <rect key="frame" x="47" y="187" width="226" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -48,12 +49,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1079" y="-661"/>
+            <point key="canvasLocation" x="717" y="-639"/>
         </scene>
         <!--Slideshow View Controller-->
         <scene sceneID="1EA-37-rbm">
             <objects>
-                <viewController id="pkp-aO-R2Z" customClass="SlideshowViewController" sceneMemberID="viewController">
+                <viewController wantsFullScreenLayout="YES" id="pkp-aO-R2Z" customClass="SlideshowViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="isY-bG-Ekz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -73,23 +74,37 @@
                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="shadowOffset" width="0.0" height="1"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9ph-Fp-sWr">
+                                <rect key="frame" x="263" y="20" width="37" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeSlideshow:" destination="pkp-aO-R2Z" eventType="touchUpInside" id="WNr-KZ-xUP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="PT7-0I-4uz"/>
                     <connections>
+                        <outlet property="closeBtn" destination="9ph-Fp-sWr" id="crI-oo-Lpw"/>
                         <outlet property="kenView" destination="tQL-0l-i2g" id="zEJ-Pi-NZt"/>
                         <outlet property="label" destination="NrJ-P3-mgD" id="3VD-VL-T9R"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nOP-RB-XZZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1731" y="-661"/>
+            <point key="canvasLocation" x="1243" y="-639"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KnK-8r-Ian">
             <objects>
-                <navigationController definesPresentationContext="YES" id="0GU-1U-kmM" sceneMemberID="viewController">
+                <navigationController definesPresentationContext="YES" id="0GU-1U-kmM" customClass="NavigationController" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="MrW-zw-DfM">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -99,7 +114,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2SS-aj-vc9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1761" y="424"/>
+            <point key="canvasLocation" x="1973" y="202"/>
         </scene>
         <!--Info View Controller - Info-->
         <scene sceneID="Zjg-Px-8uG">
@@ -171,7 +186,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AjQ-3Y-j7h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2253" y="424"/>
+            <point key="canvasLocation" x="2433" y="202"/>
         </scene>
         <!--Donate View Controller - Donate to Thirst Project-->
         <scene sceneID="sou-tB-ZEY">
@@ -229,7 +244,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lHT-uW-FZd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1079" y="1065"/>
+            <point key="canvasLocation" x="717" y="1059"/>
         </scene>
         <!--Country View Controller - Wells-->
         <scene sceneID="13">
@@ -333,12 +348,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kpx-gA-kit" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1221" y="202"/>
+            <point key="canvasLocation" x="1243" y="202"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="15">
             <objects>
-                <tabBarController id="4" sceneMemberID="viewController">
+                <tabBarController id="4" customClass="TabBarController" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="5">
                         <rect key="frame" x="0.0" y="431" width="320" height="49"/>
@@ -358,7 +373,7 @@
         <!--Navigation Controller - About-->
         <scene sceneID="64S-2V-wbf">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3C0-61-x2n" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3C0-61-x2n" customClass="NavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="About" image="Drop" id="7"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Lz7-q1-GbG">
@@ -372,12 +387,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="da7-Me-TeV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="659" y="-661"/>
+            <point key="canvasLocation" x="245" y="-639"/>
         </scene>
         <!--Navigation Controller - Wells-->
         <scene sceneID="q4T-hm-XOP">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wOz-Md-ywg" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wOz-Md-ywg" customClass="NavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Wells" image="Well" id="6"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="J1Z-6i-d9e">
@@ -396,7 +411,7 @@
         <!--Navigation Controller - Donate-->
         <scene sceneID="x02-uH-1MY">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="n8g-w3-ib6" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="n8g-w3-ib6" customClass="NavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Donate" image="Donate" id="6Df-dM-PIO"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kQe-uL-byu">
@@ -410,7 +425,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WZp-8P-ZyX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="659" y="1065"/>
+            <point key="canvasLocation" x="245" y="1059"/>
         </scene>
     </scenes>
     <resources>
@@ -429,6 +444,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="uGs-NW-3zI"/>
+        <segue reference="MKa-sP-ISy"/>
     </inferredMetricsTieBreakers>
 </document>
