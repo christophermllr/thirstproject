@@ -113,8 +113,6 @@
     self.label.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.3f];
     self.label.shadowColor = [UIColor blackColor];
     self.label.shadowOffset = CGSizeMake(0.0, 1.0);
-    
-    NSLog(@"Finished image: %d", index);
 }
 
 - (void)didFinishAllAnimations

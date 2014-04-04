@@ -23,8 +23,6 @@
     
     NSMutableArray *countries = [[NSMutableArray alloc] init];
     
-    NSLog(@"Count %d", parsedObject.count);
-    
     for (NSDictionary *countryDic in parsedObject) {
         Country *country = [[Country alloc] init];
         
