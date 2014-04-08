@@ -107,6 +107,12 @@
                          @"These diseases kill more than 2.2 million people every year.",
                          @"",
                          nil];
+    
+    CATransition *animation = [CATransition animation];
+    animation.duration = 1.0;
+    animation.type = kCATransitionFade;
+    animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    [self.label.layer addAnimation:animation forKey:@"changeTextTransition"];
 
     self.label.text = [headings objectAtIndex:index];
     self.label.textColor = [UIColor whiteColor];

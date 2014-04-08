@@ -37,9 +37,13 @@
 {
     [super viewDidLoad];
     
+    NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
+    [numberFormatter setNumberStyle: NSNumberFormatterCurrencyStyle];
+    NSString *numberAsString = [numberFormatter stringFromNumber:country.dollarsDonated];
+    
     self.title = country.countryName;
     self.wellsBuilt.text = [NSString stringWithFormat:@"%@ wells built",country.wellCount];
-    self.moneyDonated.text = [NSString stringWithFormat:@"$%@ donated", country.dollarsDonated];
+    self.moneyDonated.text = [NSString stringWithFormat:@"%@ donated", numberAsString];
     self.peopleServed.text = [NSString stringWithFormat:@"%@ lives affected", country.peopleServed];
     
     [self getCountryImage];
