@@ -13,50 +13,38 @@
 #import "ThirstProjectConfig.h"
 
 @interface DonateViewController ()
-
+@property (weak, nonatomic) IBOutlet UITableViewCell *selectedSchoolCell;
 @property (nonatomic, strong, readwrite) IBOutlet UITextField *amountField;
 @property (nonatomic, strong, readwrite) IBOutlet UIButton *payButton;
 @property (nonatomic, strong, readwrite) IBOutlet UIView *successView;
-@property (nonatomic, strong, readwrite) IBOutlet UIPickerView *pickerView;
-@property (nonatomic, strong, readwrite)          NSArray *schools;
-
 @end
 
 @implementation DonateViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(receiveSchoolSelectedNotification:)
+                                                 name:@"SchoolSelected"
+                                               object:nil];
+    
     self.acceptCreditCards = YES;
+    self.selectedSchoolCell.textLabel.text = @"Thirst Project National";
     
     // - For live charges, use PayPalEnvironmentProduction (default).
     // - To use the PayPal sandbox, use PayPalEnvironmentSandbox.
     // - For testing, use PayPalEnvironmentNoNetwork.
     self.environment = PayPalEnvironmentNoNetwork;
     
-    // Parse the school data.
-    NSError *e = nil;
-    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    if (appDelegate.schoolData == nil)
-    {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"An Internet Connection is Required"
-                                                        message:nil
-                                                       delegate:nil
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil];
-        [alert show];
-        return; //TODO send user back to initial view controller?
-    }
-    
-    self.schools = [NSJSONSerialization JSONObjectWithData:appDelegate.schoolData
-                                                   options:kNilOptions
-                                                     error:&e];
-    if (e) {
-        NSLog(@"Error : %@", e);
-    }
-    
     // Setup view things.
     self.successView.hidden = YES;
     self.amountField.keyboardType = UIKeyboardTypeDecimalPad;
+    
+    // Set text field padding to make room for $ label.
+    UIView *spacerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 25, 25)];
+    [self.amountField setLeftViewMode:UITextFieldViewModeAlways];
+    [self.amountField setLeftView:spacerView];
     
     // Set Navbar color for iOS6/7.
     if ([DeviceUtils isiOS7OrGreater]) {
@@ -96,23 +84,14 @@
     [self.view endEditing:YES];
 }
 
-#pragma mark - School picker
-
-// returns the number of 'columns' to display.
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+- (void) receiveSchoolSelectedNotification:(NSNotification *) notification
 {
-    return 1;
-}
-
-// returns the # of rows in each component..
-- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent: (NSInteger)component
-{
-    return self.schools.count;
-}
-
--(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
-{
-    return [self.schools objectAtIndex:row];
+    if ([[notification name] isEqualToString:@"SchoolSelected"])
+    {
+        NSDictionary *userInfo = notification.userInfo;
+        NSString *school = [userInfo objectForKey:@"schoolName"];
+        self.selectedSchoolCell.textLabel.text = school;
+    }
 }
 
 #pragma mark - Pay action
@@ -165,9 +144,7 @@
         return;
     }
     
-    NSInteger row = [self.pickerView selectedRowInComponent:0];
-    NSString *selectedText = [self.schools objectAtIndex:row];
-    payment.shortDescription = selectedText;
+    payment.shortDescription = self.selectedSchoolCell.textLabel.text;
     
     if (!payment.processable) {
         // This particular payment will always be processable. If, for

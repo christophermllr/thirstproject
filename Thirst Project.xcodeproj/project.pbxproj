@@ -14,6 +14,7 @@
 		72ADA73918CA315B00B1E25D /* WellsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72ADA73818CA315B00B1E25D /* WellsViewController.m */; };
 		83079642176FFEFE00CC7478 /* FlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8307963F176FFEFE00CC7478 /* FlipsideViewController.m */; };
 		83079643176FFEFE00CC7478 /* DonateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83079641176FFEFE00CC7478 /* DonateViewController.m */; };
+		830B366C19219BCA00312037 /* SchoolsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 830B366B19219BCA00312037 /* SchoolsTableViewController.m */; };
 		833EEF3818C6C17900B627B8 /* JBKenBurnsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 833EEF3618C6C17900B627B8 /* JBKenBurnsView.m */; };
 		833EEF3918C6C17900B627B8 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 833EEF3718C6C17900B627B8 /* LICENSE */; };
 		833EEF4118C6CC8A00B627B8 /* KenBurnsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 833EEF3E18C6CC8A00B627B8 /* KenBurnsAppDelegate.m */; };
@@ -82,6 +83,8 @@
 		8307963F176FFEFE00CC7478 /* FlipsideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlipsideViewController.m; sourceTree = "<group>"; };
 		83079640176FFEFE00CC7478 /* DonateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DonateViewController.h; sourceTree = "<group>"; };
 		83079641176FFEFE00CC7478 /* DonateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DonateViewController.m; sourceTree = "<group>"; };
+		830B366A19219BCA00312037 /* SchoolsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchoolsTableViewController.h; sourceTree = "<group>"; };
+		830B366B19219BCA00312037 /* SchoolsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchoolsTableViewController.m; sourceTree = "<group>"; };
 		833EEF3518C6C17900B627B8 /* JBKenBurnsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBKenBurnsView.h; sourceTree = "<group>"; };
 		833EEF3618C6C17900B627B8 /* JBKenBurnsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBKenBurnsView.m; sourceTree = "<group>"; };
 		833EEF3718C6C17900B627B8 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -269,6 +272,10 @@
 				833EEF3D18C6CC8A00B627B8 /* KenBurnsAppDelegate.h */,
 				833EEF3E18C6CC8A00B627B8 /* KenBurnsAppDelegate.m */,
 				837D2CE7171CDA4500E8677E /* MainStoryboard_iPhone.storyboard */,
+				83C6E12518ECECAD0085F34F /* NavigationController.h */,
+				83C6E12618ECECAD0085F34F /* NavigationController.m */,
+				830B366A19219BCA00312037 /* SchoolsTableViewController.h */,
+				830B366B19219BCA00312037 /* SchoolsTableViewController.m */,
 				833EEF3F18C6CC8A00B627B8 /* SlideshowViewController.h */,
 				833EEF4018C6CC8A00B627B8 /* SlideshowViewController.m */,
 				837D2CD6171CDA4500E8677E /* Supporting Files */,
@@ -278,8 +285,6 @@
 				3BEFDF9118ABEC9C00118104 /* ThirstProjectConfig.m */,
 				72ADA73718CA315B00B1E25D /* WellsViewController.h */,
 				72ADA73818CA315B00B1E25D /* WellsViewController.m */,
-				83C6E12518ECECAD0085F34F /* NavigationController.h */,
-				83C6E12618ECECAD0085F34F /* NavigationController.m */,
 			);
 			path = "Thirst Project";
 			sourceTree = "<group>";
@@ -454,6 +459,7 @@
 				833EEF3818C6C17900B627B8 /* JBKenBurnsView.m in Sources */,
 				72ADA73618CA2BE700B1E25D /* CountryBuilder.m in Sources */,
 				836025E518AC5FE100995E22 /* Country.m in Sources */,
+				830B366C19219BCA00312037 /* SchoolsTableViewController.m in Sources */,
 				83C6E12418ECEA030085F34F /* TabBarController.m in Sources */,
 				83079642176FFEFE00CC7478 /* FlipsideViewController.m in Sources */,
 				83079643176FFEFE00CC7478 /* DonateViewController.m in Sources */,

@@ -9,7 +9,7 @@
 #import "InfoViewController.h"
 #import "PayPalMobile.h"
 
-@interface DonateViewController : UIViewController <PayPalPaymentDelegate, FlipsideViewControllerDelegate,InfoViewControllerDelegate, UIPopoverControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
+@interface DonateViewController : UIViewController <PayPalPaymentDelegate, FlipsideViewControllerDelegate,InfoViewControllerDelegate, UIPopoverControllerDelegate>
 
 @property(nonatomic, strong, readwrite) UIPopoverController *flipsidePopoverController;
 
