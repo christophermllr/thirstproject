@@ -17,9 +17,23 @@
 @property (nonatomic, strong, readwrite) IBOutlet UITextField *amountField;
 @property (nonatomic, strong, readwrite) IBOutlet UIButton *payButton;
 @property (nonatomic, strong, readwrite) IBOutlet UIView *successView;
+@property (nonatomic, strong, readwrite) PayPalConfiguration *payPalConfiguration;
 @end
 
 @implementation DonateViewController
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        _payPalConfiguration = [[PayPalConfiguration alloc] init];
+        
+        // See PayPalConfiguration.h for details and default values.
+        // Should you wish to change any of the values, you can do so here.
+        // For example, if you wish to accept PayPal but not payment card payments, then add:
+        _payPalConfiguration.acceptCreditCards = YES;
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -35,7 +49,7 @@
     // - For live charges, use PayPalEnvironmentProduction (default).
     // - To use the PayPal sandbox, use PayPalEnvironmentSandbox.
     // - For testing, use PayPalEnvironmentNoNetwork.
-    self.environment = PayPalEnvironmentNoNetwork;
+    self.environment = PayPalEnvironmentSandbox;
     
     // Setup view things.
     self.successView.hidden = YES;
@@ -53,9 +67,7 @@
         self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
     } else {
         self.navigationController.navigationBar.tintColor = [ThirstProjectConfig defaultColor];
-    }
-    
-    NSLog(@"PayPal iOS SDK version: %@", [PayPalPaymentViewController libraryVersion]);
+    }    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -69,10 +81,7 @@
     [self.payButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
     [self.payButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateHighlighted];
     
-    // Optimization: Prepare for display of the payment UI by getting network work done early
-    NSString *clientId = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"PayPalClientId"];
-    [PayPalPaymentViewController setEnvironment:self.environment];
-    [PayPalPaymentViewController prepareForPaymentUsingClientId:clientId];
+    [PayPalMobile preconnectWithEnvironment:self.environment];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -145,6 +154,7 @@
     }
     
     payment.shortDescription = self.selectedSchoolCell.textLabel.text;
+    payment.intent = PayPalPaymentIntentSale;
     
     if (!payment.processable) {
         // This particular payment will always be processable. If, for
@@ -153,18 +163,13 @@
         // to handle that here.
     }
     
-    // Set the environment:
-    [PayPalPaymentViewController setEnvironment:self.environment];
+    // Create a PayPalPaymentViewController.
+    PayPalPaymentViewController *paymentViewController;
+    paymentViewController = [[PayPalPaymentViewController alloc] initWithPayment:payment
+                                                                   configuration:self.payPalConfiguration
+                                                                        delegate:self];
     
-    NSString *clientId = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"PayPalClientId"];
-    NSString *emailAddress = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"PayPalReceiverEmail"];
-    PayPalPaymentViewController *paymentViewController = [[PayPalPaymentViewController alloc] initWithClientId:clientId
-                                                                                                 receiverEmail:emailAddress
-                                                                                                       payerId:nil
-                                                                                                       payment:payment
-                                                                                                      delegate:self];
-    paymentViewController.hideCreditCardButton = !self.acceptCreditCards;
-    
+    // Present the PayPalPaymentViewController.
     [self presentViewController:paymentViewController animated:YES completion:nil];
 }
 
@@ -177,20 +182,29 @@
 
 #pragma mark - PayPalPaymentDelegate methods
 
-- (void)payPalPaymentDidComplete:(PayPalPayment *)completedPayment {
-    NSLog(@"PayPal Payment Success!");
-    self.completedPayment = completedPayment;
-    self.successView.hidden = NO;
+- (void)payPalPaymentViewController:(PayPalPaymentViewController *)paymentViewController
+                 didCompletePayment:(PayPalPayment *)completedPayment {
+    // Payment was processed successfully; send to server for verification and fulfillment.
+    [self verifyCompletedPayment:completedPayment];
     
-    [self sendCompletedPaymentToServer:completedPayment]; // Payment was processed successfully; send to server for verification and fulfillment
+    // Dismiss the PayPalPaymentViewController.
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)payPalPaymentDidCancel {
-    NSLog(@"PayPal Payment Canceled");
-    self.completedPayment = nil;
-    self.successView.hidden = YES;
+- (void)payPalPaymentDidCancel:(PayPalPaymentViewController *)paymentViewController {
+    // The payment was canceled; dismiss the PayPalPaymentViewController.
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)verifyCompletedPayment:(PayPalPayment *)completedPayment {
+    // Send the entire confirmation dictionary
+//    NSData *confirmation = [NSJSONSerialization dataWithJSONObject:completedPayment.confirmation
+//                                                           options:0
+//                                                             error:nil];
+    
+    // Send confirmation to your server; your server should verify the proof of payment
+    // and give the user their goods or services. If the server is not reachable, save
+    // the confirmation and try again later.
 }
 
 #pragma mark - Flipside View Controller

@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "Reachability.h"
+#import "PayPalMobile.h"
 
 @implementation AppDelegate
 
@@ -19,6 +20,11 @@
 {
     TPColor = [UIColor colorWithRed:3.0f/255.0f green:170.0f/255.0f blue:171.0f/255.0f alpha:1.0f];
     [[UITabBar appearance] setTintColor:TPColor];
+    
+    [PayPalMobile initializeWithClientIdsForEnvironments: @{
+        PayPalEnvironmentProduction : [[NSBundle mainBundle] objectForInfoDictionaryKey:@"PayPalClientId"],
+        PayPalEnvironmentSandbox : [[NSBundle mainBundle] objectForInfoDictionaryKey:@"PayPalClientId"]}];
+    
     [self getSchoolData];
     [self getCountryData];
     return YES;

@@ -92,6 +92,8 @@
 		833EEF3E18C6CC8A00B627B8 /* KenBurnsAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KenBurnsAppDelegate.m; sourceTree = "<group>"; };
 		833EEF3F18C6CC8A00B627B8 /* SlideshowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideshowViewController.h; sourceTree = "<group>"; };
 		833EEF4018C6CC8A00B627B8 /* SlideshowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideshowViewController.m; sourceTree = "<group>"; };
+		834484DD1921C6700068A63A /* PayPalConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PayPalConfiguration.h; path = Libs/PayPalMobile/PayPalConfiguration.h; sourceTree = "<group>"; };
+		834484DE1921C6700068A63A /* PayPalFuturePaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PayPalFuturePaymentViewController.h; path = Libs/PayPalMobile/PayPalFuturePaymentViewController.h; sourceTree = "<group>"; };
 		836025E318AC5FE100995E22 /* Country.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Country.h; sourceTree = "<group>"; };
 		836025E418AC5FE100995E22 /* Country.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Country.m; sourceTree = "<group>"; };
 		836FC2CC1826C88400577614 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
@@ -314,6 +316,8 @@
 			isa = PBXGroup;
 			children = (
 				837FC02E18503ECF00B7D327 /* libPayPalMobile.a */,
+				834484DD1921C6700068A63A /* PayPalConfiguration.h */,
+				834484DE1921C6700068A63A /* PayPalFuturePaymentViewController.h */,
 				837FC02F18503ECF00B7D327 /* PayPalMobile.h */,
 				837FC03018503ECF00B7D327 /* PayPalPayment.h */,
 				837FC03118503ECF00B7D327 /* PayPalPaymentViewController.h */,

@@ -30,8 +30,6 @@
 	<true/>
 	<key>PayPalClientId</key>
 	<string>AURwPhAvt-7dtlSH5C1X9S8kbddcjIWDcEcoIm7SOxS-1tXA4KdMBT83U2Oe</string>
-	<key>PayPalReceiverEmail</key>
-	<string>seth-facilitator@thirstproject.org</string>
 	<key>TPCountriesURL</key>
 	<string>https://dl.dropboxusercontent.com/u/2384307/TPApp/countries.json</string>
 	<key>TPImagesURL</key>
