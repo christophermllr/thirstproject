@@ -22,8 +22,8 @@
     [[UITabBar appearance] setTintColor:TPColor];
     
     [PayPalMobile initializeWithClientIdsForEnvironments: @{
-        PayPalEnvironmentProduction : [[NSBundle mainBundle] objectForInfoDictionaryKey:@"PayPalClientId"],
-        PayPalEnvironmentSandbox : [[NSBundle mainBundle] objectForInfoDictionaryKey:@"PayPalClientId"]}];
+        PayPalEnvironmentProduction : [[NSBundle mainBundle] objectForInfoDictionaryKey:@"PayPalProductionClientId"],
+        PayPalEnvironmentSandbox : [[NSBundle mainBundle] objectForInfoDictionaryKey:@"PayPalSandboxClientId"]}];
     
     [self getSchoolData];
     [self getCountryData];

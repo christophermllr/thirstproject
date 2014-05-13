@@ -31,6 +31,7 @@
         // Should you wish to change any of the values, you can do so here.
         // For example, if you wish to accept PayPal but not payment card payments, then add:
         _payPalConfiguration.acceptCreditCards = YES;
+        _payPalConfiguration.rememberUser = NO;
     }
     return self;
 }
@@ -43,7 +44,6 @@
                                                  name:@"SchoolSelected"
                                                object:nil];
     
-    self.acceptCreditCards = YES;
     self.selectedSchoolCell.textLabel.text = @"Thirst Project National";
     
     // - For live charges, use PayPalEnvironmentProduction (default).
