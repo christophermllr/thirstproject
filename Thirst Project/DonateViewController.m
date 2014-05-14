@@ -107,11 +107,6 @@
 
 - (IBAction)pay {
     
-    // Remove our last completed payment, just for demo purposes.
-    self.completedPayment = nil;
-    
-    PayPalPayment *payment = [[PayPalPayment alloc] init];
-    
     // Did the user enter an amount?
     if (self.amountField.text == nil || [self.amountField.text length] == 0) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Enter a Donation Amount"
@@ -123,6 +118,7 @@
         return;
     }
     
+    // Is the amount valid?
     if (([[self.amountField.text componentsSeparatedByString:@"."] count] - 1) > 1) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Invalid Donation Amount"
                                                         message:nil
@@ -133,16 +129,7 @@
         return;
     }
     
-    NSNumber *number = [NSNumber numberWithDouble:[self.amountField.text doubleValue]];
-    NSNumberFormatter *fmt = [[NSNumberFormatter alloc] init];
-    [fmt setNumberStyle:NSNumberFormatterDecimalStyle];
-    [fmt setMaximumFractionDigits:2];
-    [fmt setRoundingMode: NSNumberFormatterRoundUp];
-    NSString *numstring = [fmt stringFromNumber:number];
-    payment.amount = [NSDecimalNumber decimalNumberWithString:numstring];
-    payment.currencyCode = @"USD";
-    
-    // Is donation amount greater than 0
+    // Is donation amount greater than 0?
     if ([self.amountField.text doubleValue] == 0) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Donation amount must be greater than $0"
                                                         message:nil
@@ -153,14 +140,41 @@
         return;
     }
     
-    payment.shortDescription = self.selectedSchoolCell.textLabel.text;
-    payment.intent = PayPalPaymentIntentSale;
+    // Format the number.
+    NSNumber *number = [NSNumber numberWithDouble:[self.amountField.text doubleValue]];
+    NSNumberFormatter *fmt = [[NSNumberFormatter alloc] init];
+    [fmt setNumberStyle:NSNumberFormatterDecimalStyle];
+    [fmt setMaximumFractionDigits:2];
+    [fmt setRoundingMode: NSNumberFormatterRoundUp];
+    NSString *numstring = [fmt stringFromNumber:number];
+    NSDecimalNumber *amount = [NSDecimalNumber decimalNumberWithString:numstring];
+    
+    NSString *donationName = [NSString stringWithFormat:@"Donation to %@", self.selectedSchoolCell.textLabel.text];
+    
+    // Setup PayPalItem and PayPalPayment
+    PayPalItem *donation = [PayPalItem itemWithName:donationName
+                                       withQuantity:1
+                                          withPrice:amount
+                                       withCurrency:@"USD"
+                                            withSku:nil];
+    
+    PayPalPayment *payment = [PayPalPayment paymentWithAmount:amount
+                                                 currencyCode:@"USD"
+                                             shortDescription:donationName
+                                                       intent:PayPalPaymentIntentSale];
+    
+    // Set items on payment.
+    NSArray *items = @[donation];
+    payment.items = items;
     
     if (!payment.processable) {
-        // This particular payment will always be processable. If, for
-        // example, the amount was negative or the shortDescription was
-        // empty, this payment wouldn't be processable, and you'd want
-        // to handle that here.
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Payment is not processable."
+                                                        message:nil
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+        return;
     }
     
     // Create a PayPalPaymentViewController.
