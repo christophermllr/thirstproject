@@ -29,8 +29,6 @@
 		837D2CE0171CDA4500E8677E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 837D2CDF171CDA4500E8677E /* AppDelegate.m */; };
 		837D2CE9171CDA4500E8677E /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 837D2CE7171CDA4500E8677E /* MainStoryboard_iPhone.storyboard */; };
 		837D2CEF171CDA4500E8677E /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 837D2CEE171CDA4500E8677E /* AboutViewController.m */; };
-		837D2D03171CDA4500E8677E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837D2CCF171CDA4500E8677E /* UIKit.framework */; };
-		837D2D04171CDA4500E8677E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837D2CD1171CDA4500E8677E /* Foundation.framework */; };
 		837D4B10171CDD1900E8677E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837D4B0F171CDD1900E8677E /* AVFoundation.framework */; };
 		837D4B1B171CE22700E8677E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837D4B11171CE22700E8677E /* AudioToolbox.framework */; };
 		837D4B1C171CE22700E8677E /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 837D4B12171CE22700E8677E /* CoreMedia.framework */; };
@@ -57,16 +55,6 @@
 		D54047A317530F190056196E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D54047A217530F190056196E /* libz.dylib */; };
 		D54047A517530F8C0056196E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D54047A417530F8C0056196E /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		837D2D05171CDA4500E8677E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 837D2CC4171CDA4500E8677E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 837D2CCB171CDA4500E8677E;
-			remoteInfo = "Thirst Project";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3BEFDF8D18ABEBB900118104 /* DeviceUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceUtils.h; sourceTree = "<group>"; };
@@ -110,7 +98,6 @@
 		837D2CE8171CDA4500E8677E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		837D2CED171CDA4500E8677E /* AboutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		837D2CEE171CDA4500E8677E /* AboutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
-		837D2D00171CDA4500E8677E /* Thirst ProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Thirst ProjectTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		837D4B0F171CDD1900E8677E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		837D4B11171CE22700E8677E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		837D4B12171CE22700E8677E /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
@@ -177,15 +164,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		837D2CFC171CDA4500E8677E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				837D2D03171CDA4500E8677E /* UIKit.framework in Frameworks */,
-				837D2D04171CDA4500E8677E /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -215,7 +193,6 @@
 			isa = PBXGroup;
 			children = (
 				837D2CCC171CDA4500E8677E /* Thirst Project.app */,
-				837D2D00171CDA4500E8677E /* Thirst ProjectTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -354,25 +331,6 @@
 			productReference = 837D2CCC171CDA4500E8677E /* Thirst Project.app */;
 			productType = "com.apple.product-type.application";
 		};
-		837D2CFF171CDA4500E8677E /* Thirst ProjectTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 837D2D15171CDA4500E8677E /* Build configuration list for PBXNativeTarget "Thirst ProjectTests" */;
-			buildPhases = (
-				837D2CFB171CDA4500E8677E /* Sources */,
-				837D2CFC171CDA4500E8677E /* Frameworks */,
-				837D2CFD171CDA4500E8677E /* Resources */,
-				837D2CFE171CDA4500E8677E /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				837D2D06171CDA4500E8677E /* PBXTargetDependency */,
-			);
-			name = "Thirst ProjectTests";
-			productName = "Thirst ProjectTests";
-			productReference = 837D2D00171CDA4500E8677E /* Thirst ProjectTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -401,7 +359,6 @@
 			projectRoot = "";
 			targets = (
 				837D2CCB171CDA4500E8677E /* Thirst Project */,
-				837D2CFF171CDA4500E8677E /* Thirst ProjectTests */,
 			);
 		};
 /* End PBXProject section */
@@ -418,30 +375,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		837D2CFD171CDA4500E8677E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		837D2CFE171CDA4500E8677E /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		837D2CC8171CDA4500E8677E /* Sources */ = {
@@ -470,22 +404,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		837D2CFB171CDA4500E8677E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		837D2D06171CDA4500E8677E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 837D2CCB171CDA4500E8677E /* Thirst Project */;
-			targetProxy = 837D2D05171CDA4500E8677E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		837D2CD8171CDA4500E8677E /* InfoPlist.strings */ = {
@@ -519,7 +438,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: West Monroe Partners, LLC";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: West Monroe Partners, LLC";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -538,6 +458,7 @@
 					"-lstdc++",
 					"-ObjC",
 				);
+				PROVISIONING_PROFILE = "78ADA763-0949-4329-99FA-BB3D36F4FA71";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -555,7 +476,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: West Monroe Partners, LLC";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: West Monroe Partners, LLC";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -567,6 +489,7 @@
 					"-lstdc++",
 					"-ObjC",
 				);
+				PROVISIONING_PROFILE = "78ADA763-0949-4329-99FA-BB3D36F4FA71";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
@@ -578,8 +501,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: West Monroe Partners, LLC";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -592,7 +515,7 @@
 					"$(SRCROOT)/Libs/PayPalMobile",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "78ADA763-0949-4329-99FA-BB3D36F4FA71";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -602,8 +525,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: West Monroe Partners, LLC";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -617,42 +540,8 @@
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "78ADA763-0949-4329-99FA-BB3D36F4FA71";
 				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		837D2D16171CDA4500E8677E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Thirst Project.app/Thirst Project";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\\\"$(SDKROOT)/Developer/Library/Frameworks\\\"",
-					"\\\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\\\"",
-					"$(inherited)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Thirst Project/Thirst Project-Prefix.pch";
-				INFOPLIST_FILE = "Thirst ProjectTests/Thirst ProjectTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-			};
-			name = Debug;
-		};
-		837D2D17171CDA4500E8677E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Thirst Project.app/Thirst Project";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\\\"$(SDKROOT)/Developer/Library/Frameworks\\\"",
-					"\\\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\\\"",
-					"$(inherited)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Thirst Project/Thirst Project-Prefix.pch";
-				INFOPLIST_FILE = "Thirst ProjectTests/Thirst ProjectTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Release;
 		};
@@ -673,15 +562,6 @@
 			buildConfigurations = (
 				837D2D13171CDA4500E8677E /* Debug */,
 				837D2D14171CDA4500E8677E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		837D2D15171CDA4500E8677E /* Build configuration list for PBXNativeTarget "Thirst ProjectTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				837D2D16171CDA4500E8677E /* Debug */,
-				837D2D17171CDA4500E8677E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
