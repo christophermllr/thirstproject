@@ -21,31 +21,31 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.0_20140709</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1.0</string>
+	<string>1.0_20140709</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>PayPalProductionClientId</key>
 	<string></string>
 	<key>PayPalSandboxClientId</key>
 	<string>AURwPhAvt-7dtlSH5C1X9S8kbddcjIWDcEcoIm7SOxS-1tXA4KdMBT83U2Oe</string>
-	<key>TPCountriesURL</key>
-	<string>https://dl.dropboxusercontent.com/u/2384307/TPApp/countries.json</string>
-	<key>TPImagesURL</key>
-	<string>https://dl.dropboxusercontent.com/u/2384307/TPApp/images/</string>
-	<key>TPSchoolsURL</key>
-	<string>https://dl.dropboxusercontent.com/u/2384307/TPApp/schools.json</string>
-	<key>TPFeedbackEmail</key>
-	<string>cmiller@westmonroepartners.com</string>
-	<key>TPFeedbackSubject</key>
-	<string>[ThirstProject] App Feedback</string>
 	<key>TPContactEmail</key>
 	<string>seth@thirstproject.org</string>
 	<key>TPContactSubject</key>
 	<string>Contact from iOS App</string>
+	<key>TPCountriesURL</key>
+	<string>https://dl.dropboxusercontent.com/u/2384307/TPApp/countries.json</string>
+	<key>TPFeedbackEmail</key>
+	<string>cmiller@westmonroepartners.com</string>
+	<key>TPFeedbackSubject</key>
+	<string>[ThirstProject] App Feedback</string>
+	<key>TPImagesURL</key>
+	<string>https://dl.dropboxusercontent.com/u/2384307/TPApp/images/</string>
+	<key>TPSchoolsURL</key>
+	<string>https://dl.dropboxusercontent.com/u/2384307/TPApp/schools.json</string>
 	<key>UIMainStoryboardFile</key>
 	<string>MainStoryboard_iPhone</string>
 	<key>UIMainStoryboardFile~ipad</key>
