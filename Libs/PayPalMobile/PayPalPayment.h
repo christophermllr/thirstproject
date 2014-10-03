@@ -1,7 +1,7 @@
 //
 //  PayPalPayment.h
 //
-//  Version 2.1.0
+//  Version 2.4.2
 //
 //  Copyright (c) 2014, PayPal
 //  All rights reserved.
@@ -14,6 +14,7 @@
 typedef NS_ENUM(NSInteger, PayPalPaymentIntent) {
   PayPalPaymentIntentSale = 0,
   PayPalPaymentIntentAuthorize = 1,
+  PayPalPaymentIntentOrder = 2,
   };
 
 
@@ -74,7 +75,7 @@ typedef NS_ENUM(NSInteger, PayPalPaymentIntent) {
 /// Number of a particular item. 10 characters max. Required.
 @property(nonatomic, assign, readwrite) NSUInteger quantity;
 
-/// Item cost. 10 characters max. Required.
+/// Item cost. 10 characters max. May be negative for "coupon" etc. Required.
 @property(nonatomic, copy, readwrite) NSDecimalNumber *price;
 
 /// ISO standard currency code (http://en.wikipedia.org/wiki/ISO_4217). Required.
@@ -82,6 +83,53 @@ typedef NS_ENUM(NSInteger, PayPalPaymentIntent) {
 
 /// Stock keeping unit corresponding (SKU) to item. 50 characters max.
 @property(nonatomic, copy, readwrite) NSString *sku;
+
+@end
+
+
+#pragma mark - PayPalShippingAddress
+
+/// The PayPalShippingAddress class defines an optional customer shipping address.
+/// @see https://developer.paypal.com/webapps/developer/docs/api/#shippingaddress-object for more details
+@interface PayPalShippingAddress : NSObject <NSCopying>
+
+/// Convenience constructor.
+/// See the documentation of the individual properties for more detail.
+/// @param receipientName Name of recipient.
+/// @param line1 First line of address.
+/// @param line2 Second line of address, if any.
+/// @param city City.
+/// @param state State, county, etc., as appropriate.
+/// @param postalCode Appropriate ZIP or postal code.
+/// @param countryCode 2-letter country code.
++ (PayPalShippingAddress *)shippingAddressWithRecipientName:(NSString *)recipientName
+                                                  withLine1:(NSString *)line1
+                                                  withLine2:(NSString *)line2
+                                                   withCity:(NSString *)city
+                                                  withState:(NSString *)state
+                                             withPostalCode:(NSString *)postalCode
+                                            withCountryCode:(NSString *)countryCode;
+
+/// Name of the recipient at this address. 50 characters max. Required.
+@property(nonatomic, copy, readwrite) NSString *recipientName;
+
+/// Line 1 of the address (e.g., Number, street, etc). 100 characters max. Required.
+@property(nonatomic, copy, readwrite) NSString *line1;
+
+/// Line 2 of the address (e.g., Suite, apt #, etc). 100 characters max.
+@property(nonatomic, copy, readwrite) NSString *line2;
+
+/// City name. 50 characters max. Required.
+@property(nonatomic, copy, readwrite) NSString *city;
+
+/// 2-letter code for US states, and the equivalent for other countries. 100 characters max. Required in certain countries.
+@property(nonatomic, copy, readwrite) NSString *state;
+
+/// ZIP code or equivalent is usually required for countries that have them. 20 characters max. Required in certain countries.
+@property(nonatomic, copy, readwrite) NSString *postalCode;
+
+/// 2-letter country code. 2 characters max. Required.
+@property(nonatomic, copy, readwrite) NSString *countryCode;
 
 @end
 
@@ -96,7 +144,8 @@ typedef NS_ENUM(NSInteger, PayPalPaymentIntent) {
 /// @param currencyCode The ISO 4217 currency for the payment.
 /// @param shortDescription A short descripton of the payment.
 /// @param intent PayPalPaymentIntentSale for an immediate payment;
-///                PayPalPaymentIntentAuthorize for payment authorization only, to be captured separately at a later time.
+///                PayPalPaymentIntentAuthorize for payment authorization only, to be captured separately at a later time;
+///                PayPalPaymentIntentOrder for taking an order, with authorization and capture to be done separately at a later time.
 + (PayPalPayment *)paymentWithAmount:(NSDecimalNumber *)amount
                         currencyCode:(NSString *)currencyCode
                     shortDescription:(NSString *)shortDescription
@@ -117,9 +166,18 @@ typedef NS_ENUM(NSInteger, PayPalPaymentIntent) {
 @property(nonatomic, copy, readwrite) NSString *shortDescription;
 
 /// The intent of this payment:
+///
 /// - PayPalPaymentIntentSale for an immediate payment
+///
 /// - PayPalPaymentIntentAuthorize for payment authorization only,
 ///   to be captured separately at a later time.
+///
+/// - PayPalPaymentIntentOrder for taking an order, with authorization
+///   and capture to be done separately at a later time.
+///
+///   (PayPalPaymentIntentOrder is valid only for PayPal payments,
+///   not credit card payments.)
+///
 /// Defaults to PayPalPaymentIntentSale.
 @property(nonatomic, assign, readwrite) PayPalPaymentIntent intent;
 
@@ -135,6 +193,18 @@ typedef NS_ENUM(NSInteger, PayPalPaymentIntent) {
 /// @note If you provide one or more items, be sure that the various prices correctly
 /// sum to the payment `amount` or to `paymentDetails.subtotal`.
 @property (nonatomic, copy, readwrite) NSArray *items;
+
+/// Optional customer shipping address, if your app wishes to provide this to the SDK.
+@property (nonatomic, copy, readwrite) PayPalShippingAddress *shippingAddress;
+
+/// Optional invoice number, for your tracking purposes. (up to 256 characters)
+@property (nonatomic, copy, readwrite) NSString *invoiceNumber;
+
+/// Optional text, for your tracking purposes. (up to 256 characters)
+@property (nonatomic, copy, readwrite) NSString *custom;
+
+/// Optional text which will appear on the customer's credit card statement. (up to 22 characters)
+@property (nonatomic, copy, readwrite) NSString *softDescriptor;
 
 /// Optional Build Notation code ("BN code"), obtained from partnerprogram@paypal.com,
 /// for your tracking purposes.

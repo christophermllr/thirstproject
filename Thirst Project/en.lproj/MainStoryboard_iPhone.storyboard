@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
-        <!--About View Controller - About-->
+        <!--About-->
         <scene sceneID="11">
             <objects>
                 <viewController id="2" customClass="AboutViewController" sceneMemberID="viewController">
@@ -125,7 +125,7 @@
             </objects>
             <point key="canvasLocation" x="1973" y="202"/>
         </scene>
-        <!--Info View Controller - Info-->
+        <!--Info-->
         <scene sceneID="Zjg-Px-8uG">
             <objects>
                 <viewController id="K5F-YR-rnn" customClass="InfoViewController" sceneMemberID="viewController">
@@ -197,7 +197,7 @@
             </objects>
             <point key="canvasLocation" x="2433" y="202"/>
         </scene>
-        <!--Donate View Controller - Donate-->
+        <!--Donate-->
         <scene sceneID="sou-tB-ZEY">
             <objects>
                 <viewController id="Lck-JH-vOB" customClass="DonateViewController" sceneMemberID="viewController">
@@ -288,7 +288,7 @@
             </objects>
             <point key="canvasLocation" x="717" y="1059"/>
         </scene>
-        <!--Schools Table View Controller - Select Chapter-->
+        <!--Select Chapter-->
         <scene sceneID="gtF-fp-8iz">
             <objects>
                 <tableViewController id="sb9-hk-sEN" customClass="SchoolsTableViewController" sceneMemberID="viewController">
@@ -334,7 +334,7 @@
             </objects>
             <point key="canvasLocation" x="1243" y="1059"/>
         </scene>
-        <!--Country View Controller - Wells-->
+        <!--Wells-->
         <scene sceneID="13">
             <objects>
                 <viewController title="Wells" id="3" customClass="CountryViewController" sceneMemberID="viewController">
@@ -421,7 +421,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <size key="freeformSize" width="320" height="568"/>
                     <connections>
                         <outlet property="countryImage" destination="fLB-Le-00i" id="Kol-FY-ckR"/>
                         <outlet property="moneyDonated" destination="MJL-8T-u8Y" id="ZVX-Mx-SU9"/>
@@ -453,7 +452,7 @@
             </objects>
             <point key="canvasLocation" x="-406" y="202"/>
         </scene>
-        <!--Navigation Controller - About-->
+        <!--About-->
         <scene sceneID="64S-2V-wbf">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3C0-61-x2n" customClass="NavigationController" sceneMemberID="viewController">
@@ -472,7 +471,7 @@
             </objects>
             <point key="canvasLocation" x="245" y="-639"/>
         </scene>
-        <!--Navigation Controller - Wells-->
+        <!--Wells-->
         <scene sceneID="q4T-hm-XOP">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wOz-Md-ywg" customClass="NavigationController" sceneMemberID="viewController">
@@ -491,7 +490,7 @@
             </objects>
             <point key="canvasLocation" x="245" y="202"/>
         </scene>
-        <!--Navigation Controller - Donate-->
+        <!--Donate-->
         <scene sceneID="x02-uH-1MY">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="n8g-w3-ib6" customClass="NavigationController" sceneMemberID="viewController">
@@ -520,13 +519,13 @@
         <image name="WMP" width="300" height="51"/>
         <image name="Well" width="25" height="25"/>
     </resources>
-    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="aNO-p1-YjI"/>
+        <segue reference="MKa-sP-ISy"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
